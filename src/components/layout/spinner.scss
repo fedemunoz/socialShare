@@ -1,0 +1,14 @@
+@import '../../colors';
+
+.spinner-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  align-self: center;
+
+  .MuiCircularProgress-root {
+    display: block;
+    margin: auto;
+    color: $primary;
+  }
+}

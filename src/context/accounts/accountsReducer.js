@@ -5,17 +5,20 @@ const reducer = (state, action) => {
     case GET_ACCOUNTS:
       return {
         ...state,
-        accounts: action.payload
+        accounts: action.payload,
+        loading: false
       };
     case ADD_ACCOUNT:
       return {
         ...state,
-        accounts: state.accounts.push(action.payload)
+        accounts: state.accounts.push(action.payload),
+        loading: false
       };
     case REMOVE_ACCOUNT:
       return {
         ...state,
-        accounts: state.accounts.filter(account => account !== action.payload)
+        accounts: state.accounts.filter(account => account.id !== action.payload),
+        loading: false
       };
     default:
       return state;

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "logo": "instagram",
+    "name": "thenomadclub",
+    "url": "http://www.instagram.com/thenomadclub"
+  },
+  {
+    "id": 1,
+    "logo": "facebook",
+    "name": "jdsakjas",
+    "url": "http://www.facebook.com/jdsakjas"
+  },
+  {
+    "id": 2,
+    "logo": "twitter",
+    "name": "fedemunoz88",
+    "url": "http://www.twitter.com/fedemunoz88"
+  },
+  {
+    "id": 3,
+    "logo": "youtube",
+    "name": "jdsakjas",
+    "url": "http://www.youtube.com/jdsakjas"
+  },
+  {
+    "id": 4,
+    "logo": "linkedin",
+    "name": "jdsakjas",
+    "url": "http://www.linkedin.com/jdsakjas"
+  },
+  {
+    "id": 5,
+    "logo": "google",
+    "name": "jdsakjas@gmail.com",
+    "url": "mailto:jdsakjas@gmail.com"
+  }
+]

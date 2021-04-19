@@ -1,0 +1,15 @@
+@import '../../colors';
+
+.app-send-to-email {
+  margin-bottom: 2rem;
+  .input-slot {
+    flex: 1;
+    .MuiFormControl-root {
+      width: 100%;
+    }
+  }
+  button {
+    background-color: $primary;
+    color: $primary-contrast;
+  }
+}

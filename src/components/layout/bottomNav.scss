@@ -1,0 +1,13 @@
+@import '../../colors';
+
+.app-bottom-navbar {
+  .MuiBottomNavigation-root {
+    border-top: solid 1px $border;
+    .MuiButtonBase-root {
+      color: $gray;
+      &.Mui-selected {
+        color: $primary;
+      }
+    }
+  }  
+}

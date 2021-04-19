@@ -1,0 +1,232 @@
+[
+  {
+    "id": 0,
+    "title": "Instagram",
+    "logo": "instagram",
+    "urlPrefix": "instagram.com/",
+    "placeholder": "Instagram user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 1,
+    "title": "Facebook",
+    "logo": "facebook",
+    "urlPrefix": "facebook.com/",
+    "placeholder": "Facebook user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 2,
+    "title": "Twitter",
+    "logo": "twitter",
+    "urlPrefix": "twitter.com/",
+    "placeholder": "Twitter user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 3,
+    "title": "Youtube",
+    "logo": "youtube",
+    "urlPrefix": "youtube.com/",
+    "placeholder": "Youtube user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 4,
+    "title": "Linkedin",
+    "logo": "linkedin",
+    "urlPrefix": "linkedin.com/",
+    "placeholder": "Linkedin user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 5,
+    "title": "Snapchat",
+    "logo": "snapchat",
+    "urlPrefix": "snapchat.com/",
+    "placeholder": "Snapchat user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 6,
+    "title": "Pinterest",
+    "logo": "pinterest",
+    "urlPrefix": "pinterest.com/",
+    "placeholder": "Pinterest user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 16,
+    "title": "Tumblr",
+    "logo": "tumblr",
+    "urlPrefix": "tumblr.com/",
+    "placeholder": "Tumblr user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 17,
+    "title": "Reddit",
+    "logo": "reddit",
+    "urlPrefix": "reddit.com/",
+    "placeholder": "Reddit user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 18,
+    "title": "Medium",
+    "logo": "medium",
+    "urlPrefix": "medium.com/",
+    "placeholder": "Medium user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 19,
+    "title": "Flickr",
+    "logo": "flickr",
+    "urlPrefix": "flickr.com/",
+    "placeholder": "Flickr user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 20,
+    "title": "Skype",
+    "logo": "skype",
+    "urlPrefix": "skype.com/",
+    "placeholder": "Skype user",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": true
+  },
+  {
+    "id": 12,
+    "title": "Paypal",
+    "logo": "paypal",
+    "urlPrefix": "paypal.com/",
+    "placeholder": "Paypal user",
+    "categoryId": 2,
+    "categoryName": "Payment",
+    "hasLink": true
+  },
+  {
+    "id": 21,
+    "title": "Venmo",
+    "logo": "circle",
+    "urlPrefix": "venmo.com/",
+    "placeholder": "Venmo user",
+    "categoryId": 2,
+    "categoryName": "Payment",
+    "hasLink": true
+  },
+  {
+    "id": 22,
+    "title": "Tik Tok",
+    "logo": "circle",
+    "urlPrefix": "tiktok.com/",
+    "placeholder": "Tik Tok user",
+    "categoryId": 0,
+    "categoryName": "Social Networks",
+    "hasLink": true
+  },
+  {
+    "id": 7,
+    "title": "Email",
+    "logo": "envelope",
+    "urlPrefix": "",
+    "placeholder": "Email account",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": false
+  },
+  {
+    "id": 8,
+    "title": "Website",
+    "logo": "globe",
+    "urlPrefix": "",
+    "placeholder": "URL",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": false
+  },
+  {
+    "id": 9,
+    "title": "Phone",
+    "logo": "phone",
+    "urlPrefix": "",
+    "placeholder": "Phone number",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": false
+  },
+  {
+    "id": 10,
+    "title": "Gmail",
+    "logo": "google",
+    "urlPrefix": "",
+    "placeholder": "Gmail account",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": false
+  },
+  {
+    "id": 13,
+    "title": "StackOverflow",
+    "logo": "stack-overflow",
+    "urlPrefix": "stackoverflow.com/",
+    "placeholder": "StackOverflow user",
+    "categoryId": 3,
+    "categoryName": "Software Development",
+    "hasLink": true
+  },
+  {
+    "id": 14,
+    "title": "Github",
+    "logo": "github",
+    "urlPrefix": "github.com/",
+    "placeholder": "Github user",
+    "categoryId": 3,
+    "categoryName": "Software Development",
+    "hasLink": true
+  },
+  {
+    "id": 15,
+    "title": "BitBucket",
+    "logo": "bitbucket",
+    "urlPrefix": "bitbucket.com/",
+    "placeholder": "BitBucket user",
+    "categoryId": 3,
+    "categoryName": "Software Development",
+    "hasLink": true
+  },
+  {
+    "id": 11,
+    "title": "Yahoo",
+    "logo": "yahoo",
+    "urlPrefix": "",
+    "placeholder": "Yahoo account",
+    "categoryId": 1,
+    "categoryName": "Communication",
+    "hasLink": true
+  }
+]

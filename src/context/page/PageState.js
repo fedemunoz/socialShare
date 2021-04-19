@@ -1,25 +1,29 @@
 import React, { useReducer } from 'react';
 import PageContext from './pageContext';
 import PageReducer from './pageReducer';
-import { SET_TITLE } from '../types';
+import { SET_PAGE } from '../types';
 
 const PageState = props => {
-  const initialState = null;
+  const initialState = {
+    title: null,
+    route: 'my-qr'
+  };
 
   const [state, dispatch] = useReducer(PageReducer, initialState);
 
-  const setTitle = (title) => {
+  const setPage = (pageData) => {
     dispatch({
-      type: SET_TITLE,
-      payload: title
+      type: SET_PAGE,
+      payload: pageData
     });
   };
 
   return (
     <PageContext.Provider
       value={{
-        title: state,
-        setTitle
+        title: state.title,
+        route: state.route,
+        setPage
       }}
     >
       {props.children}

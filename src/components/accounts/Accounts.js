@@ -1,24 +1,25 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import AccountItem from './AccountItem';
 import AccountsContext from '../../context/accounts/accountsContext';
+import Spinner from '../layout/Spinner';
 
 const Accounts = () => {
   const accountsContext = useContext(AccountsContext);
+  
+  const { loading, accounts, getAccounts } = accountsContext;
 
   useEffect(() => {
-    accountsContext.getAccounts();
-    console.log(accountsContext.accounts)
+    getAccounts();
     // eslint-disable-next-line
   }, []);
 
-  // const { accounts, getAccounts } = accountsContext;
 
-  return (
-    <div>
-      {accountsContext.accounts.map(account => (
+  return loading ? <Spinner /> : (
+    <Fragment>
+      {accounts.map(account => (
         <AccountItem key={account.id} account={account} />
       ))}
-    </div>
+    </Fragment>
   );
 };
 

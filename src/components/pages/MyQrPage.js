@@ -5,7 +5,7 @@ const MyQrPage = () => {
   const pageContext = useContext(PageContext);
 
   useEffect(() => {
-    pageContext.setTitle('My QR');
+    pageContext.setPage({ title: 'My QR', route: 'my-qr' });
     // eslint-disable-next-line
   }, []);
 

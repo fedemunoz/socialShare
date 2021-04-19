@@ -1,0 +1,11 @@
+@import '../../colors';
+
+.app-add-button {
+  button {
+    position: fixed !important;
+    bottom: 72px;
+    right: 5vw;
+    color: $primary-contrast;
+    background-color: $primary;
+  }
+}
