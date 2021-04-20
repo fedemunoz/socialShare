@@ -1,6 +1,7 @@
-import React, { useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import PageContext from '../../context/page/pageContext';
 import Accounts from '../accounts/Accounts';
+import AddButton from '../../components/layout/AddButton';
 
 const AccountsPage = () => {
   const pageContext = useContext(PageContext);
@@ -10,8 +11,10 @@ const AccountsPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <Accounts />
+  return (<Fragment>
+      <Accounts />
+      <AddButton />
+    </Fragment>
   )
 };
 

@@ -1,6 +1,7 @@
 import React, { Fragment, useContext, useEffect } from 'react';
 import PageContext from '../../context/page/pageContext';
 import SendToEmail from '../accounts/SendToEmail';
+import AccountSelector from '../accounts/AccountSelector';
 import ContentDivider from '../layout/ContentDivider';
 
 const EmailPage = () => {
@@ -16,6 +17,7 @@ const EmailPage = () => {
       <h3>Select accounts</h3>
       <SendToEmail />
       <ContentDivider />
+      <AccountSelector />
     </Fragment>
   )
 };

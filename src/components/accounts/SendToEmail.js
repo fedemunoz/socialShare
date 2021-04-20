@@ -8,15 +8,16 @@ import Button from '@material-ui/core/Button';
 
 const SendToEmail = () => {
   const accountsContext = useContext(AccountsContext);
+  const { loading } = accountsContext;
   
   return (
-    <div class="app-send-to-email">
+    <div className="app-send-to-email">
       <Grid container spacing={2} alignItems="flex-end">
         <Grid item className="input-slot">
           <TextField required label="Email to" />
         </Grid>
         <Grid item>
-          <Button variant="contained" disabled={accountsContext.loading}>
+          <Button variant="contained" disabled={loading}>
             Send
           </Button>
         </Grid>

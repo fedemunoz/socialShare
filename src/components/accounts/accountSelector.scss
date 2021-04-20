@@ -1,0 +1,31 @@
+@import '../../colors';
+
+.account-selector-container {
+  margin: 1rem 0;
+  
+  .MuiFormControl-root {
+    display: flex;
+    flex: 1;
+    color: $dark-gray;
+
+    &.full-width-input {
+      .MuiFormControlLabel-root {
+        margin-left: 0;
+        .MuiFormControlLabel-label {
+          width: 100%;
+          .logo-icon {
+            width: 4rem;
+          }
+        }
+      }
+    }
+
+    .selected-checkbox {
+      color: $primary;
+    }    
+    
+    .MuiCheckbox-colorSecondary.Mui-checked {
+      color: $primary;
+    }
+  }
+}

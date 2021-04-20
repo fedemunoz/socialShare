@@ -1,11 +1,18 @@
 import React, { useReducer } from 'react';
 import AccountsContext from './accountsContext';
 import AccountsReducer from './accountsReducer';
-import { GET_ACCOUNTS, ADD_ACCOUNT, REMOVE_ACCOUNT, SET_LOADING } from '../types';
+import { 
+  GET_ACCOUNTS, 
+  ADD_ACCOUNT, 
+  REMOVE_ACCOUNT, 
+  SET_LOADING, 
+  SET_SELECTED_ACCOUNTS
+} from '../types';
 
 const AccountsState = props => {
   const initialState = {
     accounts: [],
+    selectedAccounts: {}, 
     loading: false
   };
 
@@ -15,15 +22,19 @@ const AccountsState = props => {
     dispatch({ type: SET_LOADING });
   }
 
-  const getAccounts = async() => {
-    setLoading();
+  const getFromStorage = async () => {
     const response = await fetch('../../data/test_user_data.json',{
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'
        }
     });
-    const accounts = await response.json();
+    return response.json();
+  }
+
+  const getAccounts = async() => {
+    setLoading();    
+    const accounts = await getFromStorage();
     
     dispatch({
       type: GET_ACCOUNTS,
@@ -40,22 +51,45 @@ const AccountsState = props => {
   };
 
   const removeAccount = (accountId) => {
-    setLoading();    
+    setLoading();
     dispatch({
       type: REMOVE_ACCOUNT,
       payload: accountId
     });
   };
 
+  const selectAllAccounts = async (selectAll) => {
+    const accounts = await getFromStorage()
+    let selection = { 'all': selectAll };
+    for (const account of accounts) {
+      selection[account.id] = selectAll;
+    }
+
+    dispatch({
+      type: SET_SELECTED_ACCOUNTS,
+      payload: selection
+    });
+  }
+
+  const setSelectedAccounts = (selection) => {
+    dispatch({
+      type: SET_SELECTED_ACCOUNTS,
+      payload: selection
+    });
+  }
+
   return (
     <AccountsContext.Provider
       value={{
-        accounts: state.accounts,
         loading: state.loading,
+        accounts: state.accounts,
+        selectedAccounts: state.selectedAccounts, 
         setLoading,
         getAccounts,
         addAccount,
-        removeAccount
+        removeAccount,
+        selectAllAccounts,
+        setSelectedAccounts
       }}
     >
       {props.children}

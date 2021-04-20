@@ -3,5 +3,6 @@ export const SET_PAGE = 'SET_PAGE';
 export const GET_ACCOUNTS = 'SET_ACCOUNTS';
 export const ADD_ACCOUNT = 'ADD_ACCOUNT';
 export const REMOVE_ACCOUNT = 'REMOVE_ACCOUNT';
+export const SET_SELECTED_ACCOUNTS = 'SET_SELECTED_ACCOUNTS';
 export const SHOW_CONFIRM = 'SHOW_CONFIRM';
 export const HIDE_CONFIRM = 'HIDE_CONFIRM';
