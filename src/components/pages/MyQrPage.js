@@ -1,6 +1,7 @@
-import React, { Fragment, useContext,useEffect } from 'react';
+import React, { useContext,useEffect } from 'react';
 import PageContext from '../../context/page/pageContext';
 import AccountsContext from '../../context/accounts/accountsContext';
+import Accounts from '../accounts/Accounts';
 
 const MyQrPage = () => {
   const pageContext = useContext(PageContext);
@@ -13,11 +14,7 @@ const MyQrPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <Fragment>
-      <p>MyQR page</p>
-    </Fragment>
-  )
+  return (<Accounts />)
 };
 
 export default MyQrPage;

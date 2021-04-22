@@ -5,6 +5,7 @@ import BottomNav from './components/layout/BottomNav';
 import EmailPage from './components/pages/EmailPage';
 import MyQrPage from './components/pages/MyQrPage';
 import AccountsPage from './components/pages/AccountsPage';
+import ShowQrPage from './components/pages/ShowQrPage';
 
 import PageState from './context/page/PageState';
 import AccountsState from './context/accounts/AccountsState';
@@ -26,6 +27,7 @@ function App() {
                   <Route exact path='/email' component={EmailPage} />
                   <Route exact path='/my-qr' component={MyQrPage} />
                   <Route exact path='/accounts' component={AccountsPage} />
+                  <Route exact path='/show-qr' component={ShowQrPage} />
                 </Switch>                
               </div>
               <BottomNav /> 

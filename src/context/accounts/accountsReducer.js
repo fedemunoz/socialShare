@@ -2,7 +2,8 @@ import {
   GET_ACCOUNTS, 
   ADD_ACCOUNT, 
   REMOVE_ACCOUNT, 
-  SET_SELECTED_ACCOUNTS
+  SET_SELECTED_ACCOUNTS,
+  SET_SHOW_QR
 } from '../types';
 
 const reducer = (state, action) => {
@@ -30,6 +31,11 @@ const reducer = (state, action) => {
         ...state,
         selectedAccounts: action.payload,
         loading: false
+      };
+    case SET_SHOW_QR:
+      return {
+        ...state,
+        showQr: action.payload
       };
     default:
       return state;

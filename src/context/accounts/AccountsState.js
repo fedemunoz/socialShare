@@ -6,13 +6,15 @@ import {
   ADD_ACCOUNT, 
   REMOVE_ACCOUNT, 
   SET_LOADING, 
-  SET_SELECTED_ACCOUNTS
+  SET_SELECTED_ACCOUNTS,
+  SET_SHOW_QR
 } from '../types';
 
 const AccountsState = props => {
   const initialState = {
     accounts: [],
     selectedAccounts: {}, 
+    showQr: null, 
     loading: false
   };
 
@@ -71,10 +73,17 @@ const AccountsState = props => {
     });
   }
 
-  const setSelectedAccounts = (selection) => {
+  const setSelectedAccounts = selection => {
     dispatch({
       type: SET_SELECTED_ACCOUNTS,
       payload: selection
+    });
+  }
+
+  const setShowQr = account => {
+    dispatch({
+      type: SET_SHOW_QR,
+      payload: account
     });
   }
 
@@ -84,12 +93,14 @@ const AccountsState = props => {
         loading: state.loading,
         accounts: state.accounts,
         selectedAccounts: state.selectedAccounts, 
+        showQr: state.showQr,
         setLoading,
         getAccounts,
         addAccount,
         removeAccount,
         selectAllAccounts,
-        setSelectedAccounts
+        setSelectedAccounts,
+        setShowQr
       }}
     >
       {props.children}

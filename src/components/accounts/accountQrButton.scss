@@ -1,0 +1,20 @@
+@import '../../colors';
+
+.account-qr-button {
+  display: flex;
+  flex: 50%;
+  color: $primary;
+  align-self: center;
+  text-align: center;
+  font-size: 10vh;
+  svg {
+    flex: 1;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .account-qr-button {
+    display: flex;
+    flex: calc(100%/3);
+  }
+}
