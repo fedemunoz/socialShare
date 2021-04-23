@@ -1,7 +1,7 @@
 import React, { useReducer } from "react";
 import PageContext from "./pageContext";
 import PageReducer from "./pageReducer";
-import { SET_PAGE } from "../types";
+import { SET_PAGE } from "./pageActions";
 
 const PageState = (props) => {
   const initialState = {

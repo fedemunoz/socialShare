@@ -1,0 +1,6 @@
+export const SET_LOADING = "SET_LOADING";
+export const GET_ACCOUNTS = "SET_ACCOUNTS";
+export const ADD_ACCOUNT = "ADD_ACCOUNT";
+export const REMOVE_ACCOUNT = "REMOVE_ACCOUNT";
+export const SET_SELECTED_ACCOUNTS = "SET_SELECTED_ACCOUNTS";
+export const SET_SHOW_QR = "SET_SHOW_QR";

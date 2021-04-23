@@ -1,4 +1,4 @@
-import { SHOW_CONFIRM, HIDE_CONFIRM } from '../types';
+import { SHOW_CONFIRM, HIDE_CONFIRM } from "./dialogActions";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -7,18 +7,18 @@ const reducer = (state, action) => {
         show: true,
         title: action.payload.title,
         msg: action.payload.msg,
-        res: null
+        res: null,
       };
     case HIDE_CONFIRM:
       return {
         show: false,
-        title: '',
-        msg: '',
-        res: action.payload
+        title: "",
+        msg: "",
+        res: action.payload,
       };
     default:
       return state;
-    }
+  }
 };
 
 export default reducer;

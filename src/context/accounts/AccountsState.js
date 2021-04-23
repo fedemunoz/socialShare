@@ -1,98 +1,91 @@
-import React, { useReducer } from 'react';
-import AccountsContext from './accountsContext';
-import AccountsReducer from './accountsReducer';
-import { 
-  GET_ACCOUNTS, 
-  ADD_ACCOUNT, 
-  REMOVE_ACCOUNT, 
-  SET_LOADING, 
-  SET_SELECTED_ACCOUNTS,
-  SET_SHOW_QR
-} from '../types';
+import React, { useReducer } from "react";
+import AccountsContext from "./accountsContext";
+import AccountsReducer from "./accountsReducer";
+import * as actions from "./accountsActions";
 
-const AccountsState = props => {
+const AccountsState = (props) => {
   const initialState = {
     accounts: [],
-    selectedAccounts: {}, 
-    showQr: null, 
-    loading: false
+    selectedAccounts: {},
+    showQr: null,
+    loading: false,
   };
 
   const [state, dispatch] = useReducer(AccountsReducer, initialState);
 
   const setLoading = () => {
-    dispatch({ type: SET_LOADING });
-  }
+    dispatch({ type: actions.SET_LOADING });
+  };
 
   const getFromStorage = async () => {
-    const response = await fetch('../../data/test_user_data.json',{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
+    const response = await fetch("../../data/test_user_data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
     });
     return response.json();
-  }
+  };
 
-  const getAccounts = async() => {
-    setLoading();    
+  const getAccounts = async () => {
+    setLoading();
     const accounts = await getFromStorage();
-    
+
     dispatch({
-      type: GET_ACCOUNTS,
-      payload: accounts
+      type: actions.GET_ACCOUNTS,
+      payload: accounts,
     });
   };
 
   const addAccount = (account) => {
     setLoading();
     dispatch({
-      type: ADD_ACCOUNT,
-      payload: account
+      type: actions.ADD_ACCOUNT,
+      payload: account,
     });
   };
 
   const removeAccount = (accountId) => {
     setLoading();
     dispatch({
-      type: REMOVE_ACCOUNT,
-      payload: accountId
+      type: actions.REMOVE_ACCOUNT,
+      payload: accountId,
     });
   };
 
   const selectAllAccounts = async (selectAll) => {
-    const accounts = await getFromStorage()
-    let selection = { 'all': selectAll };
+    const accounts = await getFromStorage();
+    let selection = { all: selectAll };
     for (const account of accounts) {
       selection[account.id] = selectAll;
     }
 
     dispatch({
-      type: SET_SELECTED_ACCOUNTS,
-      payload: selection
+      type: actions.SET_SELECTED_ACCOUNTS,
+      payload: selection,
     });
-  }
+  };
 
-  const setSelectedAccounts = selection => {
+  const setSelectedAccounts = (selection) => {
     dispatch({
-      type: SET_SELECTED_ACCOUNTS,
-      payload: selection
+      type: actions.SET_SELECTED_ACCOUNTS,
+      payload: selection,
     });
-  }
+  };
 
-  const setShowQr = account => {
+  const setShowQr = (account) => {
     dispatch({
-      type: SET_SHOW_QR,
-      payload: account
+      type: actions.SET_SHOW_QR,
+      payload: account,
     });
-  }
+  };
 
   return (
     <AccountsContext.Provider
       value={{
         loading: state.loading,
         accounts: state.accounts,
-        selectedAccounts: state.selectedAccounts, 
+        selectedAccounts: state.selectedAccounts,
         showQr: state.showQr,
         setLoading,
         getAccounts,
@@ -100,7 +93,7 @@ const AccountsState = props => {
         removeAccount,
         selectAllAccounts,
         setSelectedAccounts,
-        setShowQr
+        setShowQr,
       }}
     >
       {props.children}

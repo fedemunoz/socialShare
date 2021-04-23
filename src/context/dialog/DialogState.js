@@ -1,14 +1,14 @@
-import React, { useReducer } from 'react';
-import DialogContext from './dialogContext';
-import DialogReducer from './dialogReducer';
-import { SHOW_CONFIRM, HIDE_CONFIRM } from '../types';
+import React, { useReducer } from "react";
+import DialogContext from "./dialogContext";
+import DialogReducer from "./dialogReducer";
+import { SHOW_CONFIRM, HIDE_CONFIRM } from "./dialogActions";
 
-const DialogState = props => {
+const DialogState = (props) => {
   const initialState = {
     show: false,
-    title: '',
-    msg: '',
-    res: null
+    title: "",
+    msg: "",
+    res: null,
   };
 
   const [state, dispatch] = useReducer(DialogReducer, initialState);
@@ -16,14 +16,14 @@ const DialogState = props => {
   const showConfirm = (title, msg) => {
     dispatch({
       type: SHOW_CONFIRM,
-      payload: {title, msg}
+      payload: { title, msg },
     });
   };
 
   const hideConfirm = (res) => {
     dispatch({
       type: HIDE_CONFIRM,
-      payload: res
+      payload: res,
     });
   };
 
@@ -32,7 +32,7 @@ const DialogState = props => {
       value={{
         dialog: state,
         showConfirm,
-        hideConfirm
+        hideConfirm,
       }}
     >
       {props.children}
