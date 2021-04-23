@@ -1,12 +1,12 @@
-import React, { useReducer } from 'react';
-import PageContext from './pageContext';
-import PageReducer from './pageReducer';
-import { SET_PAGE } from '../types';
+import React, { useReducer } from "react";
+import PageContext from "./pageContext";
+import PageReducer from "./pageReducer";
+import { SET_PAGE } from "../types";
 
-const PageState = props => {
+const PageState = (props) => {
   const initialState = {
     title: null,
-    route: 'my-qr'
+    route: "",
   };
 
   const [state, dispatch] = useReducer(PageReducer, initialState);
@@ -14,7 +14,7 @@ const PageState = props => {
   const setPage = (pageData) => {
     dispatch({
       type: SET_PAGE,
-      payload: pageData
+      payload: pageData,
     });
   };
 
@@ -23,7 +23,7 @@ const PageState = props => {
       value={{
         title: state.title,
         route: state.route,
-        setPage
+        setPage,
       }}
     >
       {props.children}
