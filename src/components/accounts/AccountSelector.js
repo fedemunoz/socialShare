@@ -5,14 +5,11 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab  } from '@fortawesome/free-brands-svg-icons';
+import Icon from '../layout/Icon';
 import Spinner from '../layout/Spinner';
 import './accountSelector.scss';
 
 const AccountSelector = () => {
-  library.add(fab);
   const [ indeterminate, setIndeterminate ] = React.useState(false);
   
   const accountsContext = useContext(AccountsContext);
@@ -75,7 +72,7 @@ const AccountSelector = () => {
               }
               label={
                 <Fragment>
-                  <FontAwesomeIcon icon={['fab', account.logo]} size="lg" className="logo-icon" /> 
+                  <Icon icon={account.logo} size="lg" />
                   {account.title}
                 </Fragment>
               }
