@@ -69,6 +69,13 @@ const AccountsState = (props) => {
     });
   };
 
+  const sendEmail = (accounts) => {
+    dispatch({
+      type: actions.SEND_EMAIL,
+      payload: accounts,
+    });
+  };
+
   return (
     <AccountsContext.Provider
       value={{
@@ -82,6 +89,7 @@ const AccountsState = (props) => {
         selectAllAccounts,
         selectAccount,
         setShowQr,
+        sendEmail,
       }}
     >
       {props.children}

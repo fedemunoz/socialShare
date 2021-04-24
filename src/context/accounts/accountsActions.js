@@ -5,3 +5,4 @@ export const REMOVE_ACCOUNT = "REMOVE_ACCOUNT";
 export const SELECT_ALL_ACCOUNTS = "SELECT_ALL_ACCOUNTS";
 export const SELECT_ACCOUNT = "SELECT_ACCOUNT";
 export const SET_SHOW_QR = "SET_SHOW_QR";
+export const SEND_EMAIL = "SEND_EMAIL";

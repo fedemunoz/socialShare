@@ -56,8 +56,6 @@ const AccountSelector = () => {
     }
   };
 
-  const error = false;
-
   return loading ? (
     <Spinner />
   ) : (
