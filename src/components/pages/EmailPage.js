@@ -11,7 +11,7 @@ const EmailPage = () => {
   const accountsContext = useContext(AccountsContext);
 
   useEffect(() => {
-    pageContext.setPage({ title: "Send by Email", route: "email" });
+    pageContext.setPage({ title: "Send by Email" });
     // eslint-disable-next-line
   }, []);
 

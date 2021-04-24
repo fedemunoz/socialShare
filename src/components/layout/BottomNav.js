@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
@@ -8,40 +8,42 @@ import PageContext from "../../context/page/pageContext";
 import "./bottomNav.scss";
 
 const BottomNav = () => {
+  const [route, setRoute] = useState("/");
   const pageContext = useContext(PageContext);
-  const [value, setValue] = useState(pageContext.route);
   const history = useHistory();
 
   useEffect(() => {
-    history.push(pageContext.route);
+    history.push(route);
     // eslint-disable-next-line
   }, []);
 
   const onChange = (event, newValue) => {
-    setValue(newValue);
+    setRoute(newValue);
     history.push(newValue);
   };
 
   return (
-    <div className='app-bottom-navbar'>
-      <BottomNavigation value={value} onChange={onChange} showLabels>
-        <BottomNavigationAction
-          value='email'
-          label='Email'
-          icon={<MailOutlineIcon />}
-        />
-        <BottomNavigationAction
-          value=''
-          label='My QR'
-          icon={<CropFreeIcon />}
-        />
-        <BottomNavigationAction
-          value='accounts'
-          label='Accounts'
-          icon={<PersonIcon />}
-        />
-      </BottomNavigation>
-    </div>
+    !pageContext.backUrl && (
+      <div className='app-bottom-navbar'>
+        <BottomNavigation value={route} onChange={onChange} showLabels>
+          <BottomNavigationAction
+            value='email'
+            label='Email'
+            icon={<MailOutlineIcon />}
+          />
+          <BottomNavigationAction
+            value='/'
+            label='My QR'
+            icon={<CropFreeIcon />}
+          />
+          <BottomNavigationAction
+            value='accounts'
+            label='Accounts'
+            icon={<PersonIcon />}
+          />
+        </BottomNavigation>
+      </div>
+    )
   );
 };
 

@@ -6,7 +6,6 @@ import * as actions from "./pageActions";
 const PageState = (props) => {
   const initialState = {
     title: null,
-    route: "",
     backUrl: "",
     modal: null,
   };
@@ -17,13 +16,6 @@ const PageState = (props) => {
     dispatch({
       type: actions.SET_PAGE,
       payload: pageData,
-    });
-  };
-
-  const setBackUrl = (backUrl) => {
-    dispatch({
-      type: actions.SET_BACK_URL,
-      payload: backUrl,
     });
   };
 
@@ -44,11 +36,9 @@ const PageState = (props) => {
     <PageContext.Provider
       value={{
         title: state.title,
-        route: state.route,
-        modal: state.modal,
         backUrl: state.backUrl,
+        modal: state.modal,
         setPage,
-        setBackUrl,
         showModal,
         hideModal,
       }}

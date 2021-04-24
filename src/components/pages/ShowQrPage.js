@@ -7,25 +7,25 @@ const QRCode = require("qrcode.react");
 
 const ShowQrPage = () => {
   const pageContext = useContext(PageContext);
-  const { setPage, setBackUrl } = pageContext;
+  const accountsContext = useContext(AccountsContext);
+  const { showQr } = accountsContext;
+
   useEffect(() => {
-    setPage({ title: "Scan to share", route: "show-qr" });
-    setBackUrl("/");
+    pageContext.setPage({ title: "Scan to share", backUrl: "/" });
     // eslint-disable-next-line
   }, []);
 
-  const accountsContext = useContext(AccountsContext);
-  const { logo, title, url } = accountsContext.showQr;
-
   return (
-    <div className='show-qr-container'>
-      <h2>
-        <Icon icon={logo} size='sm' /> {title}
-      </h2>
-      <div className='qr-container'>
-        <QRCode value={url} />
+    showQr && (
+      <div className='show-qr-container'>
+        <h2>
+          <Icon icon={showQr.logo} size='sm' /> {showQr.title}
+        </h2>
+        <div className='qr-container'>
+          <QRCode value={showQr.url} />
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

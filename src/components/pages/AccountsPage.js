@@ -10,7 +10,7 @@ const AccountsPage = () => {
   const accountsContext = useContext(AccountsContext);
 
   useEffect(() => {
-    pageContext.setPage({ title: "My Accounts", route: "accounts" });
+    pageContext.setPage({ title: "My Accounts" });
     // eslint-disable-next-line
   }, []);
 

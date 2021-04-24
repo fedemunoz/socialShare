@@ -6,12 +6,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         title: action.payload.title,
-        route: action.payload.route,
-      };
-    case actions.SET_BACK_URL:
-      return {
-        ...state,
-        backUrl: action.payload,
+        backUrl: action.payload.backUrl || "",
       };
     case actions.SHOW_MODAL:
       return {

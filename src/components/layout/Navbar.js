@@ -10,11 +10,10 @@ import PageContext from "../../context/page/pageContext";
 const Navbar = () => {
   const history = useHistory();
   const pageContext = useContext(PageContext);
-  const { title, backUrl, setBackUrl } = pageContext;
+  const { title, backUrl } = pageContext;
 
   const onClick = () => {
     history.push(backUrl);
-    setBackUrl("");
   };
 
   return (

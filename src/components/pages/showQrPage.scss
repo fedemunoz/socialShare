@@ -1,4 +1,4 @@
-@import '../../colors';
+@import "../../colors";
 
 .show-qr-container {
   display: flex;
@@ -13,14 +13,14 @@
     align-items: center;
     align-self: center;
     canvas {
-      width: 85vw !important;
-      height: 85vw !important;
+      width: 80vw !important;
+      height: 80vw !important;
     }
   }
 }
 
 @media only screen and (orientation: landscape) {
-  .show-qr-container {    
+  .show-qr-container {
     .qr-container {
       canvas {
         width: 40vh !important;

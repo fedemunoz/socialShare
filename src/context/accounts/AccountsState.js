@@ -7,7 +7,7 @@ const AccountsState = (props) => {
   const initialState = {
     accounts: [],
     showQr: null,
-    loading: false,
+    loading: true,
   };
 
   const [state, dispatch] = useReducer(AccountsReducer, initialState);
