@@ -9,21 +9,21 @@ import "./home.scss";
 const Home = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
-  const { loading, accounts, getAccounts } = accountsContext;
+  const { loading, userAccounts, getUserAccounts } = accountsContext;
 
   useEffect(() => {
     pageContext.setPage({ title: "My QR" });
-    if (!accounts.length) getAccounts();
+    if (!userAccounts.length) getUserAccounts();
     // eslint-disable-next-line
   }, []);
 
   if (loading) return <Spinner />;
 
-  return !accounts.length ? (
+  return !userAccounts.length ? (
     <NoAccounts />
   ) : (
     <div className='qr-button-container'>
-      {accounts.map((account) => (
+      {userAccounts.map((account) => (
         <AccountQrButton key={account.id} account={account} />
       ))}
     </div>

@@ -16,7 +16,7 @@ const AccountSelector = () => {
   const accountsContext = useContext(AccountsContext);
   const {
     loading,
-    accounts,
+    userAccounts,
     selectAllAccounts,
     selectAccount,
   } = accountsContext;
@@ -36,12 +36,12 @@ const AccountSelector = () => {
 
   const checkSelection = () => {
     let selected = 0;
-    for (const account of accounts) {
+    for (const account of userAccounts) {
       if (account.email) selected++;
     }
 
     switch (selected) {
-      case accounts.length:
+      case userAccounts.length:
         setallSelected(true);
         setIndeterminate(false);
         break;
@@ -83,7 +83,7 @@ const AccountSelector = () => {
         className='full-width-input'
       >
         <FormGroup>
-          {accounts.map((account) => (
+          {userAccounts.map((account) => (
             <FormControlLabel
               key={account.id}
               control={

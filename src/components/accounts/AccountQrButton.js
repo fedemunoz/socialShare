@@ -1,23 +1,20 @@
-import React, { useContext } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Icon from "../layout/Icon";
-import AccountsContext from "../../context/accounts/accountsContext";
 import "./accountQrButton.scss";
 
 const AccountQrButton = ({ account }) => {
-  const accountsContext = useContext(AccountsContext);
-  const history = useHistory();
-
-  const itemClick = () => {
-    accountsContext.setShowQr(account);
-    history.push("show-qr");
-  };
-
   return (
-    <div className='account-qr-button' onClick={itemClick}>
+    <Link
+      className='account-qr-button'
+      to={{
+        pathname: "/show-qr",
+        account: account,
+      }}
+    >
       <Icon icon={account.logo} size='lg' />
-    </div>
+    </Link>
   );
 };
 

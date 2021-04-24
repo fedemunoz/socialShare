@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "title": "Instagram",
+    "name": "Instagram",
     "logo": "instagram",
     "urlPrefix": "instagram.com/",
     "placeholder": "Instagram user",
@@ -11,7 +11,7 @@
   },
   {
     "id": 1,
-    "title": "Facebook",
+    "name": "Facebook",
     "logo": "facebook",
     "urlPrefix": "facebook.com/",
     "placeholder": "Facebook user",
@@ -21,7 +21,7 @@
   },
   {
     "id": 2,
-    "title": "Twitter",
+    "name": "Twitter",
     "logo": "twitter",
     "urlPrefix": "twitter.com/",
     "placeholder": "Twitter user",
@@ -31,7 +31,7 @@
   },
   {
     "id": 3,
-    "title": "Youtube",
+    "name": "Youtube",
     "logo": "youtube",
     "urlPrefix": "youtube.com/",
     "placeholder": "Youtube user",
@@ -41,7 +41,7 @@
   },
   {
     "id": 4,
-    "title": "Linkedin",
+    "name": "Linkedin",
     "logo": "linkedin",
     "urlPrefix": "linkedin.com/",
     "placeholder": "Linkedin user",
@@ -51,7 +51,7 @@
   },
   {
     "id": 5,
-    "title": "Snapchat",
+    "name": "Snapchat",
     "logo": "snapchat",
     "urlPrefix": "snapchat.com/",
     "placeholder": "Snapchat user",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "title": "Pinterest",
+    "name": "Pinterest",
     "logo": "pinterest",
     "urlPrefix": "pinterest.com/",
     "placeholder": "Pinterest user",
@@ -71,7 +71,7 @@
   },
   {
     "id": 16,
-    "title": "Tumblr",
+    "name": "Tumblr",
     "logo": "tumblr",
     "urlPrefix": "tumblr.com/",
     "placeholder": "Tumblr user",
@@ -81,7 +81,7 @@
   },
   {
     "id": 17,
-    "title": "Reddit",
+    "name": "Reddit",
     "logo": "reddit",
     "urlPrefix": "reddit.com/",
     "placeholder": "Reddit user",
@@ -91,7 +91,7 @@
   },
   {
     "id": 18,
-    "title": "Medium",
+    "name": "Medium",
     "logo": "medium",
     "urlPrefix": "medium.com/",
     "placeholder": "Medium user",
@@ -101,7 +101,7 @@
   },
   {
     "id": 19,
-    "title": "Flickr",
+    "name": "Flickr",
     "logo": "flickr",
     "urlPrefix": "flickr.com/",
     "placeholder": "Flickr user",
@@ -111,7 +111,7 @@
   },
   {
     "id": 20,
-    "title": "Skype",
+    "name": "Skype",
     "logo": "skype",
     "urlPrefix": "skype.com/",
     "placeholder": "Skype user",
@@ -121,7 +121,7 @@
   },
   {
     "id": 12,
-    "title": "Paypal",
+    "name": "Paypal",
     "logo": "paypal",
     "urlPrefix": "paypal.com/",
     "placeholder": "Paypal user",
@@ -131,7 +131,7 @@
   },
   {
     "id": 21,
-    "title": "Venmo",
+    "name": "Venmo",
     "logo": "circle",
     "urlPrefix": "venmo.com/",
     "placeholder": "Venmo user",
@@ -141,7 +141,7 @@
   },
   {
     "id": 22,
-    "title": "Tik Tok",
+    "name": "Tik Tok",
     "logo": "circle",
     "urlPrefix": "tiktok.com/",
     "placeholder": "Tik Tok user",
@@ -151,7 +151,7 @@
   },
   {
     "id": 7,
-    "title": "Email",
+    "name": "Email",
     "logo": "envelope",
     "urlPrefix": "",
     "placeholder": "Email account",
@@ -161,7 +161,7 @@
   },
   {
     "id": 8,
-    "title": "Website",
+    "name": "Website",
     "logo": "globe",
     "urlPrefix": "",
     "placeholder": "URL",
@@ -171,7 +171,7 @@
   },
   {
     "id": 9,
-    "title": "Phone",
+    "name": "Phone",
     "logo": "phone",
     "urlPrefix": "",
     "placeholder": "Phone number",
@@ -181,7 +181,7 @@
   },
   {
     "id": 10,
-    "title": "Gmail",
+    "name": "Gmail",
     "logo": "google",
     "urlPrefix": "",
     "placeholder": "Gmail account",
@@ -191,7 +191,7 @@
   },
   {
     "id": 13,
-    "title": "StackOverflow",
+    "name": "StackOverflow",
     "logo": "stack-overflow",
     "urlPrefix": "stackoverflow.com/",
     "placeholder": "StackOverflow user",
@@ -201,7 +201,7 @@
   },
   {
     "id": 14,
-    "title": "Github",
+    "name": "Github",
     "logo": "github",
     "urlPrefix": "github.com/",
     "placeholder": "Github user",
@@ -211,7 +211,7 @@
   },
   {
     "id": 15,
-    "title": "BitBucket",
+    "name": "BitBucket",
     "logo": "bitbucket",
     "urlPrefix": "bitbucket.com/",
     "placeholder": "BitBucket user",
@@ -221,7 +221,7 @@
   },
   {
     "id": 11,
-    "title": "Yahoo",
+    "name": "Yahoo",
     "logo": "yahoo",
     "urlPrefix": "",
     "placeholder": "Yahoo account",

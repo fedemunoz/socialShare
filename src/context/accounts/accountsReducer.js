@@ -7,16 +7,22 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
-    case actions.GET_ACCOUNTS:
+    case actions.GET_USER_ACCOUNTS:
       return {
         ...state,
-        accounts: action.payload,
+        userAccounts: action.payload,
+        loading: false,
+      };
+    case actions.GET_AVAILABLE_ACCOUNTS:
+      return {
+        ...state,
+        availableAccounts: action.payload,
         loading: false,
       };
     case actions.ADD_ACCOUNT:
       return {
         ...state,
-        accounts: state.accounts.push({
+        userAccounts: state.userAccounts.push({
           ...action.payload,
           email: true,
         }),
@@ -25,7 +31,7 @@ const reducer = (state, action) => {
     case actions.REMOVE_ACCOUNT:
       return {
         ...state,
-        accounts: state.accounts.filter(
+        userAccounts: state.userAccounts.filter(
           (account) => account.id !== action.payload
         ),
         loading: false,
@@ -33,7 +39,7 @@ const reducer = (state, action) => {
     case actions.SELECT_ALL_ACCOUNTS:
       return {
         ...state,
-        accounts: state.accounts.map((account) => {
+        userAccounts: state.userAccounts.map((account) => {
           return {
             ...account,
             email: action.payload,
@@ -44,7 +50,7 @@ const reducer = (state, action) => {
     case actions.SELECT_ACCOUNT:
       return {
         ...state,
-        accounts: state.accounts.map((account) => {
+        userAccounts: state.userAccounts.map((account) => {
           return account.id.toString() !== action.payload.id
             ? account
             : {
@@ -53,11 +59,6 @@ const reducer = (state, action) => {
               };
         }),
         loading: false,
-      };
-    case actions.SET_SHOW_QR:
-      return {
-        ...state,
-        showQr: action.payload,
       };
     default:
       return state;

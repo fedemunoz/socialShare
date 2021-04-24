@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Fab from "@material-ui/core/Fab";
 import Button from "@material-ui/core/Button";
@@ -6,18 +7,18 @@ import AddIcon from "@material-ui/icons/Add";
 import "./addButton.scss";
 
 const AddButton = ({ type }) => {
-  return type === "sm" ? (
-    <div className='app-add-button'>
-      <Fab aria-label='add' className='sm-button'>
-        <AddIcon />
-      </Fab>
-    </div>
-  ) : (
-    <div className='app-add-button'>
-      <Button variant='contained' startIcon={<AddIcon />}>
-        Add account
-      </Button>
-    </div>
+  return (
+    <Link className='app-add-button' to='/add-account'>
+      {type === "sm" ? (
+        <Fab aria-label='add' className='sm-button'>
+          <AddIcon />
+        </Fab>
+      ) : (
+        <Button variant='contained' startIcon={<AddIcon />}>
+          Add account
+        </Button>
+      )}
+    </Link>
   );
 };
 

@@ -14,7 +14,7 @@ const AccountsPage = () => {
     // eslint-disable-next-line
   }, []);
 
-  return !accountsContext.accounts.length ? (
+  return !accountsContext.userAccounts.length ? (
     <NoAccounts />
   ) : (
     <Fragment>

@@ -5,8 +5,8 @@ import * as actions from "./accountsActions";
 
 const AccountsState = (props) => {
   const initialState = {
-    accounts: [],
-    showQr: null,
+    availableAccounts: [],
+    userAccounts: [],
     loading: true,
   };
 
@@ -16,7 +16,7 @@ const AccountsState = (props) => {
     dispatch({ type: actions.SET_LOADING });
   };
 
-  const getAccounts = async () => {
+  const getUserAccounts = async () => {
     setLoading();
     const response = await fetch("../../data/test_user_data.json", {
       headers: {
@@ -24,11 +24,27 @@ const AccountsState = (props) => {
         Accept: "application/json",
       },
     });
-    const accounts = await response.json();
+    const userAccounts = await response.json();
 
     dispatch({
-      type: actions.GET_ACCOUNTS,
-      payload: accounts,
+      type: actions.GET_USER_ACCOUNTS,
+      payload: userAccounts,
+    });
+  };
+
+  const getAvailableAccounts = async () => {
+    setLoading();
+    const response = await fetch("../../data/available_accounts.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
+    const allAccounts = await response.json();
+
+    dispatch({
+      type: actions.GET_AVAILABLE_ACCOUNTS,
+      payload: allAccounts,
     });
   };
 
@@ -62,13 +78,6 @@ const AccountsState = (props) => {
     });
   };
 
-  const setShowQr = (account) => {
-    dispatch({
-      type: actions.SET_SHOW_QR,
-      payload: account,
-    });
-  };
-
   const sendEmail = (accounts) => {
     dispatch({
       type: actions.SEND_EMAIL,
@@ -80,15 +89,15 @@ const AccountsState = (props) => {
     <AccountsContext.Provider
       value={{
         loading: state.loading,
-        accounts: state.accounts,
-        showQr: state.showQr,
+        userAccounts: state.userAccounts,
+        availableAccounts: state.availableAccounts,
         setLoading,
-        getAccounts,
+        getUserAccounts,
+        getAvailableAccounts,
         addAccount,
         removeAccount,
         selectAllAccounts,
         selectAccount,
-        setShowQr,
         sendEmail,
       }}
     >

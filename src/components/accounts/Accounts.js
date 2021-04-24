@@ -6,13 +6,13 @@ import Spinner from "../layout/Spinner";
 const Accounts = () => {
   const accountsContext = useContext(AccountsContext);
 
-  const { loading, accounts } = accountsContext;
+  const { loading, userAccounts } = accountsContext;
 
   return loading ? (
     <Spinner />
   ) : (
     <Fragment>
-      {accounts.map((account) => (
+      {userAccounts.map((account) => (
         <AccountItem key={account.id} account={account} />
       ))}
     </Fragment>

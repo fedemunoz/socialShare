@@ -13,7 +13,7 @@ const SendToEmail = () => {
 
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
-  const { accounts, sendEmail } = accountsContext;
+  const { userAccounts, sendEmail } = accountsContext;
 
   const onChange = (event) => {
     if (buttonDisabled) setButtonDisabled(false);
@@ -23,7 +23,7 @@ const SendToEmail = () => {
   };
 
   const onClick = () => {
-    const emailAccounts = accounts.filter((account) => account.email);
+    const emailAccounts = userAccounts.filter((account) => account.email);
     !emailAccounts.length
       ? pageContext.showModal({
           title: "Error",
