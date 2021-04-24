@@ -1,23 +1,33 @@
 import React, { useContext, useEffect } from "react";
 import PageContext from "../../context/page/pageContext";
 import AccountsContext from "../../context/accounts/accountsContext";
-import Accounts from "../accounts/Accounts";
+import AccountQrButton from "../accounts/AccountQrButton";
 import NoAccounts from "../accounts/NoAccounts";
 import Spinner from "../layout/Spinner";
+import "./myQrPage.scss";
 
 const MyQrPage = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
+  const { loading, accounts, getAccounts } = accountsContext;
 
   useEffect(() => {
     pageContext.setPage({ title: "My QR", route: "my-qr" });
-    accountsContext.getAccounts();
+    getAccounts();
     // eslint-disable-next-line
   }, []);
 
-  if (accountsContext.loading) return <Spinner />;
+  if (loading) return <Spinner />;
 
-  return !accountsContext.accounts.length ? <NoAccounts /> : <Accounts />;
+  return !accounts.length ? (
+    <NoAccounts />
+  ) : (
+    <div className='qr-button-container'>
+      {accounts.map((account) => (
+        <AccountQrButton key={account.id} account={account} />
+      ))}
+    </div>
+  );
 };
 
 export default MyQrPage;
