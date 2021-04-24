@@ -1,14 +1,19 @@
-import { SET_PAGE, SHOW_MODAL, HIDE_MODAL } from "./pageActions";
+import * as actions from "./pageActions";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SET_PAGE:
+    case actions.SET_PAGE:
       return {
         ...state,
         title: action.payload.title,
         route: action.payload.route,
       };
-    case SHOW_MODAL:
+    case actions.SET_BACK_URL:
+      return {
+        ...state,
+        backUrl: action.payload,
+      };
+    case actions.SHOW_MODAL:
       return {
         ...state,
         modal: {
@@ -16,7 +21,7 @@ const reducer = (state, action) => {
           msg: action.payload.msg,
         },
       };
-    case HIDE_MODAL:
+    case actions.HIDE_MODAL:
       return {
         ...state,
         modal: null,

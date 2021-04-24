@@ -1,12 +1,13 @@
 import React, { useReducer } from "react";
 import PageContext from "./pageContext";
 import PageReducer from "./pageReducer";
-import { SET_PAGE, SHOW_MODAL, HIDE_MODAL } from "./pageActions";
+import * as actions from "./pageActions";
 
 const PageState = (props) => {
   const initialState = {
     title: null,
     route: "",
+    backUrl: "",
     modal: null,
   };
 
@@ -14,21 +15,28 @@ const PageState = (props) => {
 
   const setPage = (pageData) => {
     dispatch({
-      type: SET_PAGE,
+      type: actions.SET_PAGE,
       payload: pageData,
+    });
+  };
+
+  const setBackUrl = (backUrl) => {
+    dispatch({
+      type: actions.SET_BACK_URL,
+      payload: backUrl,
     });
   };
 
   const showModal = (modalData) => {
     dispatch({
-      type: SHOW_MODAL,
+      type: actions.SHOW_MODAL,
       payload: modalData,
     });
   };
 
   const hideModal = () => {
     dispatch({
-      type: HIDE_MODAL,
+      type: actions.HIDE_MODAL,
     });
   };
 
@@ -38,7 +46,9 @@ const PageState = (props) => {
         title: state.title,
         route: state.route,
         modal: state.modal,
+        backUrl: state.backUrl,
         setPage,
+        setBackUrl,
         showModal,
         hideModal,
       }}

@@ -23,21 +23,21 @@ const BottomNav = () => {
   };
 
   return (
-    <div className="app-bottom-navbar">
+    <div className='app-bottom-navbar'>
       <BottomNavigation value={value} onChange={onChange} showLabels>
         <BottomNavigationAction
-          value="email"
-          label="Email"
+          value='email'
+          label='Email'
           icon={<MailOutlineIcon />}
         />
         <BottomNavigationAction
-          value=""
-          label="My QR"
+          value=''
+          label='My QR'
           icon={<CropFreeIcon />}
         />
         <BottomNavigationAction
-          value="accounts"
-          label="Accounts"
+          value='accounts'
+          label='Accounts'
           icon={<PersonIcon />}
         />
       </BottomNavigation>
