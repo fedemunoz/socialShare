@@ -4,41 +4,47 @@
     "logo": "instagram",
     "title": "Instagram",
     "name": "thenomadclub",
-    "url": "http://www.instagram.com/thenomadclub"
+    "url": "http://www.instagram.com/thenomadclub",
+    "email": true
   },
   {
     "id": 1,
     "logo": "facebook",
     "title": "Facebook",
     "name": "jdsakjas",
-    "url": "http://www.facebook.com/jdsakjas"
+    "url": "http://www.facebook.com/jdsakjas",
+    "email": true
   },
   {
     "id": 2,
     "logo": "twitter",
     "title": "Twitter",
     "name": "fedemunoz88",
-    "url": "http://www.twitter.com/fedemunoz88"
+    "url": "http://www.twitter.com/fedemunoz88",
+    "email": true
   },
   {
     "id": 3,
     "logo": "youtube",
     "title": "Youtube",
     "name": "jdsakjas",
-    "url": "http://www.youtube.com/jdsakjas"
+    "url": "http://www.youtube.com/jdsakjas",
+    "email": true
   },
   {
     "id": 4,
     "logo": "linkedin",
     "title": "Linkedin",
     "name": "jdsakjas",
-    "url": "http://www.linkedin.com/jdsakjas"
+    "url": "http://www.linkedin.com/jdsakjas",
+    "email": true
   },
   {
     "id": 5,
     "logo": "google",
     "title": "Google",
     "name": "jdsakjas@gmail.com",
-    "url": "mailto:jdsakjas@gmail.com"
+    "url": "mailto:jdsakjas@gmail.com",
+    "email": true
   }
 ]

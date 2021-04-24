@@ -6,7 +6,6 @@ import * as actions from "./accountsActions";
 const AccountsState = (props) => {
   const initialState = {
     accounts: [],
-    selectedAccounts: {},
     showQr: null,
     loading: false,
   };
@@ -17,19 +16,15 @@ const AccountsState = (props) => {
     dispatch({ type: actions.SET_LOADING });
   };
 
-  const getFromStorage = async () => {
+  const getAccounts = async () => {
+    setLoading();
     const response = await fetch("../../data/test_user_data.json", {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
       },
     });
-    return response.json();
-  };
-
-  const getAccounts = async () => {
-    setLoading();
-    const accounts = await getFromStorage();
+    const accounts = await response.json();
 
     dispatch({
       type: actions.GET_ACCOUNTS,
@@ -54,22 +49,16 @@ const AccountsState = (props) => {
   };
 
   const selectAllAccounts = async (selectAll) => {
-    const accounts = await getFromStorage();
-    let selection = { all: selectAll };
-    for (const account of accounts) {
-      selection[account.id] = selectAll;
-    }
-
     dispatch({
-      type: actions.SET_SELECTED_ACCOUNTS,
-      payload: selection,
+      type: actions.SELECT_ALL_ACCOUNTS,
+      payload: selectAll,
     });
   };
 
-  const setSelectedAccounts = (selection) => {
+  const selectAccount = (id, value) => {
     dispatch({
-      type: actions.SET_SELECTED_ACCOUNTS,
-      payload: selection,
+      type: actions.SELECT_ACCOUNT,
+      payload: { id, value },
     });
   };
 
@@ -85,14 +74,13 @@ const AccountsState = (props) => {
       value={{
         loading: state.loading,
         accounts: state.accounts,
-        selectedAccounts: state.selectedAccounts,
         showQr: state.showQr,
         setLoading,
         getAccounts,
         addAccount,
         removeAccount,
         selectAllAccounts,
-        setSelectedAccounts,
+        selectAccount,
         setShowQr,
       }}
     >
