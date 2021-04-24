@@ -1,17 +1,13 @@
-import React, { useContext } from "react";
+import React from "react";
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import validator from "validator";
-import AccountsContext from "../../context/accounts/accountsContext";
 import "./sendToEmail.scss";
 
 const SendToEmail = () => {
   const [buttonDisabled, setButtonDisabled] = React.useState(true);
   const [showError, setshowError] = React.useState(false);
-
-  const accountsContext = useContext(AccountsContext);
-  const { loading } = accountsContext;
 
   const onChange = (event) => {
     if (buttonDisabled) setButtonDisabled(false);
@@ -32,11 +28,8 @@ const SendToEmail = () => {
             helperText={showError && "Enter a valid email address."}
           />
         </Grid>
-        <Grid item className={showError ? "align-center" : ""}>
-          <Button
-            variant='contained'
-            disabled={loading || buttonDisabled || showError}
-          >
+        <Grid item className={showError ? "align-self-center" : ""}>
+          <Button variant='contained' disabled={buttonDisabled || showError}>
             Send
           </Button>
         </Grid>

@@ -1,8 +1,8 @@
-@import '../../colors';
+@import "../../colors";
 
 .account-selector-container {
   margin: 1rem 0;
-  
+
   .MuiFormControl-root {
     display: flex;
     flex: 1;
@@ -22,8 +22,8 @@
 
     .selected-checkbox {
       color: $primary;
-    }    
-    
+    }
+
     .MuiCheckbox-colorSecondary.Mui-checked {
       color: $primary;
     }

@@ -80,7 +80,7 @@ const AccountSelector = () => {
 
       <FormControl
         required
-        error={error}
+        error={!allSelected && !indeterminate}
         component='fieldset'
         className='full-width-input'
       >
@@ -106,7 +106,9 @@ const AccountSelector = () => {
             />
           ))}
         </FormGroup>
-        {error && <FormHelperText>Select at least one account</FormHelperText>}
+        <FormHelperText className='align-self-end'>
+          Select at least one account
+        </FormHelperText>
       </FormControl>
     </div>
   );

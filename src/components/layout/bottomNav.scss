@@ -1,4 +1,4 @@
-@import '../../colors';
+@import "../../colors";
 
 .app-bottom-navbar {
   .MuiBottomNavigation-root {
@@ -9,5 +9,14 @@
         color: $primary;
       }
     }
-  }  
+  }
+
+  button {
+    background-color: $white;
+    color: $gray;
+  }
+  button:hover {
+    background-color: $white;
+    color: $gray;
+  }
 }
