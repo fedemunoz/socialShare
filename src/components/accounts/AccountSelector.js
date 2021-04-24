@@ -27,7 +27,6 @@ const AccountSelector = () => {
   }, [accountsContext]);
 
   const selectAll = (event) => {
-    setallSelected(event.target.checked);
     selectAllAccounts(event.target.checked);
   };
 
