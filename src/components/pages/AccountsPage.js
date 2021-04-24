@@ -1,21 +1,27 @@
-import React, { Fragment, useContext, useEffect } from 'react';
-import PageContext from '../../context/page/pageContext';
-import Accounts from '../accounts/Accounts';
-import AddButton from '../../components/layout/AddButton';
+import React, { Fragment, useContext, useEffect } from "react";
+import AccountsContext from "../../context/accounts/accountsContext";
+import PageContext from "../../context/page/pageContext";
+import Accounts from "../accounts/Accounts";
+import NoAccounts from "../accounts/NoAccounts";
+import AddButton from "../layout/AddButton";
 
 const AccountsPage = () => {
   const pageContext = useContext(PageContext);
+  const accountsContext = useContext(AccountsContext);
 
   useEffect(() => {
-    pageContext.setPage({ title: 'My Accounts', route: 'accounts' });
+    pageContext.setPage({ title: "My Accounts", route: "accounts" });
     // eslint-disable-next-line
   }, []);
 
-  return (<Fragment>
+  return !accountsContext.accounts.length ? (
+    <NoAccounts />
+  ) : (
+    <Fragment>
       <Accounts />
       <AddButton />
     </Fragment>
-  )
+  );
 };
 
 export default AccountsPage;

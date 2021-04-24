@@ -2,6 +2,11 @@ import * as actions from "./accountsActions";
 
 const reducer = (state, action) => {
   switch (action.type) {
+    case actions.SET_LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
     case actions.GET_ACCOUNTS:
       return {
         ...state,
