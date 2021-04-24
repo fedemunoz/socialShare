@@ -13,7 +13,7 @@ const MyQrPage = () => {
 
   useEffect(() => {
     pageContext.setPage({ title: "My QR", route: "my-qr" });
-    getAccounts();
+    if (!accounts.length) getAccounts();
     // eslint-disable-next-line
   }, []);
 
