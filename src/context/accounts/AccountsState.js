@@ -6,7 +6,7 @@ import * as actions from "./accountsActions";
 const AccountsState = (props) => {
   const initialState = {
     availableAccounts: [],
-    userAccounts: [],
+    userAccounts: null,
     loading: true,
   };
 

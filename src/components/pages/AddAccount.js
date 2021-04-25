@@ -11,7 +11,7 @@ const AddAccount = () => {
   const { loading, availableAccounts, getAvailableAccounts } = accountsContext;
 
   useEffect(() => {
-    pageContext.setPage({ title: "Add account", backUrl: "/accounts" });
+    pageContext.setPage({ title: "Add account", showBackButton: true });
     if (!availableAccounts.length) getAvailableAccounts();
     // eslint-disable-next-line
   }, []);

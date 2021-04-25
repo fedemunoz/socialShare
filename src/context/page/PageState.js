@@ -6,7 +6,7 @@ import * as actions from "./pageActions";
 const PageState = (props) => {
   const initialState = {
     title: null,
-    backUrl: "",
+    showBackButton: false,
     modal: null,
   };
 
@@ -36,7 +36,7 @@ const PageState = (props) => {
     <PageContext.Provider
       value={{
         title: state.title,
-        backUrl: state.backUrl,
+        showBackButton: state.showBackButton,
         modal: state.modal,
         setPage,
         showModal,

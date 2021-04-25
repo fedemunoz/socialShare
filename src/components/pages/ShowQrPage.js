@@ -10,7 +10,7 @@ const ShowQrPage = (props) => {
   const pageContext = useContext(PageContext);
 
   useEffect(() => {
-    pageContext.setPage({ title: "Scan to share", backUrl: "/" });
+    pageContext.setPage({ title: "Scan to share", showBackButton: true });
     // eslint-disable-next-line
   }, []);
 

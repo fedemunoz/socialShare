@@ -35,6 +35,8 @@ const AccountSelector = () => {
   };
 
   const checkSelection = () => {
+    if (!userAccounts) return;
+
     let selected = 0;
     for (const account of userAccounts) {
       if (account.email) selected++;

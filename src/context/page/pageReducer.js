@@ -6,7 +6,7 @@ const reducer = (state, action) => {
       return {
         ...state,
         title: action.payload.title,
-        backUrl: action.payload.backUrl || "",
+        showBackButton: action.payload.showBackButton,
       };
     case actions.SHOW_MODAL:
       return {

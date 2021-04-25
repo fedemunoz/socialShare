@@ -23,7 +23,7 @@ const BottomNav = () => {
   };
 
   return (
-    !pageContext.backUrl && (
+    !pageContext.showBackButton && (
       <div className='app-bottom-navbar'>
         <BottomNavigation value={route} onChange={onChange} showLabels>
           <BottomNavigationAction

@@ -8,13 +8,14 @@ import AddButton from "../layout/AddButton";
 const AccountsPage = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
+  const { userAccounts } = accountsContext;
 
   useEffect(() => {
     pageContext.setPage({ title: "My Accounts" });
     // eslint-disable-next-line
   }, []);
 
-  return !accountsContext.userAccounts.length ? (
+  return userAccounts && !userAccounts.length ? (
     <NoAccounts />
   ) : (
     <Fragment>

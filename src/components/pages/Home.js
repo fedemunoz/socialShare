@@ -13,11 +13,11 @@ const Home = () => {
 
   useEffect(() => {
     pageContext.setPage({ title: "My QR" });
-    if (!userAccounts.length) getUserAccounts();
+    if (!userAccounts || !userAccounts.length) getUserAccounts();
     // eslint-disable-next-line
   }, []);
 
-  if (loading) return <Spinner />;
+  if (loading || !userAccounts) return <Spinner />;
 
   return !userAccounts.length ? (
     <NoAccounts />

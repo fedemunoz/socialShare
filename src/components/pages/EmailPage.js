@@ -9,13 +9,14 @@ import ContentDivider from "../layout/ContentDivider";
 const EmailPage = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
+  const { userAccounts } = accountsContext;
 
   useEffect(() => {
     pageContext.setPage({ title: "Send by Email" });
     // eslint-disable-next-line
   }, []);
 
-  return !accountsContext.userAccounts.length ? (
+  return userAccounts && !userAccounts.length ? (
     <NoAccounts />
   ) : (
     <Fragment>

@@ -10,17 +10,17 @@ import PageContext from "../../context/page/pageContext";
 const Navbar = () => {
   const history = useHistory();
   const pageContext = useContext(PageContext);
-  const { title, backUrl } = pageContext;
-
-  const onClick = () => {
-    history.push(backUrl);
-  };
+  const { title, showBackButton } = pageContext;
 
   return (
     <AppBar position='static' color='default'>
       <Toolbar>
-        {backUrl && (
-          <IconButton edge='start' aria-label='back' onClick={onClick}>
+        {showBackButton && (
+          <IconButton
+            edge='start'
+            aria-label='back'
+            onClick={() => history.goBack()}
+          >
             <ArrowBackIosIcon className='color-dark' />
           </IconButton>
         )}
