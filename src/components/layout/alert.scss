@@ -1,0 +1,10 @@
+@import "../../colors";
+
+.modal-close-button {
+  margin-top: 2rem;
+  text-align: center;
+  button {
+    color: $primary-contrast;
+    background-color: $primary;
+  }
+}

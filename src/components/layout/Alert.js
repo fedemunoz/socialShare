@@ -2,6 +2,8 @@ import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import PageContext from "../../context/page/pageContext";
+import Button from "@material-ui/core/Button";
+import "./alert.scss";
 
 const getModalStyle = () => ({
   top: "50%",
@@ -40,6 +42,11 @@ const Alert = () => {
         <div style={modalStyle} className={classes.paper}>
           <h2 id='simple-modal-title'>{modal.title}</h2>
           <p id='simple-modal-description'>{modal.msg}</p>
+          <div className='modal-close-button'>
+            <Button variant='contained' onClick={handleClose}>
+              Close
+            </Button>
+          </div>
         </div>
       </Modal>
     )

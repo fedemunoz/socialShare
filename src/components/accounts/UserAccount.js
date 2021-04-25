@@ -9,6 +9,12 @@ import Icon from "../layout/Icon";
 // import AccountsContext from "../../context/accounts/accountsContext";
 import DialogContext from "../../context/dialog/dialogContext";
 
+const itemStyle = {
+  flex: "1",
+  display: "flex",
+  alignItems: "center",
+};
+
 const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
   const dialogContext = useContext(DialogContext);
@@ -24,11 +30,13 @@ const UserAccount = ({ account: { id, logo, name, url } }) => {
   };
 
   return (
-    <ListItem button onClick={onClick}>
-      <ListItemIcon>
-        <Icon icon={logo} size='lg' className='color-primary' />
-      </ListItemIcon>
-      <ListItemText primary={name} />
+    <ListItem button>
+      <div style={itemStyle} onClick={onClick}>
+        <ListItemIcon>
+          <Icon icon={logo} size='lg' className='color-primary' />
+        </ListItemIcon>
+        <ListItemText primary={name} />
+      </div>
       <IconButton
         aria-label='delete'
         onClick={confirmRemove}
