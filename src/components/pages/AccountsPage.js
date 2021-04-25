@@ -1,7 +1,7 @@
 import React, { Fragment, useContext, useEffect } from "react";
 import AccountsContext from "../../context/accounts/accountsContext";
 import PageContext from "../../context/page/pageContext";
-import Accounts from "../accounts/Accounts";
+import UserAccountsList from "../accounts/UserAccountsList";
 import NoAccounts from "../accounts/NoAccounts";
 import AddButton from "../layout/AddButton";
 
@@ -18,7 +18,7 @@ const AccountsPage = () => {
     <NoAccounts />
   ) : (
     <Fragment>
-      <Accounts />
+      <UserAccountsList />
       <AddButton />
     </Fragment>
   );

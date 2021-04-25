@@ -2,12 +2,14 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from "@material-ui/icons/Delete";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "../layout/Icon";
 // import AccountsContext from "../../context/accounts/accountsContext";
 import DialogContext from "../../context/dialog/dialogContext";
-import "./accountItems.scss";
 
-const AccountItem = ({ account: { id, logo, name, url } }) => {
+const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
   const dialogContext = useContext(DialogContext);
 
@@ -22,25 +24,24 @@ const AccountItem = ({ account: { id, logo, name, url } }) => {
   };
 
   return (
-    <div className='account-container'>
-      <div className='card' onClick={itemClick}>
-        <h3>
-          <Icon icon={logo} size='lg' /> {name}
-        </h3>
-      </div>
+    <ListItem button>
+      <ListItemIcon>
+        <Icon icon={logo} size='lg' className='color-primary' />
+      </ListItemIcon>
+      <ListItemText primary={name} />
       <IconButton
         aria-label='delete'
         onClick={confirmRemove}
         className='deleteButton'
       >
-        <DeleteIcon />
+        <DeleteIcon className='color-danger' />
       </IconButton>
-    </div>
+    </ListItem>
   );
 };
 
-AccountItem.propTypes = {
+UserAccount.propTypes = {
   account: PropTypes.object.isRequired,
 };
 
-export default AccountItem;
+export default UserAccount;

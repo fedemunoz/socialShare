@@ -6,85 +6,133 @@
         "name": "Instagram",
         "logo": "instagram",
         "urlPrefix": "instagram.com/",
-        "placeholder": "Instagram user",        
-        "hasLink": true
+        "placeholder": "Instagram user"        
       },
       {        
         "name": "Facebook",
         "logo": "facebook",
         "urlPrefix": "facebook.com/",
-        "placeholder": "Facebook user",        
-        "hasLink": true
+        "placeholder": "Facebook user"        
       },
       {        
         "name": "Twitter",
         "logo": "twitter",
         "urlPrefix": "twitter.com/",
-        "placeholder": "Twitter user",        
-        "hasLink": true
+        "placeholder": "Twitter user"        
       },
       {        
         "name": "Youtube",
         "logo": "youtube",
         "urlPrefix": "youtube.com/",
-        "placeholder": "Youtube user",        
-        "hasLink": true
+        "placeholder": "Youtube user"        
       },
       {        
         "name": "Linkedin",
         "logo": "linkedin",
         "urlPrefix": "linkedin.com/",
-        "placeholder": "Linkedin user",        
-        "hasLink": true
+        "placeholder": "Linkedin user"        
       },
       {        
         "name": "Snapchat",
         "logo": "snapchat",
         "urlPrefix": "snapchat.com/",
-        "placeholder": "Snapchat user",        
-        "hasLink": true
+        "placeholder": "Snapchat user"        
       },
       {        
         "name": "Pinterest",
         "logo": "pinterest",
         "urlPrefix": "pinterest.com/",
-        "placeholder": "Pinterest user",        
-        "hasLink": true
+        "placeholder": "Pinterest user"        
       },
       {        
         "name": "Tumblr",
         "logo": "tumblr",
         "urlPrefix": "tumblr.com/",
-        "placeholder": "Tumblr user",        
-        "hasLink": true
+        "placeholder": "Tumblr user"        
       },
       {        
         "name": "Reddit",
         "logo": "reddit",
         "urlPrefix": "reddit.com/",
-        "placeholder": "Reddit user",        
-        "hasLink": true
+        "placeholder": "Reddit user"        
       },
       {        
         "name": "Medium",
         "logo": "medium",
         "urlPrefix": "medium.com/",
-        "placeholder": "Medium user",        
-        "hasLink": true
+        "placeholder": "Medium user"        
       },
       {        
         "name": "Flickr",
         "logo": "flickr",
         "urlPrefix": "flickr.com/",
-        "placeholder": "Flickr user",        
-        "hasLink": true
+        "placeholder": "Flickr user"        
       },
       {        
         "name": "Tik Tok",
         "logo": "tiktok",
         "urlPrefix": "tiktok.com/",
-        "placeholder": "Tik Tok user",        
-        "hasLink": true
+        "placeholder": "Tik Tok user"        
+      },
+      {        
+        "name": "Spotify",
+        "logo": "spotify",
+        "urlPrefix": "open.spotify.com/user/",
+        "placeholder": "Spotify user"        
+      }
+    ]
+  },
+  {
+    "name": "General",
+    "accounts": [
+      {        
+        "name": "Email",
+        "logo": "envelope",
+        "faIcon": "fas",        
+        "placeholder": "Email account"        
+      },      
+      {        
+        "name": "Link",
+        "logo": "link",
+        "faIcon": "fas",        
+        "placeholder": "Link"        
+      },
+      {        
+        "name": "Phone",
+        "logo": "phone",
+        "faIcon": "fas",        
+        "placeholder": "Phone number"        
+      },
+      {        
+        "name": "Website",
+        "logo": "globe",
+        "faIcon": "fas",        
+        "placeholder": "URL"        
+      }
+    ]
+  },
+  {
+    "name": "Companies",
+    "accounts": [
+      {        
+        "name": "Apple",
+        "logo": "apple",        
+        "placeholder": "Apple account"        
+      },
+      {        
+        "name": "Google",
+        "logo": "google",        
+        "placeholder": "Google account"        
+      },
+      {        
+        "name": "Microsoft",
+        "logo": "microsoft",        
+        "placeholder": "Microsoft account"        
+      },
+      {        
+        "name": "Yahoo",
+        "logo": "yahoo",        
+        "placeholder": "Yahoo account"        
       }
     ]
   },
@@ -95,47 +143,23 @@
         "name": "Skype",
         "logo": "skype",
         "urlPrefix": "skype.com/",
-        "placeholder": "Skype user",        
-        "hasLink": true
+        "placeholder": "Skype user"        
       },
       {        
-        "name": "Email",
-        "logo": "envelope",
-        "faIcon": "fas",
-        "urlPrefix": "",
-        "placeholder": "Email account",        
-        "hasLink": false
+        "name": "Discord",
+        "logo": "discord",
+        "placeholder": "Discord user"        
       },
       {        
-        "name": "Website",
-        "logo": "globe",
-        "faIcon": "fas",
-        "urlPrefix": "",
-        "placeholder": "URL",        
-        "hasLink": false
+        "name": "Telegram",
+        "logo": "telegram",
+        "placeholder": "Telegram user"        
       },
       {        
-        "name": "Phone",
-        "logo": "phone",
-        "faIcon": "fas",
-        "urlPrefix": "",
-        "placeholder": "Phone number",        
-        "hasLink": false
-      },
-      {        
-        "name": "Gmail",
-        "logo": "google",
-        "urlPrefix": "",
-        "placeholder": "Gmail account",        
-        "hasLink": false
-      },
-      {        
-        "name": "Yahoo",
-        "logo": "yahoo",
-        "urlPrefix": "",
-        "placeholder": "Yahoo account",        
-        "hasLink": true
-      }    
+        "name": "Whatsapp",
+        "logo": "whatsapp",
+        "placeholder": "Whatsapp user"        
+      }      
     ]
   },
   {
@@ -145,15 +169,13 @@
         "name": "Paypal",
         "logo": "paypal",
         "urlPrefix": "paypal.com/",
-        "placeholder": "Paypal user",        
-        "hasLink": true
+        "placeholder": "Paypal user"        
       },
       {        
         "name": "Stripe",
         "logo": "stripe",
         "urlPrefix": "stripe.com/",
-        "placeholder": "Stripe user",        
-        "hasLink": true
+        "placeholder": "Stripe user"        
       }
     ]
   },
@@ -164,50 +186,43 @@
         "name": "StackOverflow",
         "logo": "stack-overflow",
         "urlPrefix": "stackoverflow.com/",
-        "placeholder": "StackOverflow user",        
-        "hasLink": true
+        "placeholder": "StackOverflow user"        
       },
       {        
         "name": "Github",
         "logo": "github",
         "urlPrefix": "github.com/",
-        "placeholder": "Github user",        
-        "hasLink": true
+        "placeholder": "Github user"        
       },
       {        
         "name": "Gitlab",
         "logo": "gitlab",
         "urlPrefix": "gitlab.com/",
-        "placeholder": "Gitlab user",        
-        "hasLink": true
+        "placeholder": "Gitlab user"        
       },
       {        
         "name": "Dev",
         "logo": "dev",
         "urlPrefix": "dev.com/",
-        "placeholder": "Dev user",        
-        "hasLink": true
+        "placeholder": "Dev user"        
       },
       {        
         "name": "BitBucket",
         "logo": "bitbucket",
         "urlPrefix": "bitbucket.com/",
-        "placeholder": "BitBucket user",        
-        "hasLink": true
+        "placeholder": "BitBucket user"        
       },
       {        
         "name": "Trello",
         "logo": "trello",
         "urlPrefix": "trello.com/",
-        "placeholder": "Trello user",        
-        "hasLink": true
+        "placeholder": "Trello user"        
       },
       {        
         "name": "Figma",
         "logo": "figma",
         "urlPrefix": "figma.com/",
-        "placeholder": "Figma user",        
-        "hasLink": true
+        "placeholder": "Figma user"        
       }
     ]
   }

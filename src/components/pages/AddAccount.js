@@ -1,7 +1,8 @@
-import React, { useContext, useEffect } from "react";
+import React, { Fragment, useContext, useEffect } from "react";
 import AccountsContext from "../../context/accounts/accountsContext";
 import PageContext from "../../context/page/pageContext";
 import Spinner from "../layout/Spinner";
+import ContentDivider from "../layout/ContentDivider";
 import AccountCategory from "../accounts/AccountCategory";
 
 const AddAccount = () => {
@@ -19,10 +20,10 @@ const AddAccount = () => {
     <Spinner />
   ) : (
     availableAccounts.map((accountCategory) => (
-      <AccountCategory
-        key={accountCategory.name}
-        accountCategory={accountCategory}
-      />
+      <Fragment key={accountCategory.name}>
+        <AccountCategory accountCategory={accountCategory} />
+        <ContentDivider />
+      </Fragment>
     ))
   );
 };
