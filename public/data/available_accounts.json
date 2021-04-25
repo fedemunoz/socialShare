@@ -1,232 +1,214 @@
 [
   {
-    "id": 0,
-    "name": "Instagram",
-    "logo": "instagram",
-    "urlPrefix": "instagram.com/",
-    "placeholder": "Instagram user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
+    "name": "Social Networks",
+    "accounts": [
+      {        
+        "name": "Instagram",
+        "logo": "instagram",
+        "urlPrefix": "instagram.com/",
+        "placeholder": "Instagram user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Facebook",
+        "logo": "facebook",
+        "urlPrefix": "facebook.com/",
+        "placeholder": "Facebook user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Twitter",
+        "logo": "twitter",
+        "urlPrefix": "twitter.com/",
+        "placeholder": "Twitter user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Youtube",
+        "logo": "youtube",
+        "urlPrefix": "youtube.com/",
+        "placeholder": "Youtube user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Linkedin",
+        "logo": "linkedin",
+        "urlPrefix": "linkedin.com/",
+        "placeholder": "Linkedin user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Snapchat",
+        "logo": "snapchat",
+        "urlPrefix": "snapchat.com/",
+        "placeholder": "Snapchat user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Pinterest",
+        "logo": "pinterest",
+        "urlPrefix": "pinterest.com/",
+        "placeholder": "Pinterest user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Tumblr",
+        "logo": "tumblr",
+        "urlPrefix": "tumblr.com/",
+        "placeholder": "Tumblr user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Reddit",
+        "logo": "reddit",
+        "urlPrefix": "reddit.com/",
+        "placeholder": "Reddit user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Medium",
+        "logo": "medium",
+        "urlPrefix": "medium.com/",
+        "placeholder": "Medium user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Flickr",
+        "logo": "flickr",
+        "urlPrefix": "flickr.com/",
+        "placeholder": "Flickr user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Tik Tok",
+        "logo": "tiktok",
+        "urlPrefix": "tiktok.com/",
+        "placeholder": "Tik Tok user",        
+        "hasLink": true
+      }
+    ]
   },
   {
-    "id": 1,
-    "name": "Facebook",
-    "logo": "facebook",
-    "urlPrefix": "facebook.com/",
-    "placeholder": "Facebook user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
+    "name": "Communication",
+    "accounts": [
+      {        
+        "name": "Skype",
+        "logo": "skype",
+        "urlPrefix": "skype.com/",
+        "placeholder": "Skype user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Email",
+        "logo": "envelope",
+        "faIcon": "fas",
+        "urlPrefix": "",
+        "placeholder": "Email account",        
+        "hasLink": false
+      },
+      {        
+        "name": "Website",
+        "logo": "globe",
+        "faIcon": "fas",
+        "urlPrefix": "",
+        "placeholder": "URL",        
+        "hasLink": false
+      },
+      {        
+        "name": "Phone",
+        "logo": "phone",
+        "faIcon": "fas",
+        "urlPrefix": "",
+        "placeholder": "Phone number",        
+        "hasLink": false
+      },
+      {        
+        "name": "Gmail",
+        "logo": "google",
+        "urlPrefix": "",
+        "placeholder": "Gmail account",        
+        "hasLink": false
+      },
+      {        
+        "name": "Yahoo",
+        "logo": "yahoo",
+        "urlPrefix": "",
+        "placeholder": "Yahoo account",        
+        "hasLink": true
+      }    
+    ]
   },
   {
-    "id": 2,
-    "name": "Twitter",
-    "logo": "twitter",
-    "urlPrefix": "twitter.com/",
-    "placeholder": "Twitter user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
+    "name": "Payment",
+    "accounts": [
+      {        
+        "name": "Paypal",
+        "logo": "paypal",
+        "urlPrefix": "paypal.com/",
+        "placeholder": "Paypal user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Stripe",
+        "logo": "stripe",
+        "urlPrefix": "stripe.com/",
+        "placeholder": "Stripe user",        
+        "hasLink": true
+      }
+    ]
   },
   {
-    "id": 3,
-    "name": "Youtube",
-    "logo": "youtube",
-    "urlPrefix": "youtube.com/",
-    "placeholder": "Youtube user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 4,
-    "name": "Linkedin",
-    "logo": "linkedin",
-    "urlPrefix": "linkedin.com/",
-    "placeholder": "Linkedin user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 5,
-    "name": "Snapchat",
-    "logo": "snapchat",
-    "urlPrefix": "snapchat.com/",
-    "placeholder": "Snapchat user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 6,
-    "name": "Pinterest",
-    "logo": "pinterest",
-    "urlPrefix": "pinterest.com/",
-    "placeholder": "Pinterest user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 16,
-    "name": "Tumblr",
-    "logo": "tumblr",
-    "urlPrefix": "tumblr.com/",
-    "placeholder": "Tumblr user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 17,
-    "name": "Reddit",
-    "logo": "reddit",
-    "urlPrefix": "reddit.com/",
-    "placeholder": "Reddit user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 18,
-    "name": "Medium",
-    "logo": "medium",
-    "urlPrefix": "medium.com/",
-    "placeholder": "Medium user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 19,
-    "name": "Flickr",
-    "logo": "flickr",
-    "urlPrefix": "flickr.com/",
-    "placeholder": "Flickr user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 20,
-    "name": "Skype",
-    "logo": "skype",
-    "urlPrefix": "skype.com/",
-    "placeholder": "Skype user",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": true
-  },
-  {
-    "id": 12,
-    "name": "Paypal",
-    "logo": "paypal",
-    "urlPrefix": "paypal.com/",
-    "placeholder": "Paypal user",
-    "categoryId": 2,
-    "categoryName": "Payment",
-    "hasLink": true
-  },
-  {
-    "id": 21,
-    "name": "Venmo",
-    "logo": "circle",
-    "urlPrefix": "venmo.com/",
-    "placeholder": "Venmo user",
-    "categoryId": 2,
-    "categoryName": "Payment",
-    "hasLink": true
-  },
-  {
-    "id": 22,
-    "name": "Tik Tok",
-    "logo": "circle",
-    "urlPrefix": "tiktok.com/",
-    "placeholder": "Tik Tok user",
-    "categoryId": 0,
-    "categoryName": "Social Networks",
-    "hasLink": true
-  },
-  {
-    "id": 7,
-    "name": "Email",
-    "logo": "envelope",
-    "urlPrefix": "",
-    "placeholder": "Email account",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": false
-  },
-  {
-    "id": 8,
-    "name": "Website",
-    "logo": "globe",
-    "urlPrefix": "",
-    "placeholder": "URL",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": false
-  },
-  {
-    "id": 9,
-    "name": "Phone",
-    "logo": "phone",
-    "urlPrefix": "",
-    "placeholder": "Phone number",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": false
-  },
-  {
-    "id": 10,
-    "name": "Gmail",
-    "logo": "google",
-    "urlPrefix": "",
-    "placeholder": "Gmail account",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": false
-  },
-  {
-    "id": 13,
-    "name": "StackOverflow",
-    "logo": "stack-overflow",
-    "urlPrefix": "stackoverflow.com/",
-    "placeholder": "StackOverflow user",
-    "categoryId": 3,
-    "categoryName": "Software Development",
-    "hasLink": true
-  },
-  {
-    "id": 14,
-    "name": "Github",
-    "logo": "github",
-    "urlPrefix": "github.com/",
-    "placeholder": "Github user",
-    "categoryId": 3,
-    "categoryName": "Software Development",
-    "hasLink": true
-  },
-  {
-    "id": 15,
-    "name": "BitBucket",
-    "logo": "bitbucket",
-    "urlPrefix": "bitbucket.com/",
-    "placeholder": "BitBucket user",
-    "categoryId": 3,
-    "categoryName": "Software Development",
-    "hasLink": true
-  },
-  {
-    "id": 11,
-    "name": "Yahoo",
-    "logo": "yahoo",
-    "urlPrefix": "",
-    "placeholder": "Yahoo account",
-    "categoryId": 1,
-    "categoryName": "Communication",
-    "hasLink": true
+    "name": "Software Development",
+    "accounts": [
+      {        
+        "name": "StackOverflow",
+        "logo": "stack-overflow",
+        "urlPrefix": "stackoverflow.com/",
+        "placeholder": "StackOverflow user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Github",
+        "logo": "github",
+        "urlPrefix": "github.com/",
+        "placeholder": "Github user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Gitlab",
+        "logo": "gitlab",
+        "urlPrefix": "gitlab.com/",
+        "placeholder": "Gitlab user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Dev",
+        "logo": "dev",
+        "urlPrefix": "dev.com/",
+        "placeholder": "Dev user",        
+        "hasLink": true
+      },
+      {        
+        "name": "BitBucket",
+        "logo": "bitbucket",
+        "urlPrefix": "bitbucket.com/",
+        "placeholder": "BitBucket user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Trello",
+        "logo": "trello",
+        "urlPrefix": "trello.com/",
+        "placeholder": "Trello user",        
+        "hasLink": true
+      },
+      {        
+        "name": "Figma",
+        "logo": "figma",
+        "urlPrefix": "figma.com/",
+        "placeholder": "Figma user",        
+        "hasLink": true
+      }
+    ]
   }
 ]

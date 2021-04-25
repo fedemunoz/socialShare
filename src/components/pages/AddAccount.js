@@ -1,9 +1,8 @@
 import React, { useContext, useEffect } from "react";
 import AccountsContext from "../../context/accounts/accountsContext";
 import PageContext from "../../context/page/pageContext";
-import Icon from "../layout/Icon";
 import Spinner from "../layout/Spinner";
-import "../accounts/accountItems.scss";
+import AccountCategory from "../accounts/AccountCategory";
 
 const AddAccount = () => {
   const pageContext = useContext(PageContext);
@@ -16,21 +15,14 @@ const AddAccount = () => {
     // eslint-disable-next-line
   }, []);
 
-  const onClick = () => {
-    console.log(123);
-  };
-
   return loading ? (
     <Spinner />
   ) : (
-    availableAccounts.map((account) => (
-      <div className='account-container'>
-        <div className='card' onClick={onClick}>
-          <h3>
-            <Icon icon={account.logo} size='lg' /> {account.name}
-          </h3>
-        </div>
-      </div>
+    availableAccounts.map((accountCategory) => (
+      <AccountCategory
+        key={accountCategory.name}
+        accountCategory={accountCategory}
+      />
     ))
   );
 };
