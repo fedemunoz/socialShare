@@ -13,7 +13,7 @@ const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
   const dialogContext = useContext(DialogContext);
 
-  const itemClick = () => window.open(url, "_blank");
+  const onClick = () => window.open(url, "_blank");
 
   const confirmRemove = () => {
     dialogContext.showConfirm(
@@ -24,7 +24,7 @@ const UserAccount = ({ account: { id, logo, name, url } }) => {
   };
 
   return (
-    <ListItem button>
+    <ListItem button onClick={onClick}>
       <ListItemIcon>
         <Icon icon={logo} size='lg' className='color-primary' />
       </ListItemIcon>
