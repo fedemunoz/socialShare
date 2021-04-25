@@ -7,17 +7,20 @@ import AddIcon from "@material-ui/icons/Add";
 import "./addButton.scss";
 
 const AddButton = ({ type }) => {
+  const button =
+    type === "sm" ? (
+      <Fab aria-label='add' className='sm-button'>
+        <AddIcon />
+      </Fab>
+    ) : (
+      <Button variant='contained' startIcon={<AddIcon />}>
+        Add account
+      </Button>
+    );
+
   return (
     <Link className='app-add-button' to='/add-account'>
-      {type === "sm" ? (
-        <Fab aria-label='add' className='sm-button'>
-          <AddIcon />
-        </Fab>
-      ) : (
-        <Button variant='contained' startIcon={<AddIcon />}>
-          Add account
-        </Button>
-      )}
+      {button}
     </Link>
   );
 };

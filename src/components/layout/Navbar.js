@@ -10,12 +10,12 @@ import PageContext from "../../context/page/pageContext";
 const Navbar = () => {
   const history = useHistory();
   const pageContext = useContext(PageContext);
-  const { title, showBackButton } = pageContext;
+  const { title, previousTab } = pageContext;
 
   return (
     <AppBar position='static' color='default'>
       <Toolbar>
-        {showBackButton && (
+        {previousTab && (
           <IconButton
             edge='start'
             aria-label='back'

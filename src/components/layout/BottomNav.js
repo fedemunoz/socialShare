@@ -1,44 +1,41 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useContext, useEffect } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
 import CropFreeIcon from "@material-ui/icons/CropFree";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PageContext from "../../context/page/pageContext";
 import "./bottomNav.scss";
+import constants from "../../shared/constants";
 
 const BottomNav = () => {
-  const [route, setRoute] = useState("/");
   const pageContext = useContext(PageContext);
-  const history = useHistory();
+  const { title, previousTab } = pageContext;
 
   useEffect(() => {
-    history.push(route);
     // eslint-disable-next-line
   }, []);
 
   const onChange = (event, newValue) => {
-    setRoute(newValue);
-    history.push(newValue);
+    pageContext.setPage({ title: newValue });
   };
 
   return (
-    !pageContext.showBackButton && (
+    !previousTab && (
       <div className='app-bottom-navbar'>
-        <BottomNavigation value={route} onChange={onChange} showLabels>
+        <BottomNavigation value={title} onChange={onChange} showLabels>
           <BottomNavigationAction
-            value='email'
-            label='Email'
+            value={constants.EMAIL_TAB.title}
+            label={constants.EMAIL_TAB.label}
             icon={<MailOutlineIcon />}
           />
           <BottomNavigationAction
-            value='/'
-            label='My QR'
+            value={constants.MY_QR_TAB.title}
+            label={constants.MY_QR_TAB.label}
             icon={<CropFreeIcon />}
           />
           <BottomNavigationAction
-            value='accounts'
-            label='Accounts'
+            value={constants.ACCOUNTS_TAB.title}
+            label={constants.ACCOUNTS_TAB.label}
             icon={<PersonIcon />}
           />
         </BottomNavigation>

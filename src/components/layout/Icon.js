@@ -6,11 +6,9 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fab, fas);
 
-const Icon = ({ icon, size, type, className }) => {
-  return (
-    <FontAwesomeIcon icon={[type, icon]} size={size} className={className} />
-  );
-};
+const Icon = ({ icon, size, type, className }) => (
+  <FontAwesomeIcon icon={[type, icon]} size={size} className={className} />
+);
 
 Icon.propTypes = {
   icon: PropTypes.string.isRequired,

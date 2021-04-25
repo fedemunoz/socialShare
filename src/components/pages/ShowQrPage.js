@@ -1,16 +1,23 @@
 import React, { useContext, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Icon from "../layout/Icon";
 import PageContext from "../../context/page/pageContext";
+import constants from "../../shared/constants";
 import "./showQrPage.scss";
 
 const QRCode = require("qrcode.react");
 
 const ShowQrPage = (props) => {
+  const history = useHistory();
   const account = props.location.account;
   const pageContext = useContext(PageContext);
 
   useEffect(() => {
-    pageContext.setPage({ title: "Scan to share", showBackButton: true });
+    if (!account) return history.goBack();
+    pageContext.setPage({
+      title: constants.SHOW_QR_PAGE.title,
+      previousTab: constants.MY_QR_TAB.title,
+    });
     // eslint-disable-next-line
   }, []);
 

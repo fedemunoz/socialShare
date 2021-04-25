@@ -2,11 +2,12 @@ import React, { useReducer } from "react";
 import PageContext from "./pageContext";
 import PageReducer from "./pageReducer";
 import * as actions from "./pageActions";
+import constants from "../../shared/constants";
 
 const PageState = (props) => {
   const initialState = {
-    title: null,
-    showBackButton: false,
+    title: constants.MY_QR_TAB.title,
+    previousTab: "",
     modal: null,
   };
 
@@ -36,7 +37,7 @@ const PageState = (props) => {
     <PageContext.Provider
       value={{
         title: state.title,
-        showBackButton: state.showBackButton,
+        previousTab: state.previousTab,
         modal: state.modal,
         setPage,
         showModal,

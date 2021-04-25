@@ -1,25 +1,21 @@
-import React, { Fragment, useContext, useEffect } from "react";
-import AccountsContext from "../../context/accounts/accountsContext";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+
 import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormHelperText from "@material-ui/core/FormHelperText";
 import Checkbox from "@material-ui/core/Checkbox";
+
+import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
-import Spinner from "../layout/Spinner";
 import "./accountSelector.scss";
 
 const AccountSelector = () => {
-  const [allSelected, setallSelected] = React.useState(true);
-  const [indeterminate, setIndeterminate] = React.useState(false);
+  const [allSelected, setallSelected] = useState(true);
+  const [indeterminate, setIndeterminate] = useState(false);
 
   const accountsContext = useContext(AccountsContext);
-  const {
-    loading,
-    userAccounts,
-    selectAllAccounts,
-    selectAccount,
-  } = accountsContext;
+  const { userAccounts, selectAllAccounts, selectAccount } = accountsContext;
 
   useEffect(() => {
     checkSelection();
@@ -58,9 +54,7 @@ const AccountSelector = () => {
     }
   };
 
-  return loading ? (
-    <Spinner />
-  ) : (
+  return (
     <div className='account-selector-container'>
       <FormControl>
         <FormControlLabel

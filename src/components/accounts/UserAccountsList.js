@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import List from "@material-ui/core/List";
 import AccountsContext from "../../context/accounts/accountsContext";
-import Spinner from "../layout/Spinner";
 import UserAccount from "./UserAccount";
 
 const addButtonPadding = {
@@ -11,11 +10,9 @@ const addButtonPadding = {
 const UserAccountsList = () => {
   const accountsContext = useContext(AccountsContext);
 
-  const { loading, userAccounts } = accountsContext;
+  const { userAccounts } = accountsContext;
 
-  return loading ? (
-    <Spinner />
-  ) : (
+  return (
     <List style={addButtonPadding}>
       {userAccounts.map((account) => (
         <UserAccount key={account.id} account={account} />

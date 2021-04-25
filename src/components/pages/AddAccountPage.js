@@ -4,14 +4,18 @@ import PageContext from "../../context/page/pageContext";
 import Spinner from "../layout/Spinner";
 import ContentDivider from "../layout/ContentDivider";
 import AccountCategory from "../accounts/AccountCategory";
+import constants from "../../shared/constants";
 
-const AddAccount = () => {
+const AddAccountPage = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
   const { loading, availableAccounts, getAvailableAccounts } = accountsContext;
 
   useEffect(() => {
-    pageContext.setPage({ title: "Add account", showBackButton: true });
+    pageContext.setPage({
+      title: constants.ADD_ACCOUNT_PAGE.title,
+      previousTab: constants.ACCOUNTS_TAB.title,
+    });
     if (!availableAccounts.length) getAvailableAccounts();
     // eslint-disable-next-line
   }, []);
@@ -28,4 +32,4 @@ const AddAccount = () => {
   );
 };
 
-export default AddAccount;
+export default AddAccountPage;

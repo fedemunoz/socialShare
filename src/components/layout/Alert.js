@@ -4,9 +4,9 @@ import Modal from "@material-ui/core/Modal";
 import PageContext from "../../context/page/pageContext";
 
 const getModalStyle = () => ({
-  top: `50%`,
-  left: `50%`,
-  transform: `translate(-50%, -50%)`,
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
 });
 
 const useStyles = makeStyles((theme) => ({
