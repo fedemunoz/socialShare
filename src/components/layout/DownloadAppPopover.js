@@ -59,10 +59,12 @@ const DownloadAppPopover = () => {
             <Typography className={classes.typography}>
               <b>Install this app for a better experience:</b>
               <br />
-              <b>1.</b> Tap
+              <b>1.</b> Open with Safari.
+              <br />
+              <b>2.</b> Tap
               <img src='./share-icon.svg' alt='share-icon' style={iconStyle} />
               <br />
-              <b>2.</b> Select 'Add to homescreen'.
+              <b>3.</b> Select 'Add to homescreen'.
             </Typography>
           </Popover>
         )}
