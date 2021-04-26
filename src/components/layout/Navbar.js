@@ -7,13 +7,18 @@ import Typography from "@material-ui/core/Typography";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import PageContext from "../../context/page/pageContext";
 
+const style = {
+  boxShadow: "rgb(0 0 0 / 15%) 0px 4px 4px 0px",
+  backgroundColor: "#FFFFFF",
+};
+
 const Navbar = () => {
   const history = useHistory();
   const pageContext = useContext(PageContext);
   const { title, previousTab } = pageContext;
 
   return (
-    <AppBar position='static' color='default'>
+    <AppBar position='static' color='default' style={style}>
       <Toolbar>
         {previousTab && (
           <IconButton
