@@ -9,6 +9,7 @@ import Navbar from "./components/layout/Navbar";
 import BottomNav from "./components/layout/BottomNav";
 import Alert from "./components/layout/Alert";
 import ConfirmDialog from "./components/layout/ConfirmDialog";
+import DownloadAppPopover from "./components/layout/DownloadAppPopover";
 
 import HomePage from "./components/pages/HomePage";
 import ShowQrPage from "./components/pages/ShowQrPage";
@@ -50,6 +51,7 @@ function App() {
               <BottomNav />
             </div>
           </Router>
+          <DownloadAppPopover />
         </AccountsState>
       </NotificationsState>
     </PageState>
