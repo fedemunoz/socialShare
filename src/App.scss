@@ -1,10 +1,15 @@
 @import "./colors";
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
 
 .App {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
 
   .main-container {
     display: flex;
