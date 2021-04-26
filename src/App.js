@@ -49,9 +49,9 @@ function App() {
                 </Switch>
               </div>
               <BottomNav />
+              <DownloadAppPopover />
             </div>
           </Router>
-          <DownloadAppPopover />
         </AccountsState>
       </NotificationsState>
     </PageState>

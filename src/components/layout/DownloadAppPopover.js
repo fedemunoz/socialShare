@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 const iconStyle = {
-  marginTop: "0.4rem",
   height: "1.4rem",
   padding: "0 0.4rem",
 };
