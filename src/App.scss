@@ -3,6 +3,8 @@ html,
 body,
 #root,
 .App {
+  min-height: calc(100% + env(safe-area-inset-top));
+  padding-top: env(safe-area-inset-top);
   height: 100%;
 }
 
