@@ -2,7 +2,7 @@
 
 .app-bottom-navbar {
   .MuiBottomNavigation-root {
-    padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0) !important;
     border-top: solid 1px $border;
     .MuiButtonBase-root {
       color: $gray;
