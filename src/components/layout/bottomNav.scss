@@ -4,7 +4,7 @@
   .MuiBottomNavigation-root {
     border-top: solid 1px $border;
     padding-bottom: 0;
-    // padding-bottom: env(safe-area-inset-bottom, 0);
+    padding-bottom: env(safe-area-inset-bottom, 0);
     .MuiButtonBase-root {
       color: $gray;
       &.Mui-selected {

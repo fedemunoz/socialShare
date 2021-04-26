@@ -1,10 +1,14 @@
 @import "./colors";
+html {
+  padding-top: 0;
+  padding-top: env(safe-area-inset-top, 0);
+}
+
 html,
 body,
 #root,
 .App {
   height: 100%;
-  padding-top: env(safe-area-inset-top, 0);
 }
 
 .App {
