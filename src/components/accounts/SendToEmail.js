@@ -4,14 +4,14 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import validator from "validator";
 import AccountsContext from "../../context/accounts/accountsContext";
-import PageContext from "../../context/page/pageContext";
+import NotificationsContext from "../../context/notifications/notificationsContext";
 import "./sendToEmail.scss";
 
 const SendToEmail = () => {
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [showError, setshowError] = useState(false);
 
-  const pageContext = useContext(PageContext);
+  const notificationsContext = useContext(NotificationsContext);
   const accountsContext = useContext(AccountsContext);
   const { userAccounts, sendEmail } = accountsContext;
 
@@ -25,7 +25,7 @@ const SendToEmail = () => {
   const onClick = () => {
     const emailAccounts = userAccounts.filter((account) => account.email);
     !emailAccounts.length
-      ? pageContext.showModal({
+      ? notificationsContext.showModal({
           title: "Error",
           msg: "Select at least one account.",
         })

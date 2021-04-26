@@ -8,19 +8,6 @@ const reducer = (state, action) => {
         title: action.payload.title,
         previousTab: action.payload.previousTab || "",
       };
-    case actions.SHOW_MODAL:
-      return {
-        ...state,
-        modal: {
-          title: action.payload.title,
-          msg: action.payload.msg,
-        },
-      };
-    case actions.HIDE_MODAL:
-      return {
-        ...state,
-        modal: null,
-      };
     default:
       return state;
   }

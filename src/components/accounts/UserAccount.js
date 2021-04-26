@@ -7,7 +7,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Icon from "../layout/Icon";
 // import AccountsContext from "../../context/accounts/accountsContext";
-import DialogContext from "../../context/dialog/dialogContext";
+import NotificationsContext from "../../context/notifications/notificationsContext";
 
 const itemStyle = {
   flex: "1",
@@ -17,15 +17,15 @@ const itemStyle = {
 
 const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
-  const dialogContext = useContext(DialogContext);
+  const notificationsContext = useContext(NotificationsContext);
 
   const onClick = () => window.open(url, "_blank");
 
   const confirmRemove = () => {
-    dialogContext.showConfirm(
-      "",
-      "Are you sure you want to delete this account?"
-    );
+    notificationsContext.showConfirm({
+      title: "",
+      msg: "Are you sure you want to delete this account?",
+    });
     // accountsContext.removeAccount(id);
   };
 

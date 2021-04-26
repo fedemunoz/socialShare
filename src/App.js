@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import PageState from "./context/page/PageState";
 import AccountsState from "./context/accounts/AccountsState";
-import DialogState from "./context/dialog/DialogState";
+import NotificationsState from "./context/notifications/NotificationsState";
 
 import Navbar from "./components/layout/Navbar";
 import BottomNav from "./components/layout/BottomNav";
@@ -20,14 +20,14 @@ import constants from "./shared/constants";
 function App() {
   return (
     <PageState>
-      <DialogState>
+      <NotificationsState>
         <AccountsState>
-          <ConfirmDialog />
           <Router>
             <div className='App'>
               <Navbar title='Page' />
               <div className='main-container'>
                 <Alert />
+                <ConfirmDialog />
                 <Switch>
                   <Route
                     exact
@@ -51,7 +51,7 @@ function App() {
             </div>
           </Router>
         </AccountsState>
-      </DialogState>
+      </NotificationsState>
     </PageState>
   );
 }

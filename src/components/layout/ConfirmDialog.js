@@ -1,42 +1,42 @@
-import React, { useContext } from 'react';
-import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContext from '../../context/dialog/dialogContext';
+import React, { useContext } from "react";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import NotificationsContext from "../../context/notifications/notificationsContext";
 
 const ConfirmDialog = () => {
-  const dialogContext = useContext(DialogContext);
-  const { dialog } = dialogContext;
-
-  const handleClose = () => dialog.hideConfirm('asdas');
+  const notificationsContext = useContext(NotificationsContext);
+  const { confirm, cancelConfirm, confirmAction } = notificationsContext;
 
   return (
-    <div>
-      <Dialog
-        open={dialog.show}
-        onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
-      >
-        <DialogTitle id="alert-dialog-title">{ dialog.title }</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="alert-dialog-description">
-            { dialog.msg }
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleClose} color="primary" autoFocus>
-            Confirm
-          </Button>
-        </DialogActions>
-      </Dialog>
-    </div>
+    confirm && (
+      <div>
+        <Dialog
+          open
+          onClose={() => cancelConfirm()}
+          aria-labelledby='alert-dialog-title'
+          aria-describedby='alert-dialog-description'
+        >
+          <DialogTitle id='alert-dialog-title'>{confirm.title}</DialogTitle>
+          <DialogContent>
+            <DialogContentText id='alert-dialog-description'>
+              {confirm.msg}
+            </DialogContentText>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={() => cancelConfirm()} color='primary'>
+              Cancel
+            </Button>
+            <Button onClick={() => confirmAction()} color='primary' autoFocus>
+              Confirm
+            </Button>
+          </DialogActions>
+        </Dialog>
+      </div>
+    )
   );
 };
 

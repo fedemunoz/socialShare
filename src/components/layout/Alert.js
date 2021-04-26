@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
-import PageContext from "../../context/page/pageContext";
+import NotificationsContext from "../../context/notifications/notificationsContext";
 import Button from "@material-ui/core/Button";
 import "./alert.scss";
 
@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Alert = () => {
-  const pageContext = useContext(PageContext);
-  const { modal, hideModal } = pageContext;
+  const notificationsContext = useContext(NotificationsContext);
+  const { modal, hideModal } = notificationsContext;
   const handleClose = () => hideModal();
 
   const classes = useStyles();

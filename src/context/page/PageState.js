@@ -8,7 +8,6 @@ const PageState = (props) => {
   const initialState = {
     title: constants.MY_QR_TAB.title,
     previousTab: "",
-    modal: null,
   };
 
   const [state, dispatch] = useReducer(PageReducer, initialState);
@@ -20,28 +19,12 @@ const PageState = (props) => {
     });
   };
 
-  const showModal = (modalData) => {
-    dispatch({
-      type: actions.SHOW_MODAL,
-      payload: modalData,
-    });
-  };
-
-  const hideModal = () => {
-    dispatch({
-      type: actions.HIDE_MODAL,
-    });
-  };
-
   return (
     <PageContext.Provider
       value={{
         title: state.title,
         previousTab: state.previousTab,
-        modal: state.modal,
         setPage,
-        showModal,
-        hideModal,
       }}
     >
       {props.children}
