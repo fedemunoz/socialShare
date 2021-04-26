@@ -6,6 +6,7 @@ import NoAccounts from "../accounts/NoAccounts";
 import EmailTab from "../pages/tabs/EmailTab";
 import MyQrTab from "../pages/tabs/MyQrTab";
 import AccountsTab from "../pages/tabs/AccountsTab";
+import constants from "../../shared/constants";
 
 const HomePage = () => {
   const accountsContext = useContext(AccountsContext);
@@ -26,12 +27,14 @@ const HomePage = () => {
   }
 
   switch (title) {
-    case "Send by Email":
+    case constants.EMAIL_TAB.title:
       return <EmailTab />;
-    case "My Accounts":
+    case constants.MY_QR_TAB.title:
+      return <MyQrTab userAccounts={userAccounts} />;
+    case constants.ACCOUNTS_TAB.title:
       return <AccountsTab />;
     default:
-      return <MyQrTab userAccounts={userAccounts} />;
+      return <Spinner />;
   }
 };
 
