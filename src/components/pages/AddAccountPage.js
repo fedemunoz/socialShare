@@ -1,14 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { Fragment, useContext, useEffect } from "react";
 import AccountsContext from "../../context/accounts/accountsContext";
 import PageContext from "../../context/page/pageContext";
 import Spinner from "../layout/Spinner";
 import ContentDivider from "../layout/ContentDivider";
 import AccountCategory from "../accounts/AccountCategory";
 import constants from "../../shared/constants";
-
-const iosPadding = {
-  paddingBottom: "env(safe-area-inset-bottom, 0)",
-};
 
 const AddAccountPage = () => {
   const pageContext = useContext(PageContext);
@@ -28,10 +24,10 @@ const AddAccountPage = () => {
     <Spinner />
   ) : (
     availableAccounts.map((accountCategory) => (
-      <div key={accountCategory.name} style={iosPadding}>
+      <Fragment key={accountCategory.name}>
         <AccountCategory accountCategory={accountCategory} />
         <ContentDivider />
-      </div>
+      </Fragment>
     ))
   );
 };
