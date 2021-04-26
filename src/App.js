@@ -1,4 +1,5 @@
 import "./App.scss";
+import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import PageState from "./context/page/PageState";
@@ -10,13 +11,14 @@ import BottomNav from "./components/layout/BottomNav";
 import Alert from "./components/layout/Alert";
 import ConfirmDialog from "./components/layout/ConfirmDialog";
 import DownloadAppPopover from "./components/layout/DownloadAppPopover";
+import Spinner from "./components/layout/Spinner";
 
 import HomePage from "./components/pages/HomePage";
-import ShowQrPage from "./components/pages/ShowQrPage";
-import AddAccountPage from "./components/pages/AddAccountPage";
-import NotFoundPage from "./components/pages/NotFoundPage";
-
 import constants from "./shared/constants";
+
+const ShowQrPage = lazy(() => import("./components/pages/ShowQrPage"));
+const AddAccountPage = lazy(() => import("./components/pages/AddAccountPage"));
+const NotFoundPage = lazy(() => import("./components/pages/NotFoundPage"));
 
 function App() {
   return (
@@ -24,33 +26,35 @@ function App() {
       <NotificationsState>
         <AccountsState>
           <Router>
-            <div className='App'>
-              <Navbar title='Page' />
-              <div className='main-container'>
-                <Alert />
-                <ConfirmDialog />
-                <Switch>
-                  <Route
-                    exact
-                    path={constants.HOME_PAGE.route}
-                    component={HomePage}
-                  />
-                  <Route
-                    exact
-                    path={`/${constants.SHOW_QR_PAGE.route}`}
-                    component={ShowQrPage}
-                  />
-                  <Route
-                    exact
-                    path={`/${constants.ADD_ACCOUNT_PAGE.route}`}
-                    component={AddAccountPage}
-                  />
-                  <Route component={NotFoundPage} />
-                </Switch>
+            <Suspense fallback={<Spinner />}>
+              <div className='App'>
+                <Navbar title='Page' />
+                <div className='main-container'>
+                  <Alert />
+                  <ConfirmDialog />
+                  <Switch>
+                    <Route
+                      exact
+                      path={constants.HOME_PAGE.route}
+                      component={HomePage}
+                    />
+                    <Route
+                      exact
+                      path={`/${constants.SHOW_QR_PAGE.route}`}
+                      component={ShowQrPage}
+                    />
+                    <Route
+                      exact
+                      path={`/${constants.ADD_ACCOUNT_PAGE.route}`}
+                      component={AddAccountPage}
+                    />
+                    <Route component={NotFoundPage} />
+                  </Switch>
+                </div>
+                <BottomNav />
+                <DownloadAppPopover />
               </div>
-              <BottomNav />
-              <DownloadAppPopover />
-            </div>
+            </Suspense>
           </Router>
         </AccountsState>
       </NotificationsState>
