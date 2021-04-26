@@ -1,8 +1,12 @@
 @import "../../colors";
 
 .app-bottom-navbar {
-  .MuiBottomNavigation-root {
+  .navbar {
+    padding-bottom: 0 !important;
     padding-bottom: env(safe-area-inset-bottom, 0) !important;
+  }
+
+  .MuiBottomNavigation-root {
     border-top: solid 1px $border;
     .MuiButtonBase-root {
       color: $gray;
