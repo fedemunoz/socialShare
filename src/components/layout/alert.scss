@@ -3,7 +3,8 @@
 .modal-close-button {
   margin-top: 2rem;
   text-align: center;
-  button {
+  button,
+  button:hover {
     color: $primary-contrast;
     background-color: $primary;
   }
