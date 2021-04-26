@@ -3,13 +3,6 @@
 html {
   padding-top: 0;
   padding-top: env(safe-area-inset-top, 0);
-  overflow: hidden;
-  position: fixed;
-}
-
-body {
-  overflow: auto;
-  position: relative;
 }
 
 html,
@@ -17,7 +10,6 @@ body,
 #root,
 .App {
   height: 100%;
-  width: 100%;
 }
 
 .App {
