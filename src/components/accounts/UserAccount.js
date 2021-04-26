@@ -19,7 +19,7 @@ const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
   const notificationsContext = useContext(NotificationsContext);
 
-  const onClick = () => window.open(url, "_blank");
+  const onClick = () => window.open(url);
 
   const confirmRemove = () => {
     notificationsContext.showConfirm({

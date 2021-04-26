@@ -11,14 +11,19 @@
 
   h2 {
     margin: 0 0 2.5rem;
+    svg {
+      padding-right: 0.6rem;
+    }
   }
 
   .qr-container {
     display: flex;
     align-self: center;
     canvas {
-      width: 80vw !important;
-      height: 80vw !important;
+      width: 70vw !important;
+      height: 70vw !important;
+      max-width: 400px;
+      max-height: 400px;
     }
   }
 }
