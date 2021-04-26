@@ -7,7 +7,6 @@
     &.sm-button {
       position: fixed !important;
       bottom: 72px;
-      bottom: calc(env(safe-area-inset-bottom, 0) + 72px);
       right: 5vw;
     }
   }
