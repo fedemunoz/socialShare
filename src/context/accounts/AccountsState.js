@@ -1,9 +1,71 @@
 import React, { useReducer } from "react";
+import { set, get } from "idb-keyval";
+
 import AccountsContext from "./accountsContext";
 import AccountsReducer from "./accountsReducer";
 import * as actions from "./accountsActions";
 import availableAccountsJson from "../../assets/data/available_accounts.json";
-import userAccountsJson from "../../assets/data/test_user_data.json";
+
+async function loadDummyData() {
+  await set("accounts", [
+    {
+      id: 0,
+      logo: "instagram",
+      title: "Instagram",
+      name: "thenomadclub",
+      url: "http://www.instagram.com/thenomadclub",
+      email: true,
+    },
+    {
+      id: 1,
+      logo: "facebook",
+      title: "Facebook",
+      name: "jdsakjas",
+      url: "http://www.facebook.com/jdsakjas",
+      email: true,
+    },
+    {
+      id: 2,
+      logo: "twitter",
+      title: "Twitter",
+      name: "fedemunoz88",
+      url: "http://www.twitter.com/fedemunoz88",
+      email: true,
+    },
+    {
+      id: 3,
+      logo: "youtube",
+      title: "Youtube",
+      name: "jdsakjas",
+      url: "http://www.youtube.com/jdsakjas",
+      email: true,
+    },
+    {
+      id: 4,
+      logo: "spotify",
+      title: "Spotify",
+      name: "jdsakjas",
+      url: "http://www.spotify.com/jdsakjas",
+      email: true,
+    },
+    {
+      id: 5,
+      logo: "google",
+      title: "Google",
+      name: "jdsakjas@gmail.com",
+      url: "mailto:jdsakjas@gmail.com",
+      email: true,
+    },
+    {
+      id: 6,
+      logo: "linkedin",
+      title: "Linkedin",
+      name: "jdsakjas",
+      url: "http://www.linkedin.com/jdsakjas",
+      email: true,
+    },
+  ]);
+}
 
 const AccountsState = (props) => {
   const initialState = {
@@ -20,6 +82,8 @@ const AccountsState = (props) => {
 
   const getUserAccounts = async () => {
     setLoading();
+    await loadDummyData();
+    const userAccountsJson = await get("accounts");
     dispatch({
       type: actions.GET_USER_ACCOUNTS,
       payload: userAccountsJson,

@@ -15,7 +15,7 @@ const HomePage = () => {
   const { title, previousTab } = pageContext;
 
   useEffect(() => {
-    if (!userAccounts || !userAccounts.length) getUserAccounts();
+    getUserAccounts();
     if (previousTab) pageContext.setPage({ title: previousTab });
     // eslint-disable-next-line
   }, []);
