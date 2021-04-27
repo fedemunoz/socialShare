@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import Slide from "@material-ui/core/Slide";
+import Fade from "@material-ui/core/Fade";
 
 import Icon from "../layout/Icon";
 import PageContext from "../../context/page/pageContext";
@@ -24,7 +24,7 @@ const ShowQrPage = (props) => {
   }, []);
 
   return account ? (
-    <Slide direction='left' in mountOnEnter unmountOnExit>
+    <Fade in>
       <div className='show-qr-container'>
         <h2>
           <Icon icon={account.logo} size='sm' /> {account.title}
@@ -33,7 +33,7 @@ const ShowQrPage = (props) => {
           <QRCode value={account.url} />
         </div>
       </div>
-    </Slide>
+    </Fade>
   ) : null;
 };
 
