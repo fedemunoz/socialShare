@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import Fade from "@material-ui/core/Fade";
 import Slide from "@material-ui/core/Slide";
 
 import AccountsContext from "../../context/accounts/accountsContext";
@@ -25,14 +26,20 @@ const AddAccountPage = () => {
   return loading ? (
     <Spinner />
   ) : (
-    availableAccounts.map((accountCategory) => (
-      <Slide direction='left' in mountOnEnter unmountOnExit>
-        <div key={accountCategory.name}>
-          <AccountCategory accountCategory={accountCategory} />
-          <ContentDivider />
-        </div>
-      </Slide>
-    ))
+    <Fade in>
+      <div>
+        <Slide direction='left' in mountOnEnter unmountOnExit>
+          <div>
+            {availableAccounts.map((accountCategory) => (
+              <div key={accountCategory.name}>
+                <AccountCategory accountCategory={accountCategory} />
+                <ContentDivider />
+              </div>
+            ))}
+          </div>
+        </Slide>
+      </div>
+    </Fade>
   );
 };
 

@@ -1,15 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Fade from "@material-ui/core/Fade";
+
 import ContentDivider from "../../layout/ContentDivider";
 import SendToEmail from "../../accounts/SendToEmail";
 import AccountSelector from "../../accounts/AccountSelector";
 
 const EmailTab = () => (
-  <Fragment>
-    <h3>Select accounts</h3>
-    <SendToEmail />
-    <ContentDivider />
-    <AccountSelector />
-  </Fragment>
+  <Fade in>
+    <div>
+      <h3>Select accounts</h3>
+      <SendToEmail />
+      <ContentDivider />
+      <AccountSelector />
+    </div>
+  </Fade>
 );
 
 export default EmailTab;

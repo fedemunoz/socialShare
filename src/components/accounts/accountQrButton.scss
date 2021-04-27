@@ -1,4 +1,4 @@
-@import '../../colors';
+@import "../../colors";
 
 .account-qr-button {
   display: flex;
@@ -7,6 +7,15 @@
   align-self: center;
   text-align: center;
   font-size: 10vh;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
   svg {
     flex: 1;
   }
@@ -15,6 +24,6 @@
 @media only screen and (orientation: landscape) {
   .account-qr-button {
     display: flex;
-    flex: calc(100%/3);
+    flex: calc(100% / 3);
   }
 }

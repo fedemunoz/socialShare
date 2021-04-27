@@ -1,12 +1,14 @@
-import React, { Fragment } from "react";
+import React from "react";
+import Fade from "@material-ui/core/Fade";
+
 import UserAccountsList from "../../accounts/UserAccountsList";
-import AddButton from "../../layout/AddButton";
 
 const AccountsTab = () => (
-  <Fragment>
-    <UserAccountsList />
-    <AddButton />
-  </Fragment>
+  <Fade in>
+    <div>
+      <UserAccountsList />
+    </div>
+  </Fade>
 );
 
 export default AccountsTab;
