@@ -7,15 +7,6 @@
   align-self: center;
   text-align: center;
   font-size: 10vh;
-  text-decoration: none;
-
-  &:focus,
-  &:hover,
-  &:visited,
-  &:link,
-  &:active {
-    text-decoration: none;
-  }
   svg {
     flex: 1;
   }

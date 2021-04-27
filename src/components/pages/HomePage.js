@@ -1,6 +1,4 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import Slide from "@material-ui/core/Slide";
-
 import PageContext from "../../context/page/pageContext";
 import AccountsContext from "../../context/accounts/accountsContext";
 import Spinner from "../layout/Spinner";
@@ -8,7 +6,6 @@ import NoAccounts from "../accounts/NoAccounts";
 import EmailTab from "../pages/tabs/EmailTab";
 import MyQrTab from "../pages/tabs/MyQrTab";
 import AccountsTab from "../pages/tabs/AccountsTab";
-import AddButton from "../layout/AddButton";
 import constants from "../../shared/constants";
 
 const HomePage = () => {
@@ -31,16 +28,11 @@ const HomePage = () => {
 
   return (
     <Fragment>
-      <Slide direction='right' in mountOnEnter unmountOnExit>
-        <div className='full-height'>
-          {title === constants.EMAIL_TAB.title && <EmailTab />}
-          {title === constants.MY_QR_TAB.title && (
-            <MyQrTab userAccounts={userAccounts} />
-          )}
-          {title === constants.ACCOUNTS_TAB.title && <AccountsTab />}
-        </div>
-      </Slide>
-      {title === constants.ACCOUNTS_TAB.title && <AddButton />}
+      {title === constants.EMAIL_TAB.title && <EmailTab />}
+      {title === constants.MY_QR_TAB.title && (
+        <MyQrTab userAccounts={userAccounts} />
+      )}
+      {title === constants.ACCOUNTS_TAB.title && <AccountsTab />}
     </Fragment>
   );
 };
