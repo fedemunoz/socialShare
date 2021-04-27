@@ -1,4 +1,6 @@
 import React, { useContext, useEffect } from "react";
+import Slide from "@material-ui/core/Slide";
+
 import PageContext from "../../context/page/pageContext";
 import AccountsContext from "../../context/accounts/accountsContext";
 import Spinner from "../layout/Spinner";
@@ -26,16 +28,17 @@ const HomePage = () => {
     return <NoAccounts />;
   }
 
-  switch (title) {
-    case constants.EMAIL_TAB.title:
-      return <EmailTab />;
-    case constants.MY_QR_TAB.title:
-      return <MyQrTab userAccounts={userAccounts} />;
-    case constants.ACCOUNTS_TAB.title:
-      return <AccountsTab />;
-    default:
-      return <Spinner />;
-  }
+  return (
+    <Slide direction='right' in mountOnEnter unmountOnExit>
+      <div className='full-height'>
+        {title === constants.EMAIL_TAB.title && <EmailTab />}
+        {title === constants.MY_QR_TAB.title && (
+          <MyQrTab userAccounts={userAccounts} />
+        )}
+        {title === constants.ACCOUNTS_TAB.title && <AccountsTab />}
+      </div>
+    </Slide>
+  );
 };
 
 export default HomePage;

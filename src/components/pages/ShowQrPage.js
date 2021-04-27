@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import Slide from "@material-ui/core/Slide";
+
 import Icon from "../layout/Icon";
 import PageContext from "../../context/page/pageContext";
 import constants from "../../shared/constants";
@@ -22,14 +24,16 @@ const ShowQrPage = (props) => {
   }, []);
 
   return account ? (
-    <div className='show-qr-container'>
-      <h2>
-        <Icon icon={account.logo} size='sm' /> {account.title}
-      </h2>
-      <div className='qr-container'>
-        <QRCode value={account.url} />
+    <Slide direction='left' in mountOnEnter unmountOnExit>
+      <div className='show-qr-container'>
+        <h2>
+          <Icon icon={account.logo} size='sm' /> {account.title}
+        </h2>
+        <div className='qr-container'>
+          <QRCode value={account.url} />
+        </div>
       </div>
-    </div>
+    </Slide>
   ) : null;
 };
 

@@ -1,4 +1,6 @@
-import React, { Fragment, useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
+import Slide from "@material-ui/core/Slide";
+
 import AccountsContext from "../../context/accounts/accountsContext";
 import PageContext from "../../context/page/pageContext";
 import Spinner from "../layout/Spinner";
@@ -24,10 +26,12 @@ const AddAccountPage = () => {
     <Spinner />
   ) : (
     availableAccounts.map((accountCategory) => (
-      <Fragment key={accountCategory.name}>
-        <AccountCategory accountCategory={accountCategory} />
-        <ContentDivider />
-      </Fragment>
+      <Slide direction='left' in mountOnEnter unmountOnExit>
+        <div key={accountCategory.name}>
+          <AccountCategory accountCategory={accountCategory} />
+          <ContentDivider />
+        </div>
+      </Slide>
     ))
   );
 };

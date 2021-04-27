@@ -6,7 +6,7 @@ const NoAccounts = () => {
   return (
     <div className='no-accounts-container'>
       <h4>You don't have accounts yet!</h4>
-      <AddButton type={"lg"} />
+      <AddButton type='lg' />
     </div>
   );
 };
