@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
-import CropFreeIcon from "@material-ui/icons/CropFree";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PageContext from "../../context/page/pageContext";
 import "./bottomNav.scss";
