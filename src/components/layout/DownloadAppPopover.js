@@ -2,6 +2,7 @@ import React, { Fragment, useEffect, useState, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
+import { ReactComponent as ShareIcon } from "../../assets/icons/share-icon.svg";
 
 const isIos = () => {
   const userAgent = window.navigator.userAgent.toLowerCase();
@@ -60,8 +61,7 @@ const DownloadAppPopover = () => {
               <br />
               <b>1.</b> Open with Safari.
               <br />
-              <b>2.</b> Tap
-              <img src='./share-icon.svg' alt='share-icon' style={iconStyle} />
+              <b>2.</b> Tap <ShareIcon style={iconStyle} />
               <br />
               <b>3.</b> Select 'Add to homescreen'.
             </Typography>

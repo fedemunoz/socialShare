@@ -2,6 +2,8 @@ import React, { useReducer } from "react";
 import AccountsContext from "./accountsContext";
 import AccountsReducer from "./accountsReducer";
 import * as actions from "./accountsActions";
+import availableAccountsJson from "../../assets/data/available_accounts.json";
+import userAccountsJson from "../../assets/data/test_user_data.json";
 
 const AccountsState = (props) => {
   const initialState = {
@@ -18,33 +20,17 @@ const AccountsState = (props) => {
 
   const getUserAccounts = async () => {
     setLoading();
-    const response = await fetch("../../data/test_user_data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const userAccounts = await response.json();
-
     dispatch({
       type: actions.GET_USER_ACCOUNTS,
-      payload: userAccounts,
+      payload: userAccountsJson,
     });
   };
 
   const getAvailableAccounts = async () => {
     setLoading();
-    const response = await fetch("../../data/available_accounts.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const allAccounts = await response.json();
-
     dispatch({
       type: actions.GET_AVAILABLE_ACCOUNTS,
-      payload: allAccounts,
+      payload: availableAccountsJson,
     });
   };
 

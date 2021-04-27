@@ -6,6 +6,7 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PageContext from "../../context/page/pageContext";
 import "./bottomNav.scss";
 import constants from "../../shared/constants";
+import { ReactComponent as QrIcon } from "../../assets/icons/qr-code.svg";
 
 const BottomNav = () => {
   const pageContext = useContext(PageContext);
@@ -31,7 +32,7 @@ const BottomNav = () => {
           <BottomNavigationAction
             value={constants.MY_QR_TAB.title}
             label={constants.MY_QR_TAB.label}
-            icon={<CropFreeIcon />}
+            icon={<QrIcon />}
           />
           <BottomNavigationAction
             value={constants.ACCOUNTS_TAB.title}
