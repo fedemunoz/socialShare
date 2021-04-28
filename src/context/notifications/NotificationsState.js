@@ -6,21 +6,21 @@ import * as actions from "./notificationsActions";
 const NotificationsState = (props) => {
   const initialState = {
     confirm: null,
-    modal: null,
+    alert: null,
   };
 
   const [state, dispatch] = useReducer(NotificationsReducer, initialState);
 
-  const showModal = (modalData) => {
+  const showAlert = (alertData) => {
     dispatch({
-      type: actions.SHOW_MODAL,
-      payload: modalData,
+      type: actions.SHOW_ALERT,
+      payload: alertData,
     });
   };
 
-  const hideModal = () => {
+  const hideAlert = () => {
     dispatch({
-      type: actions.HIDE_MODAL,
+      type: actions.HIDE_ALERT,
     });
   };
 
@@ -49,9 +49,9 @@ const NotificationsState = (props) => {
     <NotificationsContext.Provider
       value={{
         confirm: state.confirm,
-        modal: state.modal,
-        showModal,
-        hideModal,
+        alert: state.alert,
+        showAlert,
+        hideAlert,
         showConfirm,
         confirmAction,
         cancelConfirm,

@@ -2,18 +2,19 @@ import * as actions from "./notificationsActions";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case actions.SHOW_MODAL:
+    case actions.SHOW_ALERT:
       return {
         ...state,
-        modal: {
-          title: action.payload.title,
+        alert: {
           msg: action.payload.msg,
+          type: action.payload.type,
+          position: action.payload.position,
         },
       };
-    case actions.HIDE_MODAL:
+    case actions.HIDE_ALERT:
       return {
         ...state,
-        modal: null,
+        alert: null,
       };
     case actions.SHOW_CONFIRM:
       return {

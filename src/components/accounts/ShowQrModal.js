@@ -5,7 +5,6 @@ import Fade from "@material-ui/core/Fade";
 import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
 import "./showQrModal.scss";
-import "../layout/alert.scss";
 
 const QRCode = require("qrcode.react");
 
@@ -18,7 +17,7 @@ const ShowQrModal = () => {
   return (
     <Modal open onClose={handleClose} disableEnforceFocus disableAutoFocus>
       <Fade in>
-        <div className='show-qr-container modal-component'>
+        <div className='show-qr-container'>
           <h2>
             <Icon icon={currentQr.logo} size='sm' /> {currentQr.title}
           </h2>

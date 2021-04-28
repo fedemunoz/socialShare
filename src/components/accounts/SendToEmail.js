@@ -25,9 +25,10 @@ const SendToEmail = () => {
   const onClick = () => {
     const emailAccounts = userAccounts.filter((account) => account.email);
     !emailAccounts.length
-      ? notificationsContext.showModal({
-          title: "Error",
-          msg: "Select at least one account.",
+      ? notificationsContext.showAlert({
+          msg: "Error. Select at least one account.",
+          type: "error",
+          position: "top",
         })
       : sendEmail(emailAccounts);
   };

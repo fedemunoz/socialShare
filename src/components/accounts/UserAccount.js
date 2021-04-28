@@ -18,15 +18,22 @@ const itemStyle = {
 const UserAccount = ({ account: { id, logo, name, url } }) => {
   // const accountsContext = useContext(AccountsContext);
   const notificationsContext = useContext(NotificationsContext);
+  const { showConfirm, showAlert } = notificationsContext;
 
   const onClick = () => window.open(url);
 
   const confirmRemove = () => {
-    notificationsContext.showConfirm({
+    showConfirm({
       title: "",
       msg: "Are you sure you want to delete this account?",
     });
     // accountsContext.removeAccount(id);
+
+    showAlert({
+      msg: "Account deleted!",
+      type: "error",
+      position: "bottom",
+    });
   };
 
   return (

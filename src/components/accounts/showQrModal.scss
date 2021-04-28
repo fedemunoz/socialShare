@@ -1,6 +1,16 @@
 @import "../../colors";
 
 .show-qr-container {
+  position: absolute;
+  width: 60%;
+  max-width: 400px;
+  background-color: $white;
+  padding: 1.4rem 2rem;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   color: $primary;
   text-align: center;
   justify-content: center;
