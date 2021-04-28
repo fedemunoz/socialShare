@@ -1,24 +1,20 @@
-import React from "react";
-import { useHistory } from "react-router-dom";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
+import Button from "@material-ui/core/Button";
 
+import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
 import "./accountQrButton.scss";
 
 const AccountQrButton = ({ account }) => {
-  const history = useHistory();
+  const accountsContext = useContext(AccountsContext);
 
-  const onClick = () => {
-    history.push({
-      pathname: "/show-qr",
-      account: account,
-    });
-  };
+  const onClick = () => accountsContext.showQrAccount(account);
 
   return (
-    <div className='account-qr-button' onClick={onClick}>
+    <Button className='account-qr-button' onClick={onClick} disableRipple>
       <Icon icon={account.logo} size='lg' />
-    </div>
+    </Button>
   );
 };
 

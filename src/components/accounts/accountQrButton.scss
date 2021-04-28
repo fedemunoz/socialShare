@@ -1,6 +1,6 @@
 @import "../../colors";
 
-.account-qr-button {
+.MuiButtonBase-root.account-qr-button {
   display: flex;
   flex: 50%;
   color: $primary;
@@ -8,7 +8,6 @@
   align-self: center;
   text-align: center;
   font-size: 10vh;
-  cursor: pointer;
   svg {
     flex: 1;
   }

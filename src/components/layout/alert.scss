@@ -1,11 +1,25 @@
 @import "../../colors";
+.modal-component {
+  position: absolute;
+  width: 60%;
+  max-width: 400px;
+  background-color: $white;
+  padding: 1.4rem 2rem;
 
-.modal-close-button {
-  margin-top: 2rem;
-  text-align: center;
-  button,
-  button:hover {
-    color: $primary-contrast;
-    background-color: $primary;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h2 {
+    margin-top: 0;
+  }
+  .modal-close-button {
+    margin-top: 2rem;
+    text-align: center;
+    button,
+    button:hover {
+      color: $primary-contrast;
+      background-color: $primary;
+    }
   }
 }

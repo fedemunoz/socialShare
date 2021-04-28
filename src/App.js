@@ -16,7 +16,6 @@ import Spinner from "./components/layout/Spinner";
 import HomePage from "./components/pages/HomePage";
 import constants from "./shared/constants";
 
-const ShowQrPage = lazy(() => import("./components/pages/ShowQrPage"));
 const AddAccountPage = lazy(() => import("./components/pages/AddAccountPage"));
 const NotFoundPage = lazy(() => import("./components/pages/NotFoundPage"));
 
@@ -37,11 +36,6 @@ function App() {
                       exact
                       path={constants.HOME_PAGE.route}
                       component={HomePage}
-                    />
-                    <Route
-                      exact
-                      path={`/${constants.SHOW_QR_PAGE.route}`}
-                      component={ShowQrPage}
                     />
                     <Route
                       exact

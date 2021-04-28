@@ -71,6 +71,7 @@ const AccountsState = (props) => {
   const initialState = {
     availableAccounts: [],
     userAccounts: null,
+    currentQr: null,
     loading: true,
   };
 
@@ -95,6 +96,13 @@ const AccountsState = (props) => {
     dispatch({
       type: actions.GET_AVAILABLE_ACCOUNTS,
       payload: availableAccountsJson,
+    });
+  };
+
+  const showQrAccount = (account) => {
+    dispatch({
+      type: actions.SHOW_QR_ACCOUNT,
+      payload: account,
     });
   };
 
@@ -141,9 +149,11 @@ const AccountsState = (props) => {
         loading: state.loading,
         userAccounts: state.userAccounts,
         availableAccounts: state.availableAccounts,
+        currentQr: state.currentQr,
         setLoading,
         getUserAccounts,
         getAvailableAccounts,
+        showQrAccount,
         addAccount,
         removeAccount,
         selectAllAccounts,

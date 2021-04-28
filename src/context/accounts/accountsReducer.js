@@ -19,6 +19,12 @@ const reducer = (state, action) => {
         availableAccounts: action.payload,
         loading: false,
       };
+    case actions.SHOW_QR_ACCOUNT:
+      return {
+        ...state,
+        currentQr: action.payload,
+        loading: false,
+      };
     case actions.ADD_ACCOUNT:
       return {
         ...state,
