@@ -1,6 +1,7 @@
 @import "../../styles/colors";
 
 .app-add-button {
+  text-decoration: none;
   button {
     color: $primary-contrast;
     background-color: $primary;
