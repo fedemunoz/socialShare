@@ -9,7 +9,6 @@ import "./sendToEmail.scss";
 
 const SendToEmail = () => {
   const [emailInput, setEmailInput] = useState("");
-  const [buttonDisabled, setButtonDisabled] = useState(true);
   const [showError, setshowError] = useState(false);
 
   const notificationsContext = useContext(NotificationsContext);
@@ -17,23 +16,29 @@ const SendToEmail = () => {
   const { userAccounts, sendEmail } = accountsContext;
 
   const onChange = (event) => {
-    if (buttonDisabled) setButtonDisabled(false);
     const emailTo = event.target.value;
     setEmailInput(emailTo);
     validator.isEmail(emailTo) ? setshowError(false) : setshowError(true);
   };
 
   const onClick = () => {
+    if (showError || !emailInput)
+      return showErrorAlert("Error. Invalid Email.");
+
     const emailAccounts = userAccounts.filter((account) => account.email);
-    if (!emailAccounts.length) {
-      return notificationsContext.showAlert({
-        msg: "Error. Select at least one account.",
-        type: "error",
-        position: "top",
-      });
-    }
+    if (!emailAccounts.length)
+      return showErrorAlert("Error. Select at least one account.");
+
     sendEmail(emailAccounts, emailInput);
     setEmailInput("");
+  };
+
+  const showErrorAlert = (msg) => {
+    notificationsContext.showAlert({
+      msg: msg,
+      type: "error",
+      position: "top",
+    });
   };
 
   return (
@@ -51,12 +56,7 @@ const SendToEmail = () => {
           />
         </Grid>
         <Grid item className={showError ? "align-self-center" : ""}>
-          <Button
-            color='primary'
-            variant='outlined'
-            disabled={buttonDisabled || showError}
-            onClick={onClick}
-          >
+          <Button color='primary' variant='contained' onClick={onClick}>
             Send
           </Button>
         </Grid>
