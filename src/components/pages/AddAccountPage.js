@@ -36,8 +36,6 @@ const AddAccountPage = () => {
       <div>
         <AddAccountDialog />
         <Search />
-        <ContentDivider />
-
         {filteredAccounts.map((accountCategory) =>
           accountCategory.accounts.length ? (
             <div key={accountCategory.name}>
