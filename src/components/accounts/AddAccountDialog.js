@@ -11,6 +11,7 @@ import Fade from "@material-ui/core/Fade";
 
 import Icon from "../layout/Icon";
 import AccountsContext from "../../context/accounts/accountsContext";
+import NotificationsContext from "../../context/notifications/notificationsContext";
 import "./addAccountDialog.scss";
 
 const iconMargin = {
@@ -19,6 +20,7 @@ const iconMargin = {
 
 const AddAccountDialog = () => {
   const [input, setInput] = useState("");
+  const notificationsContext = useContext(NotificationsContext);
   const accountsContext = useContext(AccountsContext);
   const { currentAddAccount, showAddAccount, addAccount } = accountsContext;
 
@@ -30,6 +32,13 @@ const AddAccountDialog = () => {
   };
 
   const handleConfirm = () => {
+    if (input.length < 3) {
+      return notificationsContext.showAlert({
+        msg: "Error. Enter a valid account.",
+        type: "error",
+        position: "top",
+      });
+    }
     addAccount(currentAddAccount, input);
     handleClose();
   };
@@ -81,11 +90,7 @@ const AddAccountDialog = () => {
               <Button onClick={handleClose} color='primary'>
                 Cancel
               </Button>
-              <Button
-                onClick={handleConfirm}
-                color='primary'
-                className={input.length < 3 ? "Mui-disabled" : ""}
-              >
+              <Button onClick={handleConfirm} color='primary'>
                 Confirm
               </Button>
             </DialogActions>
