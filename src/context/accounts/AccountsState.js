@@ -148,7 +148,27 @@ const AccountsState = (props) => {
     });
   };
 
-  const sendEmail = (accounts) => {};
+  const sendEmail = async (accounts) => {
+    try {
+      const response = await fetch("/.netlify/functions/sendmail", {
+        method: "POST",
+        body: "fede test",
+        // body: JSON.stringify(formState),
+      });
+
+      response.ok
+        ? notificationsContext.showAlert({
+            msg: "Email sent!",
+            type: "success",
+            position: "top",
+          })
+        : showError();
+
+      //all OK
+    } catch (e) {
+      showError();
+    }
+  };
 
   return (
     <AccountsContext.Provider
