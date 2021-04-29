@@ -3,64 +3,10 @@
     "name": "Social Networks",
     "accounts": [
       {        
-        "name": "Instagram",
-        "logo": "instagram",
-        "urlPrefix": "https://instagram.com/",
-        "placeholder": "Instagram user"        
-      },
-      {        
         "name": "Facebook",
         "logo": "facebook",
         "urlPrefix": "https://facebook.com/",
         "placeholder": "Facebook user"        
-      },
-      {        
-        "name": "Twitter",
-        "logo": "twitter",
-        "urlPrefix": "https://twitter.com/",
-        "placeholder": "Twitter user"        
-      },
-      {        
-        "name": "Youtube",
-        "logo": "youtube",
-        "urlPrefix": "https://youtube.com/",
-        "placeholder": "Youtube user"        
-      },
-      {        
-        "name": "Linkedin",
-        "logo": "linkedin",
-        "urlPrefix": "https://linkedin.com/in/",
-        "placeholder": "Linkedin user"        
-      },
-      {        
-        "name": "Snapchat",
-        "logo": "snapchat",
-        "urlPrefix": "https://snapchat.com/",
-        "placeholder": "Snapchat user"        
-      },
-      {        
-        "name": "Pinterest",
-        "logo": "pinterest",
-        "urlPrefix": "https://pinterest.com/",
-        "placeholder": "Pinterest user"        
-      },
-      {        
-        "name": "Tumblr",
-        "logo": "tumblr",
-        "urlPrefix": "https://tumblr.com/",
-        "placeholder": "Tumblr user"        
-      },
-      {        
-        "name": "Reddit",
-        "logo": "reddit",
-        "urlPrefix": "https://reddit.com/",
-        "placeholder": "Reddit user"        
-      },
-      {        
-        "name": "Medium",
-        "logo": "medium",
-        "urlPrefix": "https://medium.com/",
-        "placeholder": "Medium user"        
       },
       {        
         "name": "Flickr",
@@ -69,50 +15,71 @@
         "placeholder": "Flickr user"        
       },
       {        
-        "name": "Tik Tok",
-        "logo": "tiktok",
-        "urlPrefix": "https://tiktok.com/",
-        "placeholder": "Tik Tok user"        
+        "name": "Instagram",
+        "logo": "instagram",
+        "urlPrefix": "https://instagram.com/",
+        "placeholder": "Instagram user"        
+      },
+      {        
+        "name": "Linkedin",
+        "logo": "linkedin",
+        "urlPrefix": "https://linkedin.com/in/",
+        "placeholder": "Linkedin user"        
+      },
+      {        
+        "name": "Medium",
+        "logo": "medium",
+        "urlPrefix": "https://medium.com/",
+        "placeholder": "Medium user"        
+      },
+      {        
+        "name": "Pinterest",
+        "logo": "pinterest",
+        "urlPrefix": "https://pinterest.com/",
+        "placeholder": "Pinterest user"        
+      },
+      {        
+        "name": "Reddit",
+        "logo": "reddit",
+        "urlPrefix": "https://reddit.com/",
+        "placeholder": "Reddit user"        
+      },
+      {        
+        "name": "Snapchat",
+        "logo": "snapchat",
+        "urlPrefix": "https://snapchat.com/",
+        "placeholder": "Snapchat user"        
       },
       {        
         "name": "Spotify",
         "logo": "spotify",
         "urlPrefix": "https://open.spotify.com/user/",
         "placeholder": "Spotify user"        
-      }
-    ]
-  },
-  {
-    "name": "General",
-    "accounts": [
-      {        
-        "name": "Email",
-        "logo": "envelope",
-        "faIcon": "fas",    
-        "urlPrefix": "mailto:",    
-        "placeholder": "Email account"        
-      },      
-      {        
-        "name": "Link",
-        "logo": "link",
-        "faIcon": "fas",   
-        "urlPrefix": "mailto:",     
-        "placeholder": "Link"        
       },
       {        
-        "name": "Phone",
-        "logo": "phone",
-        "faIcon": "fas",  
-        "urlPrefix": "tel:+",      
-        "placeholder": "Phone number"        
+        "name": "Tik Tok",
+        "logo": "tiktok",
+        "urlPrefix": "https://tiktok.com/",
+        "placeholder": "Tik Tok user"        
       },
       {        
-        "name": "Website",
-        "logo": "globe",
-        "faIcon": "fas", 
-        "urlPrefix": "https://",       
-        "placeholder": "URL"        
-      }
+        "name": "Twitter",
+        "logo": "twitter",
+        "urlPrefix": "https://twitter.com/",
+        "placeholder": "Twitter user"        
+      },
+      {        
+        "name": "Tumblr",
+        "logo": "tumblr",
+        "urlPrefix": "https://tumblr.com/",
+        "placeholder": "Tumblr user"        
+      },
+      {        
+        "name": "Youtube",
+        "logo": "youtube",
+        "urlPrefix": "https://youtube.com/",
+        "placeholder": "Youtube user"        
+      }      
     ]
   },
   {
@@ -146,7 +113,13 @@
   },
   {
     "name": "Communication",
-    "accounts": [
+    "accounts": [      
+      {        
+        "name": "Discord",
+        "logo": "discord",
+        "urlPrefix": "tel:+",
+        "placeholder": "Discord user"        
+      },
       {        
         "name": "Skype",
         "logo": "skype",
@@ -154,10 +127,10 @@
         "placeholder": "Skype user"        
       },
       {        
-        "name": "Discord",
-        "logo": "discord",
-        "urlPrefix": "tel:+",
-        "placeholder": "Discord user"        
+        "name": "Slack",
+        "logo": "slack",
+        "urlPrefix": "https://slack.com/",
+        "placeholder": "Slack user"        
       },
       {        
         "name": "Telegram",
@@ -170,6 +143,13 @@
         "logo": "whatsapp",
         "urlPrefix": "tel:+",
         "placeholder": "Whatsapp user"        
+      },      
+      {        
+        "name": "Zoom",
+        "logo": "video",
+        "faIcon": "fas",  
+        "urlPrefix": "https://zoom.com/",
+        "placeholder": "Zoom user"        
       }      
     ]
   },
@@ -194,10 +174,22 @@
     "name": "Software Development",
     "accounts": [
       {        
-        "name": "StackOverflow",
-        "logo": "stack-overflow",
-        "urlPrefix": "https://stackoverflow.com/",
-        "placeholder": "StackOverflow user"        
+        "name": "BitBucket",
+        "logo": "bitbucket",
+        "urlPrefix": "https://bitbucket.com/",
+        "placeholder": "BitBucket user"        
+      },
+      {        
+        "name": "Dev",
+        "logo": "dev",
+        "urlPrefix": "https://dev.com/",
+        "placeholder": "Dev user"        
+      },
+      {        
+        "name": "Figma",
+        "logo": "figma",
+        "urlPrefix": "https://figma.com/",
+        "placeholder": "Figma user"        
       },
       {        
         "name": "Github",
@@ -212,28 +204,49 @@
         "placeholder": "Gitlab user"        
       },
       {        
-        "name": "Dev",
-        "logo": "dev",
-        "urlPrefix": "https://dev.com/",
-        "placeholder": "Dev user"        
-      },
-      {        
-        "name": "BitBucket",
-        "logo": "bitbucket",
-        "urlPrefix": "https://bitbucket.com/",
-        "placeholder": "BitBucket user"        
+        "name": "StackOverflow",
+        "logo": "stack-overflow",
+        "urlPrefix": "https://stackoverflow.com/",
+        "placeholder": "StackOverflow user"        
       },
       {        
         "name": "Trello",
         "logo": "trello",
         "urlPrefix": "https://trello.com/",
         "placeholder": "Trello user"        
+      }
+    ]
+  },
+  {
+    "name": "Others",
+    "accounts": [
+      {        
+        "name": "Email",
+        "logo": "envelope",
+        "faIcon": "fas",    
+        "urlPrefix": "mailto:",    
+        "placeholder": "Email account"        
+      },      
+      {        
+        "name": "Link",
+        "logo": "link",
+        "faIcon": "fas",   
+        "urlPrefix": "mailto:",     
+        "placeholder": "Link"        
       },
       {        
-        "name": "Figma",
-        "logo": "figma",
-        "urlPrefix": "https://figma.com/",
-        "placeholder": "Figma user"        
+        "name": "Phone",
+        "logo": "phone",
+        "faIcon": "fas",  
+        "urlPrefix": "tel:+",      
+        "placeholder": "Phone number"        
+      },
+      {        
+        "name": "Website",
+        "logo": "globe",
+        "faIcon": "fas", 
+        "urlPrefix": "https://",       
+        "placeholder": "URL"        
       }
     ]
   }

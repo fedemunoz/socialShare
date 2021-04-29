@@ -7,12 +7,18 @@ import Spinner from "../layout/Spinner";
 import ContentDivider from "../layout/ContentDivider";
 import AccountCategory from "../accounts/AccountCategory";
 import AddAccountDialog from "../accounts/AddAccountDialog";
+import Search from "../accounts/Search";
 import constants from "../../shared/constants";
 
 const AddAccountPage = () => {
   const pageContext = useContext(PageContext);
   const accountsContext = useContext(AccountsContext);
-  const { loading, availableAccounts, getAvailableAccounts } = accountsContext;
+  const {
+    loading,
+    availableAccounts,
+    getAvailableAccounts,
+    filteredAccounts,
+  } = accountsContext;
 
   useEffect(() => {
     pageContext.setPage({
@@ -29,12 +35,17 @@ const AddAccountPage = () => {
     <Slide direction='left' in mountOnEnter unmountOnExit>
       <div>
         <AddAccountDialog />
-        {availableAccounts.map((accountCategory) => (
-          <div key={accountCategory.name}>
-            <AccountCategory accountCategory={accountCategory} />
-            <ContentDivider />
-          </div>
-        ))}
+        <Search />
+        <ContentDivider />
+
+        {filteredAccounts.map((accountCategory) =>
+          accountCategory.accounts.length ? (
+            <div key={accountCategory.name}>
+              <AccountCategory accountCategory={accountCategory} />
+              <ContentDivider />
+            </div>
+          ) : null
+        )}
       </div>
     </Slide>
   );

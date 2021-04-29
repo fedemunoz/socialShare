@@ -14,11 +14,11 @@ const Alert = () => {
       <Snackbar
         anchorOrigin={{ vertical: alert.position, horizontal: "center" }}
         open={Boolean(alert)}
-        autoHideDuration={3000}
+        autoHideDuration={alert.time || 3000}
         onClose={handleClose}
         message={alert.msg}
         key={`${alert.position} center`}
-        className={`alert-${alert.type}`}
+        className={`snackbar-alert alert-${alert.type}`}
       />
     )
   );

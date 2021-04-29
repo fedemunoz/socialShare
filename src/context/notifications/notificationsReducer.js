@@ -5,11 +5,7 @@ const reducer = (state, action) => {
     case actions.SHOW_ALERT:
       return {
         ...state,
-        alert: {
-          msg: action.payload.msg,
-          type: action.payload.type,
-          position: action.payload.position,
-        },
+        alert: action.payload,
       };
     case actions.HIDE_ALERT:
       return {

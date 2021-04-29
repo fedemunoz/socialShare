@@ -17,7 +17,7 @@ const itemStyle = {
 const UserAccount = ({ account: { id, faIcon, logo, name, url } }) => {
   const accountsContext = useContext(AccountsContext);
 
-  const onClick = () => window.open(url);
+  const onClick = () => window.open(url, "_blank");
 
   const confirmRemove = () => accountsContext.removeAccount(id);
 

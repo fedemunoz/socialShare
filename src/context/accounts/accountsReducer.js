@@ -17,6 +17,21 @@ const reducer = (state, action) => {
       return {
         ...state,
         availableAccounts: action.payload,
+        filteredAccounts: action.payload,
+        loading: false,
+      };
+    case actions.FILTER_ACCOUNTS:
+      return {
+        ...state,
+        filteredAccounts: !action.payload
+          ? state.availableAccounts
+          : state.availableAccounts.map((category) => ({
+              name: category.name,
+              accounts: category.accounts.filter((account) => {
+                const regex = new RegExp(`${action.payload}`, "gi");
+                return account.name.match(regex);
+              }),
+            })),
         loading: false,
       };
     case actions.SHOW_QR_ACCOUNT:

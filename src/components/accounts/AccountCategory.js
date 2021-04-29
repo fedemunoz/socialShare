@@ -20,30 +20,28 @@ const AccountCategory = ({ accountCategory }) => {
   };
 
   return (
-    accountCategory.accounts.length && (
-      <Fragment>
-        <List>
-          <h3 style={titleStyle}>{accountCategory.name}</h3>
-          {accountCategory.accounts.map((account) => (
-            <ListItem
-              button
-              key={account.name}
-              onClick={() => addAccount(account)}
-            >
-              <ListItemIcon>
-                <Icon
-                  icon={account.logo}
-                  size='lg'
-                  type={account.faIcon}
-                  classes='color-primary'
-                />
-              </ListItemIcon>
-              <ListItemText primary={account.name} />
-            </ListItem>
-          ))}
-        </List>
-      </Fragment>
-    )
+    <Fragment>
+      <List>
+        <h3 style={titleStyle}>{accountCategory.name}</h3>
+        {accountCategory.accounts.map((account) => (
+          <ListItem
+            button
+            key={account.name}
+            onClick={() => addAccount(account)}
+          >
+            <ListItemIcon>
+              <Icon
+                icon={account.logo}
+                size='lg'
+                type={account.faIcon}
+                classes='color-primary'
+              />
+            </ListItemIcon>
+            <ListItemText primary={account.name} />
+          </ListItem>
+        ))}
+      </List>
+    </Fragment>
   );
 };
 

@@ -68,7 +68,10 @@ const AddAccountDialog = () => {
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
-                      {currentAddAccount.urlPrefix.replace("https://", "")}
+                      {currentAddAccount.urlPrefix.replace(
+                        /https:\/\/|mailto:|tel:/gi,
+                        ""
+                      )}
                     </InputAdornment>
                   ),
                 }}

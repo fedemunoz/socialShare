@@ -13,6 +13,7 @@ const AccountsTab = () => {
       msg: "Click accounts to preview.",
       type: "info",
       position: "top",
+      time: 2000,
     });
     // eslint-disable-next-line
   }, []);

@@ -1,17 +1,21 @@
 @import "../../styles/colors";
 
-.alert-primary {
-  .MuiSnackbarContent-root {
-    background-color: $primary;
+.snackbar-alert {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  &.alert-primary {
+    .MuiSnackbarContent-root {
+      background-color: $primary;
+    }
   }
-}
-.alert-success {
-  .MuiSnackbarContent-root {
-    background-color: $success;
+  &.alert-success {
+    .MuiSnackbarContent-root {
+      background-color: $success;
+    }
   }
-}
-.alert-error {
-  .MuiSnackbarContent-root {
-    background-color: $danger;
+  &.alert-error {
+    .MuiSnackbarContent-root {
+      background-color: $danger;
+    }
   }
 }

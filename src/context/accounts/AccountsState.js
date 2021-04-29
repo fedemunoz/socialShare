@@ -13,6 +13,7 @@ const AccountsState = (props) => {
 
   const initialState = {
     availableAccounts: [],
+    filteredAccounts: [],
     userAccounts: null,
     currentQr: null,
     currentAddAccount: null,
@@ -35,11 +36,18 @@ const AccountsState = (props) => {
     });
   };
 
-  const getAvailableAccounts = async () => {
+  const getAvailableAccounts = () => {
     setLoading();
     dispatch({
       type: actions.GET_AVAILABLE_ACCOUNTS,
       payload: availableAccountsJson,
+    });
+  };
+
+  const filterAccounts = (searchTerm) => {
+    dispatch({
+      type: actions.FILTER_ACCOUNTS,
+      payload: searchTerm,
     });
   };
 
@@ -91,32 +99,44 @@ const AccountsState = (props) => {
     });
 
   const removeAccount = async (accountId) => {
-    setLoading();
+    try {
+      setLoading();
 
-    const userAccounts = state.userAccounts.filter(
-      (account) => account.id !== accountId
-    );
-    await updateUserAccounts(userAccounts);
+      const userAccounts = state.userAccounts.filter(
+        (account) => account.id !== accountId
+      );
+      await updateUserAccounts(userAccounts);
+    } catch (e) {
+      showError();
+    }
   };
 
   const selectAllAccounts = async (selectAll) => {
-    const userAccounts = state.userAccounts.map((account) => ({
-      ...account,
-      email: selectAll,
-    }));
-    await updateUserAccounts(userAccounts);
+    try {
+      const userAccounts = state.userAccounts.map((account) => ({
+        ...account,
+        email: selectAll,
+      }));
+      await updateUserAccounts(userAccounts);
+    } catch (e) {
+      showError();
+    }
   };
 
   const selectAccount = async (id, value) => {
-    const userAccounts = state.userAccounts.map((account) => {
-      return account.id.toString() !== id
-        ? account
-        : {
-            ...account,
-            email: value,
-          };
-    });
-    await updateUserAccounts(userAccounts);
+    try {
+      const userAccounts = state.userAccounts.map((account) => {
+        return account.id.toString() !== id
+          ? account
+          : {
+              ...account,
+              email: value,
+            };
+      });
+      await updateUserAccounts(userAccounts);
+    } catch (e) {
+      showError();
+    }
   };
 
   const updateUserAccounts = async (userAccounts) => {
@@ -136,11 +156,13 @@ const AccountsState = (props) => {
         loading: state.loading,
         userAccounts: state.userAccounts,
         availableAccounts: state.availableAccounts,
+        filteredAccounts: state.filteredAccounts,
         currentQr: state.currentQr,
         currentAddAccount: state.currentAddAccount,
         setLoading,
         getUserAccounts,
         getAvailableAccounts,
+        filterAccounts,
         showQrAccount,
         showAddAccount,
         addAccount,
