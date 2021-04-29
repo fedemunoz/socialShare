@@ -10,7 +10,7 @@
   }
   button.MuiButton-contained {
     background-color: $primary;
-    color: $primary-contrast;
+    color: $primary-contrast !important;
     &.Mui-disabled {
       background-color: $disabled;
       color: $light-gray;
