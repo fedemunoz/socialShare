@@ -27,7 +27,7 @@ const ShowQrModal = () => {
             {currentQr.title}
           </h2>
           <p className='color-gray' style={nameStyle}>
-            {currentQr.url}
+            {currentQr.name}
           </p>
           <div className='qr-container'>
             <QRCode value={currentQr.url} />

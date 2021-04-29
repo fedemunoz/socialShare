@@ -5,79 +5,79 @@
       {        
         "name": "Instagram",
         "logo": "instagram",
-        "urlPrefix": "instagram.com/",
+        "urlPrefix": "https://instagram.com/",
         "placeholder": "Instagram user"        
       },
       {        
         "name": "Facebook",
         "logo": "facebook",
-        "urlPrefix": "facebook.com/",
+        "urlPrefix": "https://facebook.com/",
         "placeholder": "Facebook user"        
       },
       {        
         "name": "Twitter",
         "logo": "twitter",
-        "urlPrefix": "twitter.com/",
+        "urlPrefix": "https://twitter.com/",
         "placeholder": "Twitter user"        
       },
       {        
         "name": "Youtube",
         "logo": "youtube",
-        "urlPrefix": "youtube.com/",
+        "urlPrefix": "https://youtube.com/",
         "placeholder": "Youtube user"        
       },
       {        
         "name": "Linkedin",
         "logo": "linkedin",
-        "urlPrefix": "linkedin.com/in/",
+        "urlPrefix": "https://linkedin.com/in/",
         "placeholder": "Linkedin user"        
       },
       {        
         "name": "Snapchat",
         "logo": "snapchat",
-        "urlPrefix": "snapchat.com/",
+        "urlPrefix": "https://snapchat.com/",
         "placeholder": "Snapchat user"        
       },
       {        
         "name": "Pinterest",
         "logo": "pinterest",
-        "urlPrefix": "pinterest.com/",
+        "urlPrefix": "https://pinterest.com/",
         "placeholder": "Pinterest user"        
       },
       {        
         "name": "Tumblr",
         "logo": "tumblr",
-        "urlPrefix": "tumblr.com/",
+        "urlPrefix": "https://tumblr.com/",
         "placeholder": "Tumblr user"        
       },
       {        
         "name": "Reddit",
         "logo": "reddit",
-        "urlPrefix": "reddit.com/",
+        "urlPrefix": "https://reddit.com/",
         "placeholder": "Reddit user"        
       },
       {        
         "name": "Medium",
         "logo": "medium",
-        "urlPrefix": "medium.com/",
+        "urlPrefix": "https://medium.com/",
         "placeholder": "Medium user"        
       },
       {        
         "name": "Flickr",
         "logo": "flickr",
-        "urlPrefix": "flickr.com/",
+        "urlPrefix": "https://flickr.com/",
         "placeholder": "Flickr user"        
       },
       {        
         "name": "Tik Tok",
         "logo": "tiktok",
-        "urlPrefix": "tiktok.com/",
+        "urlPrefix": "https://tiktok.com/",
         "placeholder": "Tik Tok user"        
       },
       {        
         "name": "Spotify",
         "logo": "spotify",
-        "urlPrefix": "open.spotify.com/user/",
+        "urlPrefix": "https://open.spotify.com/user/",
         "placeholder": "Spotify user"        
       }
     ]
@@ -150,7 +150,7 @@
       {        
         "name": "Skype",
         "logo": "skype",
-        "urlPrefix": "skype.com/",
+        "urlPrefix": "https://skype.com/",
         "placeholder": "Skype user"        
       },
       {        
@@ -179,13 +179,13 @@
       {        
         "name": "Paypal",
         "logo": "paypal",
-        "urlPrefix": "paypal.com/",
+        "urlPrefix": "https://paypal.com/",
         "placeholder": "Paypal user"        
       },
       {        
         "name": "Stripe",
         "logo": "stripe",
-        "urlPrefix": "stripe.com/",
+        "urlPrefix": "https://stripe.com/",
         "placeholder": "Stripe user"        
       }
     ]
@@ -196,7 +196,7 @@
       {        
         "name": "StackOverflow",
         "logo": "stack-overflow",
-        "urlPrefix": "stackoverflow.com/",
+        "urlPrefix": "https://stackoverflow.com/",
         "placeholder": "StackOverflow user"        
       },
       {        
@@ -208,31 +208,31 @@
       {        
         "name": "Gitlab",
         "logo": "gitlab",
-        "urlPrefix": "gitlab.com/",
+        "urlPrefix": "https://gitlab.com/",
         "placeholder": "Gitlab user"        
       },
       {        
         "name": "Dev",
         "logo": "dev",
-        "urlPrefix": "dev.com/",
+        "urlPrefix": "https://dev.com/",
         "placeholder": "Dev user"        
       },
       {        
         "name": "BitBucket",
         "logo": "bitbucket",
-        "urlPrefix": "bitbucket.com/",
+        "urlPrefix": "https://bitbucket.com/",
         "placeholder": "BitBucket user"        
       },
       {        
         "name": "Trello",
         "logo": "trello",
-        "urlPrefix": "trello.com/",
+        "urlPrefix": "https://trello.com/",
         "placeholder": "Trello user"        
       },
       {        
         "name": "Figma",
         "logo": "figma",
-        "urlPrefix": "figma.com/",
+        "urlPrefix": "https://figma.com/",
         "placeholder": "Figma user"        
       }
     ]
