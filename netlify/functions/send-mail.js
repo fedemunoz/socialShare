@@ -15,7 +15,7 @@ exports.handler = async (event, context, callback) => {
 
   const msg = {
     to: "fedemz88@gmail.com",
-    from: email,
+    from: email || "fedemz88@gmail.com",
     subject: subject ? subject : "Contact Form Submission",
     html: event.body,
   };
