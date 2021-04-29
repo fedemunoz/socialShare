@@ -88,25 +88,29 @@
       {        
         "name": "Email",
         "logo": "envelope",
-        "faIcon": "fas",        
+        "faIcon": "fas",    
+        "urlPrefix": "mailto:",    
         "placeholder": "Email account"        
       },      
       {        
         "name": "Link",
         "logo": "link",
-        "faIcon": "fas",        
+        "faIcon": "fas",   
+        "urlPrefix": "mailto:",     
         "placeholder": "Link"        
       },
       {        
         "name": "Phone",
         "logo": "phone",
-        "faIcon": "fas",        
+        "faIcon": "fas",  
+        "urlPrefix": "tel:+",      
         "placeholder": "Phone number"        
       },
       {        
         "name": "Website",
         "logo": "globe",
-        "faIcon": "fas",        
+        "faIcon": "fas", 
+        "urlPrefix": "https://",       
         "placeholder": "URL"        
       }
     ]
@@ -116,22 +120,26 @@
     "accounts": [
       {        
         "name": "Apple",
-        "logo": "apple",        
+        "logo": "apple",       
+        "urlPrefix": "mailto:", 
         "placeholder": "Apple account"        
       },
       {        
         "name": "Google",
-        "logo": "google",        
+        "logo": "google",    
+        "urlPrefix": "mailto:",    
         "placeholder": "Google account"        
       },
       {        
         "name": "Microsoft",
-        "logo": "microsoft",        
+        "logo": "microsoft",   
+        "urlPrefix": "mailto:",     
         "placeholder": "Microsoft account"        
       },
       {        
         "name": "Yahoo",
-        "logo": "yahoo",        
+        "logo": "yahoo",    
+        "urlPrefix": "mailto:",    
         "placeholder": "Yahoo account"        
       }
     ]
@@ -148,16 +156,19 @@
       {        
         "name": "Discord",
         "logo": "discord",
+        "urlPrefix": "tel:+",
         "placeholder": "Discord user"        
       },
       {        
         "name": "Telegram",
         "logo": "telegram",
+        "urlPrefix": "tel:+",
         "placeholder": "Telegram user"        
       },
       {        
         "name": "Whatsapp",
         "logo": "whatsapp",
+        "urlPrefix": "tel:+",
         "placeholder": "Whatsapp user"        
       }      
     ]

@@ -1,4 +1,4 @@
-@import "../../colors";
+@import "../../styles/colors";
 
 .show-qr-container {
   position: absolute;
@@ -12,7 +12,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  color: $primary;
   text-align: center;
   justify-content: center;
   padding: 2rem 1.8rem;

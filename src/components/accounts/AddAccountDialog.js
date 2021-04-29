@@ -11,17 +11,18 @@ import Fade from "@material-ui/core/Fade";
 
 import Icon from "../layout/Icon";
 import AccountsContext from "../../context/accounts/accountsContext";
+import "./addAccountDialog.scss";
 
 const iconMargin = {
   marginRight: "0.6rem",
 };
 
-const AddAccountModal = () => {
+const AddAccountDialog = () => {
   const [input, setInput] = useState("");
   const accountsContext = useContext(AccountsContext);
   const { currentAddAccount, showAddAccount, addAccount } = accountsContext;
 
-  const onChangeInput = (e) => setInput(e.currentTarget.value);
+  const onChangeInput = (e) => setInput(e.currentTarget.value.toLowerCase());
 
   const handleClose = () => {
     setInput("");
@@ -46,6 +47,7 @@ const AddAccountModal = () => {
             <DialogTitle id='form-dialog-title'>
               <Icon
                 icon={currentAddAccount.logo}
+                type={currentAddAccount.faIcon}
                 size='1x'
                 classes='color-primary'
                 styles={iconMargin}
@@ -62,6 +64,7 @@ const AddAccountModal = () => {
                 type='text'
                 fullWidth
                 onChange={onChangeInput}
+                value={input}
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position='start'>
@@ -75,7 +78,11 @@ const AddAccountModal = () => {
               <Button onClick={handleClose} color='primary'>
                 Cancel
               </Button>
-              <Button onClick={handleConfirm} color='primary'>
+              <Button
+                onClick={handleConfirm}
+                color='primary'
+                disabled={input.length < 3}
+              >
                 Confirm
               </Button>
             </DialogActions>
@@ -86,4 +93,4 @@ const AddAccountModal = () => {
   );
 };
 
-export default AddAccountModal;
+export default AddAccountDialog;

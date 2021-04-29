@@ -1,13 +1,16 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useContext } from "react";
 import { set, get } from "idb-keyval";
 
 import AccountsContext from "./accountsContext";
+import NotificationsContext from "../notifications/notificationsContext";
 import AccountsReducer from "./accountsReducer";
 import * as actions from "./accountsActions";
 import availableAccountsJson from "../../assets/data/available_accounts.json";
 import { v4 as uuidv4 } from "uuid";
 
 const AccountsState = (props) => {
+  const notificationsContext = useContext(NotificationsContext);
+
   const initialState = {
     availableAccounts: [],
     userAccounts: null,
@@ -55,19 +58,37 @@ const AccountsState = (props) => {
   };
 
   const addAccount = async (account, value) => {
-    setLoading();
-    const newAccount = {
-      id: uuidv4(),
-      logo: account.logo,
-      title: account.name,
-      name: value,
-      url: `http://www.${account.urlPrefix}${value}`,
-      email: true,
-    };
+    try {
+      setLoading();
+      const newAccount = {
+        id: uuidv4(),
+        faIcon: account.faIcon,
+        logo: account.logo,
+        title: account.name,
+        name: value,
+        url: `${account.urlPrefix || ""}${value}`,
+        email: true,
+      };
 
-    const userAccounts = [...state.userAccounts, newAccount];
-    await updateUserAccounts(userAccounts);
+      const userAccounts = [...state.userAccounts, newAccount];
+      await updateUserAccounts(userAccounts);
+
+      notificationsContext.showAlert({
+        msg: "Account added!",
+        type: "success",
+        position: "bottom",
+      });
+    } catch (e) {
+      showError();
+    }
   };
+
+  const showError = () =>
+    notificationsContext.showAlert({
+      msg: "Error. Please try again.",
+      type: "error",
+      position: "top",
+    });
 
   const removeAccount = async (accountId) => {
     setLoading();

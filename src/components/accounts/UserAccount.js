@@ -14,7 +14,7 @@ const itemStyle = {
   alignItems: "center",
 };
 
-const UserAccount = ({ account: { id, logo, name, url } }) => {
+const UserAccount = ({ account: { id, faIcon, logo, name, url } }) => {
   const accountsContext = useContext(AccountsContext);
 
   const onClick = () => window.open(url);
@@ -25,7 +25,7 @@ const UserAccount = ({ account: { id, logo, name, url } }) => {
     <ListItem button>
       <div style={itemStyle} onClick={onClick}>
         <ListItemIcon>
-          <Icon icon={logo} size='lg' classes='color-primary' />
+          <Icon type={faIcon} icon={logo} size='lg' classes='color-primary' />
         </ListItemIcon>
         <ListItemText primary={name} />
       </div>

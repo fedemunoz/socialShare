@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import FormControl from "@material-ui/core/FormControl";
 import FormGroup from "@material-ui/core/FormGroup";
@@ -90,19 +90,29 @@ const AccountSelector = () => {
                 />
               }
               label={
-                <Fragment>
-                  <Icon icon={account.logo} size='lg' />
-                  {account.title}
-                </Fragment>
+                <div style={{ display: "flex" }}>
+                  <div style={{ flex: "1" }}>
+                    <Icon type={account.faIcon} icon={account.logo} size='lg' />
+                    {account.title}
+                  </div>
+                  <div>
+                    <FormHelperText className='helper-text'>
+                      {account.name}
+                    </FormHelperText>
+                  </div>
+                </div>
               }
               labelPlacement='start'
               className={`banner ${account.email ? "selected-checkbox" : ""}`}
             />
           ))}
         </FormGroup>
-        <FormHelperText className='align-self-end'>
-          Select at least one account
-        </FormHelperText>
+
+        {!allSelected && !indeterminate && (
+          <FormHelperText className='align-self-end'>
+            Select at least one account
+          </FormHelperText>
+        )}
       </FormControl>
     </div>
   );

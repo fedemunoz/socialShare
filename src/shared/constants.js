@@ -7,7 +7,7 @@ export default Object.freeze({
     label: "Email",
   },
   MY_QR_TAB: {
-    title: "My QR",
+    title: "Click to Share",
     label: "My QR",
   },
   ACCOUNTS_TAB: {

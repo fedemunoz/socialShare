@@ -7,6 +7,15 @@
 .color-dark {
   color: $black;
 }
+.color-gray {
+  color: $gray;
+}
+.color-dark-gray {
+  color: $dark-gray;
+}
+.helper-text {
+  color: $dark-gray !important;
+}
 
 .full-height {
   height: 100%;
@@ -15,6 +24,9 @@
   width: 100%;
 }
 
+.text-align-center {
+  text-align: center;
+}
 .align-self-center {
   align-self: center;
 }

@@ -13,7 +13,7 @@ const AccountQrButton = ({ account }) => {
 
   return (
     <Button className='account-qr-button' onClick={onClick} disableRipple>
-      <Icon icon={account.logo} size='lg' />
+      <Icon type={account.faIcon} icon={account.logo} size='lg' />
     </Button>
   );
 };
