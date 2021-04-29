@@ -53,7 +53,7 @@ const SendToEmail = () => {
         <Grid item className={showError ? "align-self-center" : ""}>
           <Button
             color='primary'
-            variant='contained'
+            variant='outlined'
             disabled={buttonDisabled || showError}
             onClick={onClick}
           >
