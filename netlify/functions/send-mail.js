@@ -12,7 +12,7 @@ exports.handler = async (event, context, callback) => {
     to: emailTo,
     subject: "AccountShare - Here are my accounts!",
     html: accounts
-      .map((account) => `<b>${account.title}:</b> ${account.url}`)
+      .map((account) => `<b>${account.title}:</b> ${account.name}`)
       .join("<br><br>"),
   };
 

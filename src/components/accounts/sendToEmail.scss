@@ -8,11 +8,11 @@
       width: 100%;
     }
   }
-  button {
+  button.MuiButton-contained {
     background-color: $primary;
     color: $primary-contrast;
   }
-  button:hover {
+  button.MuiButton-contained:hover {
     background-color: $primary;
     color: $primary-contrast;
   }
