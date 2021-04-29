@@ -24,7 +24,9 @@ const AddAccountDialog = () => {
   const accountsContext = useContext(AccountsContext);
   const { currentAddAccount, showAddAccount, addAccount } = accountsContext;
 
-  const onChangeInput = (e) => setInput(e.currentTarget.value.toLowerCase());
+  const onChangeInput = (e) => {
+    return setInput(e.currentTarget.value.replace(/\s+/g, "").toLowerCase());
+  };
 
   const handleClose = () => {
     setInput("");
