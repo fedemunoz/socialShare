@@ -150,7 +150,7 @@ const AccountsState = (props) => {
 
   const sendEmail = async (accounts) => {
     try {
-      const response = await fetch("/.netlify/functions/sendmail", {
+      const response = await fetch("/.netlify/functions/send-mail", {
         method: "POST",
         body: JSON.stringify({
           subject: "Account Share",
