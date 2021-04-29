@@ -13,7 +13,7 @@
     color: $primary-contrast !important;
     &.Mui-disabled {
       background-color: $disabled;
-      color: $light-gray;
+      color: $light-gray !important;
     }
   }
   button.MuiButton-contained:hover {
