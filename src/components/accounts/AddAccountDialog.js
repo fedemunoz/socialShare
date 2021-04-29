@@ -84,7 +84,7 @@ const AddAccountDialog = () => {
               <Button
                 onClick={handleConfirm}
                 color='primary'
-                disabled={Boolean(input.length < 3)}
+                className={input.length < 3 ? "Mui-disabled" : ""}
               >
                 Confirm
               </Button>
