@@ -152,10 +152,23 @@ const AccountsState = (props) => {
     try {
       const response = await fetch("/.netlify/functions/sendmail", {
         method: "POST",
-        body: "fede test",
-        // body: JSON.stringify(formState),
+        body: JSON.stringify({
+          subject: "Account Share",
+          email: "fedemz88@gmail.com",
+          accounts: [
+            {
+              name: "Twitter",
+              url: "twitter.com/fedemunoz88",
+            },
+            {
+              name: "Linkedin",
+              url: "linkedin.com/in/federico-munoz-dev",
+            },
+          ],
+        }),
       });
 
+      console.log("response", response);
       response.ok
         ? notificationsContext.showAlert({
             msg: "Email sent!",
@@ -166,6 +179,7 @@ const AccountsState = (props) => {
 
       //all OK
     } catch (e) {
+      console.log("catch", e);
       showError();
     }
   };

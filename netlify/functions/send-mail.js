@@ -3,21 +3,21 @@ const { SENDGRID_API_KEY } = process.env;
 
 exports.handler = async (event, context, callback) => {
   const payload = JSON.parse(event.body);
-  const { email, subject } = payload;
+  const { email, subject, accounts } = payload;
 
   sgMail.setApiKey(SENDGRID_API_KEY);
 
-  // const body = Object.keys(payload)
-  //   .map((k) => {
-  //     return `${k}: ${payload[k]}`;
-  //   })
-  //   .join("<br><br>");
+  const body = Object.keys(accounts)
+    .map((k) => {
+      return `${k}: ${payload[k]}`;
+    })
+    .join("<br><br>");
 
   const msg = {
-    to: "fedemz88@gmail.com",
-    from: email || "fedemz88@gmail.com",
-    subject: subject ? subject : "Contact Form Submission",
-    html: event.body,
+    to: email,
+    from: "hello@accountshare.netlify.com",
+    subject: subject,
+    html: body,
   };
 
   try {
