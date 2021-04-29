@@ -11,11 +11,10 @@ import constants from "../../shared/constants";
 const HomePage = () => {
   const accountsContext = useContext(AccountsContext);
   const pageContext = useContext(PageContext);
-  const { loading, userAccounts, getUserAccounts } = accountsContext;
+  const { loading, userAccounts } = accountsContext;
   const { title, previousTab } = pageContext;
 
   useEffect(() => {
-    getUserAccounts();
     if (previousTab) pageContext.setPage({ title: previousTab });
     // eslint-disable-next-line
   }, []);
