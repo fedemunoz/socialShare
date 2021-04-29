@@ -148,30 +148,15 @@ const AccountsState = (props) => {
     });
   };
 
-  const sendEmail = async (accounts) => {
+  const sendEmail = async (accounts, emailTo) => {
     try {
+      setLoading();
       const response = await fetch("/.netlify/functions/send-mail/", {
         method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          subject: "Account Share",
-          email: "fedemz88@gmail.com",
-          accounts: [
-            {
-              name: "Twitter",
-              url: "twitter.com/fedemunoz88",
-            },
-            {
-              name: "Linkedin",
-              url: "linkedin.com/in/federico-munoz-dev",
-            },
-          ],
-        }),
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({ emailTo, accounts }),
       });
 
-      console.log("response", response);
       response.ok
         ? notificationsContext.showAlert({
             msg: "Email sent!",
@@ -179,11 +164,11 @@ const AccountsState = (props) => {
             position: "top",
           })
         : showError();
-
-      //all OK
     } catch (e) {
       console.log("catch", e);
       showError();
+    } finally {
+      dispatch({ type: actions.HIDE_LOADING });
     }
   };
 

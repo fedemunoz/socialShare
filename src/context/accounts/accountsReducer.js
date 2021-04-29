@@ -7,6 +7,11 @@ const reducer = (state, action) => {
         ...state,
         loading: true,
       };
+    case actions.HIDE_LOADING:
+      return {
+        ...state,
+        loading: false,
+      };
     case actions.GET_USER_ACCOUNTS:
       return {
         ...state,

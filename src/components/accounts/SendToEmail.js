@@ -8,6 +8,7 @@ import NotificationsContext from "../../context/notifications/notificationsConte
 import "./sendToEmail.scss";
 
 const SendToEmail = () => {
+  const [emailInput, setEmailInput] = useState("");
   const [buttonDisabled, setButtonDisabled] = useState(true);
   const [showError, setshowError] = useState(false);
 
@@ -17,20 +18,22 @@ const SendToEmail = () => {
 
   const onChange = (event) => {
     if (buttonDisabled) setButtonDisabled(false);
-    validator.isEmail(event.target.value)
-      ? setshowError(false)
-      : setshowError(true);
+    const emailTo = event.target.value;
+    setEmailInput(emailTo);
+    validator.isEmail(emailTo) ? setshowError(false) : setshowError(true);
   };
 
   const onClick = () => {
     const emailAccounts = userAccounts.filter((account) => account.email);
-    !emailAccounts.length
-      ? notificationsContext.showAlert({
-          msg: "Error. Select at least one account.",
-          type: "error",
-          position: "top",
-        })
-      : sendEmail(emailAccounts);
+    if (!emailAccounts.length) {
+      return notificationsContext.showAlert({
+        msg: "Error. Select at least one account.",
+        type: "error",
+        position: "top",
+      });
+    }
+    sendEmail(emailAccounts, emailInput);
+    setEmailInput("");
   };
 
   return (
@@ -43,6 +46,7 @@ const SendToEmail = () => {
             label='Email to'
             onChange={onChange}
             error={showError}
+            value={emailInput}
             helperText={showError && "Enter a valid email address."}
           />
         </Grid>
