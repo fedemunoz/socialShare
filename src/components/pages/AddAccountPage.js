@@ -6,6 +6,7 @@ import PageContext from "../../context/page/pageContext";
 import Spinner from "../layout/Spinner";
 import ContentDivider from "../layout/ContentDivider";
 import AccountCategory from "../accounts/AccountCategory";
+import AddAccountModal from "../accounts/AddAccountModal";
 import constants from "../../shared/constants";
 
 const AddAccountPage = () => {
@@ -27,6 +28,7 @@ const AddAccountPage = () => {
   ) : (
     <Slide direction='left' in mountOnEnter unmountOnExit>
       <div>
+        <AddAccountModal />
         {availableAccounts.map((accountCategory) => (
           <div key={accountCategory.name}>
             <AccountCategory accountCategory={accountCategory} />

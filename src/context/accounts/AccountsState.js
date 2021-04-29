@@ -5,73 +5,14 @@ import AccountsContext from "./accountsContext";
 import AccountsReducer from "./accountsReducer";
 import * as actions from "./accountsActions";
 import availableAccountsJson from "../../assets/data/available_accounts.json";
-
-async function loadDummyData() {
-  await set("accounts", [
-    {
-      id: 0,
-      logo: "instagram",
-      title: "Instagram",
-      name: "thenomadclub",
-      url: "http://www.instagram.com/thenomadclub",
-      email: true,
-    },
-    {
-      id: 1,
-      logo: "facebook",
-      title: "Facebook",
-      name: "jdsakjas",
-      url: "http://www.facebook.com/jdsakjas",
-      email: true,
-    },
-    {
-      id: 2,
-      logo: "twitter",
-      title: "Twitter",
-      name: "fedemunoz88",
-      url: "http://www.twitter.com/fedemunoz88",
-      email: true,
-    },
-    {
-      id: 3,
-      logo: "youtube",
-      title: "Youtube",
-      name: "jdsakjas",
-      url: "http://www.youtube.com/jdsakjas",
-      email: true,
-    },
-    {
-      id: 4,
-      logo: "spotify",
-      title: "Spotify",
-      name: "jdsakjas",
-      url: "http://www.spotify.com/jdsakjas",
-      email: true,
-    },
-    {
-      id: 5,
-      logo: "google",
-      title: "Google",
-      name: "jdsakjas@gmail.com",
-      url: "mailto:jdsakjas@gmail.com",
-      email: true,
-    },
-    {
-      id: 6,
-      logo: "linkedin",
-      title: "Linkedin",
-      name: "jdsakjas",
-      url: "http://www.linkedin.com/jdsakjas",
-      email: true,
-    },
-  ]);
-}
+import { v4 as uuidv4 } from "uuid";
 
 const AccountsState = (props) => {
   const initialState = {
     availableAccounts: [],
     userAccounts: null,
     currentQr: null,
+    currentAddAccount: null,
     loading: true,
   };
 
@@ -83,11 +24,11 @@ const AccountsState = (props) => {
 
   const getUserAccounts = async () => {
     setLoading();
-    await loadDummyData();
     const userAccountsJson = await get("accounts");
+
     dispatch({
       type: actions.GET_USER_ACCOUNTS,
-      payload: userAccountsJson,
+      payload: userAccountsJson || [],
     });
   };
 
@@ -106,42 +47,67 @@ const AccountsState = (props) => {
     });
   };
 
-  const addAccount = (account) => {
-    setLoading();
+  const showAddAccount = (account) => {
     dispatch({
-      type: actions.ADD_ACCOUNT,
+      type: actions.SHOW_ADD_ACCOUNT,
       payload: account,
     });
   };
 
-  const removeAccount = (accountId) => {
+  const addAccount = async (account, value) => {
     setLoading();
-    dispatch({
-      type: actions.REMOVE_ACCOUNT,
-      payload: accountId,
-    });
+    const newAccount = {
+      id: uuidv4(),
+      logo: account.logo,
+      title: account.name,
+      name: value,
+      url: `http://www.${account.urlPrefix}${value}`,
+      email: true,
+    };
+
+    const userAccounts = [...state.userAccounts, newAccount];
+    await updateUserAccounts(userAccounts);
+  };
+
+  const removeAccount = async (accountId) => {
+    setLoading();
+
+    const userAccounts = state.userAccounts.filter(
+      (account) => account.id !== accountId
+    );
+    await updateUserAccounts(userAccounts);
   };
 
   const selectAllAccounts = async (selectAll) => {
+    const userAccounts = state.userAccounts.map((account) => ({
+      ...account,
+      email: selectAll,
+    }));
+    await updateUserAccounts(userAccounts);
+  };
+
+  const selectAccount = async (id, value) => {
+    const userAccounts = state.userAccounts.map((account) => {
+      return account.id.toString() !== id
+        ? account
+        : {
+            ...account,
+            email: value,
+          };
+    });
+    await updateUserAccounts(userAccounts);
+  };
+
+  const updateUserAccounts = async (userAccounts) => {
+    await set("accounts", userAccounts);
+
     dispatch({
-      type: actions.SELECT_ALL_ACCOUNTS,
-      payload: selectAll,
+      type: actions.UPDATE_ACCOUNTS,
+      payload: userAccounts,
     });
   };
 
-  const selectAccount = (id, value) => {
-    dispatch({
-      type: actions.SELECT_ACCOUNT,
-      payload: { id, value },
-    });
-  };
-
-  const sendEmail = (accounts) => {
-    dispatch({
-      type: actions.SEND_EMAIL,
-      payload: accounts,
-    });
-  };
+  const sendEmail = (accounts) => {};
 
   return (
     <AccountsContext.Provider
@@ -150,10 +116,12 @@ const AccountsState = (props) => {
         userAccounts: state.userAccounts,
         availableAccounts: state.availableAccounts,
         currentQr: state.currentQr,
+        currentAddAccount: state.currentAddAccount,
         setLoading,
         getUserAccounts,
         getAvailableAccounts,
         showQrAccount,
+        showAddAccount,
         addAccount,
         removeAccount,
         selectAllAccounts,

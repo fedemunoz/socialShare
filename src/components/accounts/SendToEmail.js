@@ -39,6 +39,7 @@ const SendToEmail = () => {
         <Grid item className='input-slot'>
           <TextField
             required
+            type='email'
             label='Email to'
             onChange={onChange}
             error={showError}

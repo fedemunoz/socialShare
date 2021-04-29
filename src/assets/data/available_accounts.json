@@ -29,7 +29,7 @@
       {        
         "name": "Linkedin",
         "logo": "linkedin",
-        "urlPrefix": "linkedin.com/",
+        "urlPrefix": "linkedin.com/in/",
         "placeholder": "Linkedin user"        
       },
       {        

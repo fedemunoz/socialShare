@@ -6,8 +6,13 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fab, fas);
 
-const Icon = ({ icon, size, type, className }) => (
-  <FontAwesomeIcon icon={[type, icon]} size={size} className={className} />
+const Icon = ({ icon, size, type, classes, styles }) => (
+  <FontAwesomeIcon
+    icon={[type, icon]}
+    size={size}
+    className={classes}
+    style={styles}
+  />
 );
 
 Icon.propTypes = {

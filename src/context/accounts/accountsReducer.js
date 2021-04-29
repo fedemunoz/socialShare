@@ -25,45 +25,16 @@ const reducer = (state, action) => {
         currentQr: action.payload,
         loading: false,
       };
-    case actions.ADD_ACCOUNT:
+    case actions.SHOW_ADD_ACCOUNT:
       return {
         ...state,
-        userAccounts: state.userAccounts.push({
-          ...action.payload,
-          email: true,
-        }),
+        currentAddAccount: action.payload,
         loading: false,
       };
-    case actions.REMOVE_ACCOUNT:
+    case actions.UPDATE_ACCOUNTS:
       return {
         ...state,
-        userAccounts: state.userAccounts.filter(
-          (account) => account.id !== action.payload
-        ),
-        loading: false,
-      };
-    case actions.SELECT_ALL_ACCOUNTS:
-      return {
-        ...state,
-        userAccounts: state.userAccounts.map((account) => {
-          return {
-            ...account,
-            email: action.payload,
-          };
-        }),
-        loading: false,
-      };
-    case actions.SELECT_ACCOUNT:
-      return {
-        ...state,
-        userAccounts: state.userAccounts.map((account) => {
-          return account.id.toString() !== action.payload.id
-            ? account
-            : {
-                ...account,
-                email: action.payload.value,
-              };
-        }),
+        userAccounts: action.payload,
         loading: false,
       };
     default:
