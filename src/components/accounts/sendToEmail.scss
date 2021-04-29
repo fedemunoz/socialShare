@@ -8,4 +8,16 @@
       width: 100%;
     }
   }
+  button.MuiButton-contained {
+    background-color: $primary;
+    color: $primary-contrast;
+    &.Mui-disabled {
+      background-color: $disabled;
+      color: $light-gray;
+    }
+  }
+  button.MuiButton-contained:hover {
+    background-color: $primary;
+    color: $primary-contrast;
+  }
 }
