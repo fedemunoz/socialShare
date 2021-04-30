@@ -4,6 +4,9 @@ PWA for sharing contact data (social media account, email accounts, phone number
 
 Demo: [accountshare.netlify.app](https://accountshare.netlify.app)
 
+\
+\
+
 ## Email config
 
 Emails are sent through Sendgrid and a Netlify serverless lambda function.
@@ -26,6 +29,10 @@ Emails are sent through Sendgrid and a Netlify serverless lambda function.
   - Site settings -> Build & deploy -> Environment variables
   - `SENDGRID_API_KEY` : (API_KEY created on Sendgrid)
   - `SENDGRID_FROM_EMAIL` : (Sender email account validated on Sendgrid)
+
+
+\
+\
 
 ## Installation
 
