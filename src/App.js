@@ -3,13 +3,12 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import PageState from "./context/page/PageState";
-import AccountsState from "./context/accounts/AccountsState";
 import NotificationsState from "./context/notifications/NotificationsState";
+import AccountsState from "./context/accounts/AccountsState";
 
 import Navbar from "./components/layout/Navbar";
 import BottomNav from "./components/layout/BottomNav";
 import Alert from "./components/layout/Alert";
-import ConfirmDialog from "./components/layout/ConfirmDialog";
 import DownloadAppPopover from "./components/layout/DownloadAppPopover";
 import Spinner from "./components/layout/Spinner";
 
@@ -30,7 +29,6 @@ function App() {
                 <Navbar title='Page' />
                 <div className='main-container'>
                   <Alert />
-                  <ConfirmDialog />
                   <Switch>
                     <Route
                       exact
