@@ -33,7 +33,7 @@ Emails are sent through Sendgrid and a Netlify serverless lambda function.
 
 ## Installation
 
-### `npm i`
+`npm i`
 
 &nbsp;
 ### Deploy to Netlify
@@ -43,10 +43,8 @@ After linking the repository to Netlify deploy with `git push` or using [netlify
 &nbsp;
 ### Other commands
 
-### `npm start`
-
+`npm start`
 Runs the app in the development mode.
 
-### `npm run build`
-
+`npm run build`
 Builds the app for production to the `build` folder.
