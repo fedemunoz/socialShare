@@ -13,7 +13,7 @@ Emails are sent through Sendgrid and a Netlify serverless lambda function.
 
 **1) Set up Sendgrid**
 
-- Create [Sengrid](sendgrid.com) account (works with free plan)
+- Create [Sengrid](https://sendgrid.com) account (works with free plan)
 - Set up sender email account
   - Settings -> Sender Authentication
 - Generate API KEY
@@ -21,7 +21,7 @@ Emails are sent through Sendgrid and a Netlify serverless lambda function.
 
 **2) Set up Netlify**
 
-- Create [Netlify](netlify.com) account (works with free plan)
+- Create [Netlify](https://netlify.com) account (works with free plan)
 - Create new site and [link](https://cli.netlify.com/commands/link) git repository
 - Add Environment variables
   - Site settings -> Build & deploy -> Environment variables
