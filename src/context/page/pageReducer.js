@@ -8,6 +8,11 @@ const reducer = (state, action) => {
         title: action.payload.title,
         previousTab: action.payload.previousTab || "",
       };
+    case actions.SET_SHOW_ACCOUNTS_HINT:
+      return {
+        ...state,
+        showAccountsHint: action.payload,
+      };
     default:
       return state;
   }

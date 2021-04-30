@@ -8,6 +8,7 @@ const PageState = (props) => {
   const initialState = {
     title: constants.MY_QR_TAB.title,
     previousTab: "",
+    showAccountsHint: true,
   };
 
   const [state, dispatch] = useReducer(PageReducer, initialState);
@@ -19,12 +20,21 @@ const PageState = (props) => {
     });
   };
 
+  const setShowAccountsHint = (showHint) => {
+    dispatch({
+      type: actions.SET_SHOW_ACCOUNTS_HINT,
+      payload: showHint,
+    });
+  };
+
   return (
     <PageContext.Provider
       value={{
         title: state.title,
         previousTab: state.previousTab,
+        showAccountsHint: state.showAccountsHint,
         setPage,
+        setShowAccountsHint,
       }}
     >
       {props.children}

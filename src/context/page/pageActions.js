@@ -1,1 +1,2 @@
 export const SET_PAGE = "SET_PAGE";
+export const SET_SHOW_ACCOUNTS_HINT = "SET_SHOW_ACCOUNTS_HINT";
