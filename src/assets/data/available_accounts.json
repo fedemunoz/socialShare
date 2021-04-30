@@ -3,6 +3,18 @@
     "name": "Social Networks",
     "accounts": [
       {        
+        "name": "Behance",
+        "logo": "behance",
+        "urlPrefix": "https://behance.net/",
+        "placeholder": "Behance user"        
+      },
+      {        
+        "name": "Dribbble",
+        "logo": "dribbble",
+        "urlPrefix": "https://dribbble.com/",
+        "placeholder": "Dribbble user"        
+      },
+      {        
         "name": "Facebook",
         "logo": "facebook",
         "urlPrefix": "https://facebook.com/",
@@ -11,7 +23,7 @@
       {        
         "name": "Flickr",
         "logo": "flickr",
-        "urlPrefix": "https://flickr.com/",
+        "urlPrefix": "https://flickr.com/people/",
         "placeholder": "Flickr user"        
       },
       {        
@@ -29,8 +41,14 @@
       {        
         "name": "Medium",
         "logo": "medium",
-        "urlPrefix": "https://medium.com/",
+        "urlPrefix": "https://medium.com/@",
         "placeholder": "Medium user"        
+      },
+      {        
+        "name": "Meetup",
+        "logo": "meetup",
+        "urlPrefix": "https://meetup.com/",
+        "placeholder": "Meetup link"        
       },
       {        
         "name": "Pinterest",
@@ -39,15 +57,21 @@
         "placeholder": "Pinterest user"        
       },
       {        
+        "name": "Quora",
+        "logo": "quora",
+        "urlPrefix": "https://quora.com/",
+        "placeholder": "Quora user"        
+      },
+      {        
         "name": "Reddit",
         "logo": "reddit",
-        "urlPrefix": "https://reddit.com/",
+        "urlPrefix": "https://reddit.com/user/",
         "placeholder": "Reddit user"        
       },
       {        
         "name": "Snapchat",
         "logo": "snapchat",
-        "urlPrefix": "https://snapchat.com/",
+        "urlPrefix": "https://snapchat.com/add/",
         "placeholder": "Snapchat user"        
       },
       {        
@@ -59,7 +83,7 @@
       {        
         "name": "Tik Tok",
         "logo": "tiktok",
-        "urlPrefix": "https://tiktok.com/",
+        "urlPrefix": "https://tiktok.com/@",
         "placeholder": "Tik Tok user"        
       },
       {        
@@ -71,13 +95,25 @@
       {        
         "name": "Tumblr",
         "logo": "tumblr",
-        "urlPrefix": "https://tumblr.com/",
+        "urlPrefix": "https://tumblr.com/blog/view/",
         "placeholder": "Tumblr user"        
       },
       {        
+        "name": "Vimeo",
+        "logo": "vimeo",
+        "urlPrefix": "https://vimeo.com/",
+        "placeholder": "Vimeo user"        
+      },      
+      {        
+        "name": "Xing",
+        "logo": "xing",
+        "urlPrefix": "https://xing.com/profile/",
+        "placeholder": "Xing user"        
+      },      
+      {        
         "name": "Youtube",
         "logo": "youtube",
-        "urlPrefix": "https://youtube.com/",
+        "urlPrefix": "https://youtube.com/c/",
         "placeholder": "Youtube user"        
       }      
     ]
@@ -89,25 +125,25 @@
         "name": "Apple",
         "logo": "apple",       
         "urlPrefix": "mailto:", 
-        "placeholder": "Apple account"        
+        "placeholder": "Apple email account"        
       },
       {        
         "name": "Google",
         "logo": "google",    
         "urlPrefix": "mailto:",    
-        "placeholder": "Google account"        
+        "placeholder": "Google email account"        
       },
       {        
         "name": "Microsoft",
         "logo": "microsoft",   
         "urlPrefix": "mailto:",     
-        "placeholder": "Microsoft account"        
+        "placeholder": "Microsoft email account"        
       },
       {        
         "name": "Yahoo",
         "logo": "yahoo",    
         "urlPrefix": "mailto:",    
-        "placeholder": "Yahoo account"        
+        "placeholder": "Yahoo email account"        
       }
     ]
   },
@@ -118,38 +154,44 @@
         "name": "Discord",
         "logo": "discord",
         "urlPrefix": "tel:+",
-        "placeholder": "Discord user"        
+        "placeholder": "Phone number"        
       },
       {        
         "name": "Skype",
         "logo": "skype",
-        "urlPrefix": "https://skype.com/",
-        "placeholder": "Skype user"        
+        "urlPrefix": "",
+        "placeholder": "Skype invite link"        
       },
       {        
         "name": "Slack",
         "logo": "slack",
-        "urlPrefix": "https://slack.com/",
+        "urlPrefix": "https://",
         "placeholder": "Slack user"        
       },
       {        
         "name": "Telegram",
         "logo": "telegram",
         "urlPrefix": "tel:+",
-        "placeholder": "Telegram user"        
+        "placeholder": "Phone number"        
       },
+      {        
+        "name": "WeChat",
+        "logo": "weixin",
+        "urlPrefix": "tel:+",
+        "placeholder": "Phone number"        
+      },      
       {        
         "name": "Whatsapp",
         "logo": "whatsapp",
         "urlPrefix": "tel:+",
-        "placeholder": "Whatsapp user"        
+        "placeholder": "Phone number"        
       },      
       {        
         "name": "Zoom",
         "logo": "video",
         "faIcon": "fas",  
-        "urlPrefix": "https://zoom.com/",
-        "placeholder": "Zoom user"        
+        "urlPrefix": "https://",
+        "placeholder": "Zoom link"        
       }      
     ]
   },
@@ -159,14 +201,14 @@
       {        
         "name": "Paypal",
         "logo": "paypal",
-        "urlPrefix": "https://paypal.com/",
+        "urlPrefix": "https://paypal.me/",
         "placeholder": "Paypal user"        
       },
       {        
         "name": "Stripe",
         "logo": "stripe",
-        "urlPrefix": "https://stripe.com/",
-        "placeholder": "Stripe user"        
+        "urlPrefix": "https://",
+        "placeholder": "Stripe pay link"        
       }
     ]
   },
@@ -176,20 +218,20 @@
       {        
         "name": "BitBucket",
         "logo": "bitbucket",
-        "urlPrefix": "https://bitbucket.com/",
+        "urlPrefix": "https://bitbucket.org/",
         "placeholder": "BitBucket user"        
       },
       {        
         "name": "Dev",
         "logo": "dev",
-        "urlPrefix": "https://dev.com/",
-        "placeholder": "Dev user"        
+        "urlPrefix": "https://dev.to/",
+        "placeholder": "DEV user"        
       },
       {        
         "name": "Figma",
         "logo": "figma",
         "urlPrefix": "https://figma.com/",
-        "placeholder": "Figma user"        
+        "placeholder": "Figma link"        
       },
       {        
         "name": "Github",
@@ -204,9 +246,15 @@
         "placeholder": "Gitlab user"        
       },
       {        
+        "name": "Hacker News",
+        "logo": "hacker-news",
+        "urlPrefix": "https://news.ycombinator.com/user?id=",
+        "placeholder": "Hacker News user"        
+      },
+      {        
         "name": "StackOverflow",
         "logo": "stack-overflow",
-        "urlPrefix": "https://stackoverflow.com/",
+        "urlPrefix": "https://stackoverflow.com/users/",
         "placeholder": "StackOverflow user"        
       },
       {        
@@ -231,7 +279,7 @@
         "name": "Link",
         "logo": "link",
         "faIcon": "fas",   
-        "urlPrefix": "mailto:",     
+        "urlPrefix": "https://",     
         "placeholder": "Link"        
       },
       {        
