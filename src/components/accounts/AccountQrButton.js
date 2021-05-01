@@ -12,7 +12,12 @@ const AccountQrButton = ({ account }) => {
   const onClick = () => accountsContext.showQrAccount(account);
 
   return (
-    <Button className='account-qr-button' onClick={onClick} disableRipple>
+    <Button
+      className='account-qr-button'
+      onClick={onClick}
+      aria-label={account.logo}
+      disableRipple
+    >
       <Icon type={account.faIcon} icon={account.logo} size='lg' />
     </Button>
   );
