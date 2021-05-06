@@ -31,9 +31,9 @@ const reducer = (state, action) => {
         filteredAccounts: !action.payload
           ? state.availableAccounts
           : state.availableAccounts.map((category) => ({
-              name: category.name,
+              ...category,
               accounts: category.accounts.filter((account) => {
-                const regex = new RegExp(`${action.payload}`, "gi");
+                const regex = new RegExp(action.payload, "gi");
                 return account.name.match(regex);
               }),
             })),
