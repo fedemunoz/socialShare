@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 
 import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
-import "./accountQrButton.scss";
+import styles from "./accountQrButton.module.scss";
 
 const AccountQrButton = ({ account }) => {
   const accountsContext = useContext(AccountsContext);
@@ -13,7 +13,7 @@ const AccountQrButton = ({ account }) => {
 
   return (
     <Button
-      className='account-qr-button'
+      className={styles.qrButton}
       onClick={onClick}
       aria-label={account.logo}
       disableRipple

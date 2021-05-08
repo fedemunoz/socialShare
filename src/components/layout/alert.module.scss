@@ -1,20 +1,20 @@
 @import "../../styles/colors";
 
-.snackbar-alert {
+.alert {
   margin-bottom: 1rem;
   padding: 0 1rem;
-  &.alert-primary {
-    .MuiSnackbarContent-root {
+  &.primary {
+    :global(.MuiSnackbarContent-root) {
       background-color: $primary;
     }
   }
-  &.alert-success {
-    .MuiSnackbarContent-root {
+  &.success {
+    :global(.MuiSnackbarContent-root) {
       background-color: $success;
     }
   }
-  &.alert-error {
-    .MuiSnackbarContent-root {
+  &.error {
+    :global(.MuiSnackbarContent-root) {
       background-color: $danger;
     }
   }

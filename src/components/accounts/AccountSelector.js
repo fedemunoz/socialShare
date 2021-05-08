@@ -8,7 +8,7 @@ import Checkbox from "@material-ui/core/Checkbox";
 
 import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
-import "./accountSelector.scss";
+import styles from "./accountSelector.module.scss";
 
 const AccountSelector = () => {
   const [allSelected, setallSelected] = useState(true);
@@ -55,7 +55,7 @@ const AccountSelector = () => {
   };
 
   return (
-    <div className='account-selector-container'>
+    <div className={styles.container}>
       <FormControl>
         <FormControlLabel
           control={
@@ -68,7 +68,7 @@ const AccountSelector = () => {
           }
           label='Select all'
           labelPlacement='start'
-          className={`banner ${allSelected ? "selected-checkbox" : ""}`}
+          className={`banner ${allSelected ? styles.selectedCheckbox : ""}`}
         />
       </FormControl>
 
@@ -76,7 +76,7 @@ const AccountSelector = () => {
         required
         error={!allSelected && !indeterminate}
         component='fieldset'
-        className='full-width-input'
+        className={styles.fullWidthInput}
       >
         <FormGroup>
           {userAccounts.map((account) => (
@@ -103,7 +103,9 @@ const AccountSelector = () => {
                 </div>
               }
               labelPlacement='start'
-              className={`banner ${account.email ? "selected-checkbox" : ""}`}
+              className={`banner ${
+                account.email ? styles.selectedCheckbox : ""
+              }`}
             />
           ))}
         </FormGroup>

@@ -1,11 +1,11 @@
 @import "../../styles/colors";
 
-.app-add-button {
+.link {
   text-decoration: none;
   button {
     color: $primary-contrast;
     background-color: $primary;
-    &.sm-button {
+    &.smButton {
       position: fixed !important;
       bottom: 72px;
       bottom: calc(env(safe-area-inset-bottom, 0) + 72px);

@@ -4,7 +4,7 @@ import Fade from "@material-ui/core/Fade";
 import AccountsContext from "../../../context/accounts/accountsContext";
 import AccountQrButton from "../../accounts/AccountQrButton";
 import ShowQrModal from "../../accounts/ShowQrModal";
-import "./myQrTab.scss";
+import styles from "./myQrTab.module.scss";
 
 const MyQrTab = ({ userAccounts }) => {
   const accountsContext = useContext(AccountsContext);
@@ -12,7 +12,7 @@ const MyQrTab = ({ userAccounts }) => {
   return (
     <Fragment>
       <Fade in>
-        <div className='qr-button-container'>
+        <div className={styles.container}>
           {userAccounts.map((account) => (
             <AccountQrButton key={account.id} account={account} />
           ))}

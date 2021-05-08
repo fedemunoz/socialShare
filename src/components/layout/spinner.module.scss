@@ -1,12 +1,12 @@
 @import "../../styles/colors";
 
-.spinner-container {
+.container {
   display: flex;
   height: 100%;
   align-items: center;
   align-self: center;
 
-  .MuiCircularProgress-root {
+  :global(.MuiCircularProgress-root) {
     display: block;
     margin: auto;
     color: $primary;

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import NotificationsContext from "../../context/notifications/notificationsContext";
-import "./alert.scss";
+import styles from "./alert.module.scss";
 
 const Alert = () => {
   const notificationsContext = useContext(NotificationsContext);
@@ -18,7 +18,7 @@ const Alert = () => {
         onClose={handleClose}
         message={alert.msg}
         key={`${alert.position} center`}
-        className={`snackbar-alert alert-${alert.type}`}
+        className={`${styles.alert} ${styles[alert.type]}`}
       />
     )
   );

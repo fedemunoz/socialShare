@@ -1,6 +1,6 @@
 @import "../../styles/colors";
 
-.show-qr-container {
+.container {
   position: absolute;
   width: 60%;
   max-width: 400px;
@@ -23,7 +23,7 @@
     }
   }
 
-  .qr-container {
+  .qrContainer {
     canvas {
       width: 100% !important;
       height: 100% !important;

@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import validator from "validator";
 import AccountsContext from "../../context/accounts/accountsContext";
 import NotificationsContext from "../../context/notifications/notificationsContext";
-import "./sendToEmail.scss";
+import styles from "./sendToEmail.module.scss";
 
 const SendToEmail = () => {
   const [emailInput, setEmailInput] = useState("");
@@ -42,9 +42,9 @@ const SendToEmail = () => {
   };
 
   return (
-    <div className='app-send-to-email'>
+    <div className={styles.container}>
       <Grid container spacing={2} alignItems='flex-end'>
-        <Grid item className='input-slot'>
+        <Grid item className={styles.inputSlot}>
           <TextField
             required
             type='email'

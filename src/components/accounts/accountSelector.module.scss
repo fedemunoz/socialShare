@@ -1,17 +1,17 @@
 @import "../../styles/colors";
 
-.account-selector-container {
+.container {
   margin: 1rem 0;
 
-  .MuiFormControl-root {
+  :global(.MuiFormControl-root) {
     display: flex;
     flex: 1;
     color: $dark-gray;
 
-    &.full-width-input {
-      .MuiFormControlLabel-root {
+    &.fullWidthInput {
+      :global(.MuiFormControlLabel-root) {
         margin-left: 0;
-        .MuiFormControlLabel-label {
+        :global(.MuiFormControlLabel-label) {
           width: 100%;
           svg {
             width: 4rem;
@@ -20,11 +20,11 @@
       }
     }
 
-    .selected-checkbox {
+    .selectedCheckbox {
       color: $primary;
     }
 
-    .MuiCheckbox-colorSecondary.Mui-checked {
+    :global(.MuiCheckbox-colorSecondary.Mui-checked) {
       color: $primary;
     }
   }

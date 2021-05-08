@@ -4,7 +4,7 @@ import Fade from "@material-ui/core/Fade";
 
 import AccountsContext from "../../context/accounts/accountsContext";
 import Icon from "../layout/Icon";
-import "./showQrModal.scss";
+import styles from "./showQrModal.module.scss";
 
 const QRCode = require("qrcode.react");
 
@@ -21,7 +21,7 @@ const ShowQrModal = () => {
   return (
     <Modal open onClose={handleClose} disableEnforceFocus disableAutoFocus>
       <Fade in>
-        <div className='show-qr-container'>
+        <div className={styles.container}>
           <h2 className='color-primary'>
             <Icon type={currentQr.faIcon} icon={currentQr.logo} size='1x' />{" "}
             {currentQr.title}
@@ -29,7 +29,7 @@ const ShowQrModal = () => {
           <p className='color-gray' style={nameStyle}>
             {currentQr.name}
           </p>
-          <div className='qr-container'>
+          <div className={styles.qrContainer}>
             <QRCode value={currentQr.url} />
           </div>
         </div>

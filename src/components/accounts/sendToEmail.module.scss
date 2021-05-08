@@ -1,10 +1,10 @@
 @import "../../styles/colors";
 
-.app-send-to-email {
+.container {
   margin-bottom: 2rem;
-  .input-slot {
+  .inputSlot {
     flex: 1;
-    .MuiFormControl-root {
+    :global(.MuiFormControl-root) {
       width: 100%;
     }
   }

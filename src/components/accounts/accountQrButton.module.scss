@@ -1,0 +1,23 @@
+@import "../../styles/colors";
+
+:global(.MuiButtonBase-root) {
+  &.qrButton {
+    display: flex;
+    flex: 50%;
+    color: $primary;
+    padding: 2rem 0;
+    align-self: center;
+    text-align: center;
+    font-size: 10vh;
+    svg {
+      flex: 1;
+    }
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .qrButton {
+    display: flex;
+    flex: calc(100% / 3);
+  }
+}

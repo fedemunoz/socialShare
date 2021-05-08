@@ -1,10 +1,10 @@
 import React from "react";
 import AddButton from "../layout/AddButton";
-import "./noAccounts.scss";
+import styles from "./noAccounts.module.scss";
 
 const NoAccounts = () => {
   return (
-    <div className='no-accounts-container'>
+    <div className={styles.container}>
       <h4>You don't have accounts yet!</h4>
       <AddButton type='lg' />
     </div>

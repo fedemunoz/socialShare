@@ -1,9 +1,11 @@
-import React from 'react'
-import CircularProgress from '@material-ui/core/CircularProgress';
-import './spinner.scss';
+import React from "react";
+import CircularProgress from "@material-ui/core/CircularProgress";
+import styles from "./spinner.module.scss";
 
-const Spinner = () => <div className="spinner-container">
+const Spinner = () => (
+  <div className={styles.container}>
     <CircularProgress />
-  </div>;
+  </div>
+);
 
-export default Spinner
+export default Spinner;

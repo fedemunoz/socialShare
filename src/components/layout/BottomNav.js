@@ -3,7 +3,7 @@ import { BottomNavigation, BottomNavigationAction } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import PageContext from "../../context/page/pageContext";
-import "./bottomNav.scss";
+import styles from "./bottomNav.module.scss";
 import constants from "../../shared/constants";
 import { ReactComponent as QrIcon } from "../../assets/icons/qr-code.svg";
 
@@ -21,7 +21,7 @@ const BottomNav = () => {
 
   return (
     !previousTab && (
-      <div className='app-bottom-navbar'>
+      <div className={styles.navbar}>
         <BottomNavigation value={title} onChange={onChange} showLabels>
           <BottomNavigationAction
             value={constants.EMAIL_TAB.title}

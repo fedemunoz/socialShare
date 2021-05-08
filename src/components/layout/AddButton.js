@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 import Fab from "@material-ui/core/Fab";
 import Button from "@material-ui/core/Button";
 import AddIcon from "@material-ui/icons/Add";
-import "./addButton.scss";
+import styles from "./addButton.module.scss";
 
 const AddButton = ({ type }) => {
   const button =
     type === "sm" ? (
-      <Fab aria-label='add' className='sm-button'>
+      <Fab aria-label='add' className={styles.smButton}>
         <AddIcon />
       </Fab>
     ) : (
@@ -19,7 +19,7 @@ const AddButton = ({ type }) => {
     );
 
   return (
-    <Link className='app-add-button' to='/add-account'>
+    <Link className={styles.link} to='/add-account'>
       {button}
     </Link>
   );
