@@ -1,6 +1,6 @@
 # AccountShare
 
-PWA for sharing contact data (social media account, email accounts, phone numbers, links, etc.) through QR codes or by Email.
+React PWA for sharing contact data (social media account, email accounts, phone numbers, links, etc.) through QR codes or by Email.
 
 Demo: [accountshare.netlify.app](https://accountshare.netlify.app)
 
